@@ -4,15 +4,10 @@
 #include <string>
 #pragma once
 
-Client::Client(std::string name, std::vector<Medicine> medicines)
+Client::Client(std::string name, std::vector<std::string> symptoms)
 {
 	this->set_name(name);
-	this->medicines = medicines;
-}
-
-Client::Client(std::string name)
-{
-	this->name = name;
+	this->symptoms = symptoms;
 }
 
 Client::Client() {}
@@ -27,23 +22,7 @@ std::string Client::get_name()
 	return this->name;
 }
 
-std::vector<Medicine> Client::get_medicines()
+std::vector<std::string> Client::get_symptoms()
 {
-	return this->medicines;
+	return this->symptoms;
 }
-
-void Client::add_medicine(Medicine medicine)
-{
-	this->medicines.push_back(medicine);
-}
-/*
-void Client::remove_medicine(Medicine medicine)
-{
-	std::vector<Medicine>::iterator it;
-
-	it = find(this->medicines.begin(), this->medicines.end(), medicine);
-	if (it != this->medicines.end())
-	{
-		this->medicines.erase(it);
-	}
-}*/

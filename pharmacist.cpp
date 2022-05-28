@@ -1,6 +1,5 @@
 #include "pharmacist.h"
-#include <cstdlib>
-#include <ctime>
+#include <random>
 
 Pharmacist::Pharmacist()
 {
@@ -14,9 +13,11 @@ int Pharmacist::get_id()
 
 int Pharmacist::set_id()
 {
-std::srand(time(NULL));
+	std::random_device r;
+	std::default_random_engine generator(r());
+	std::uniform_int_distribution<int> id_gen(1000, 9999);
 
-int number = (rand() % 9000) + 1000;
+	int number = id_gen(generator);
 
-return number;
+	return number;
 }
