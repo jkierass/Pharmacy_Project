@@ -10,3 +10,6 @@ wet-cough
 dry-eye
 allergy
 eye-redness
+bruises
+diarrhea
+acne

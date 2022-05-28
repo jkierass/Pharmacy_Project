@@ -156,6 +156,7 @@
     <ClInclude Include="random_objects_generator.h" />
     <ClInclude Include="syrup.h" />
     <ClInclude Include="txt_file.h" />
+    <ClInclude Include="window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="client.cpp" />

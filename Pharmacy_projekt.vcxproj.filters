@@ -66,6 +66,9 @@
     <ClInclude Include="catch.hpp">
       <Filter>Pliki zasobów</Filter>
     </ClInclude>
+    <ClInclude Include="window.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="client.cpp">

@@ -4,10 +4,7 @@
 #include <ctime>
 #include "txt_file.h"
 
-RandomObjectsGenerator::RandomObjectsGenerator()
-{
-
-};
+RandomObjectsGenerator::RandomObjectsGenerator() {};
 
 std::vector<std::string> RandomObjectsGenerator::generate_symptoms()
 {

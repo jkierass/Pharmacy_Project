@@ -16,6 +16,7 @@ Pills
 1 Alventa Krka Venlafaxinum depression 28 2700 1 swallow
 1 Lafactin Aurovitas Venlafaxinum depression 28 3300 1 swallow
 2 Memotropil Polpharma Piracetamum memory_disorder 30 4000 1 swallow
+1 Stopperan UPS Loperamid diarrhea 20 1150 0 swallow
 
 Syrup
 
@@ -27,6 +28,10 @@ Syrup
 
 Ointment
 
+1 RECTOstop Pharmacy_Laboratories aloe hemorrhoids 200 1400 0 gel
+2 Altacet Bayer ethanol scrapes bruises 75 1000 0 gel
+1 Acnex Gomed bisabolol acne 35 1300 0 cream
+1 Rosacure Synchronile acne 30 7700 1 cream
 
 
 Drops
