@@ -124,5 +124,14 @@
     <Text Include="name.txt">
       <Filter>Pliki zasobów</Filter>
     </Text>
+    <Text Include="meds.txt">
+      <Filter>Pliki zasobów</Filter>
+    </Text>
+    <Text Include="symptoms.txt">
+      <Filter>Pliki zasobów</Filter>
+    </Text>
+    <Text Include="symptoms_patient.txt">
+      <Filter>Pliki zasobów</Filter>
+    </Text>
   </ItemGroup>
 </Project>
