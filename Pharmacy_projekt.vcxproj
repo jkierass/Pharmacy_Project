@@ -178,6 +178,7 @@
     <ClCompile Include="syrup.cpp" />
     <ClCompile Include="tests.cpp" />
     <ClCompile Include="txt_file.cpp" />
+    <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="meds.txt" />
