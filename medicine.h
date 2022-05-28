@@ -16,11 +16,12 @@ protected:
 	std::string producer;
 	std::string substance;
 	int base_price_gr;
+	bool receipt;
 	double calculated_price;
 	std::string med_type = "No data";
 
 public:
-	Medicine(std::string, std::string, std::string, int, int);
+	Medicine(std::string, std::string, std::string, int, int, bool);
 	friend std::ostream& operator<<(std::ostream& os, const Medicine& Med);
 	virtual void print(std::ostream&) const;
 	virtual void calculate_price();

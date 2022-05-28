@@ -3,9 +3,9 @@
 class Syrup :
     public Medicine
 {
-    std::string cough_type;
+    std::string syrup_type;
 public:
-    Syrup(std::string, std::string, std::string, int, int, std::string);
+    Syrup(std::string, std::string, std::string, int, int, bool, std::string);
     void print(std::ostream&) const override;
     void calculate_price() noexcept override;
     std::string get_cough_type() const noexcept;

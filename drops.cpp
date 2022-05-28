@@ -1,6 +1,6 @@
 #include "drops.h"
 
-Drops::Drops(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, std::string drops_type) : Medicine(name, producer, substance, amount, base_price_gr)
+Drops::Drops(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, bool receipt, std::string drops_type) : Medicine(name, producer, substance, amount, base_price_gr, receipt)
 {
 	this->drops_type = drops_type;
 	this->med_type = "Drops";
@@ -17,7 +17,7 @@ void Drops::calculate_price()		// 12% tax
 void Drops::print(std::ostream& os) const noexcept
 {
 	os << "Type: Drops\nName: " << name << "\nProducer: " << producer << "\nSubstance: " << substance <<
-		"\nCapacity: " << amount << " ml\nPosition: " << position << "\nBase price:" << (double)base_price_gr / 100 << "\nTaxed price: " << calculated_price << "\nType: " << drops_type << std::endl << std::endl;
+		"\nCapacity: " << amount << " ml\nPosition: " << position << "\nBase price:" << (double)base_price_gr / 100 << "\nTaxed price: " << calculated_price << "\nDrops type: " << drops_type << std::endl << std::endl;
 }
 
 

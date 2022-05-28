@@ -5,7 +5,7 @@ class Pills :
 {
     std::string pills_type;
 public:
-    Pills(std::string, std::string, std::string, int, int, std::string);
+    Pills(std::string, std::string, std::string, int, int, bool, std::string);
     void print(std::ostream&) const noexcept override;
     void calculate_price() noexcept override;
     std::string get_pills_type() const noexcept;

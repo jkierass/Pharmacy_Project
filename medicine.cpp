@@ -1,7 +1,8 @@
 #include "medicine.h"
 
-Medicine::Medicine(std::string name, std::string producer, std::string substance, int amount, int base_price_gr)
+Medicine::Medicine(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, bool receipt)
 {
+	this->receipt = receipt;
 	set_name(name);
 	set_producer(producer);
 	set_substance(substance);
