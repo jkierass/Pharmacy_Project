@@ -5,7 +5,6 @@
 TxtFile::TxtFile(std::string path)
 {
     set_path(path);
-    std::ifstream file;
 }
 
 void TxtFile::set_path(std::string path)
@@ -16,6 +15,11 @@ void TxtFile::set_path(std::string path)
 std::string TxtFile::get_path()
 {
     return path;
+}
+
+std::ifstream& TxtFile::get_file()
+{
+    return file;
 }
 
 bool TxtFile::openFile()
@@ -32,7 +36,24 @@ bool TxtFile::closeFile()
     return true;
 }
 
-Client TxtFile::create_client(std::string name)
+Client TxtFile::create_client(std::string name, std::vector<std::string> symptoms)
 {
-    return Client(name);
+    return Client(name, symptoms);
+}
+
+int TxtFile::lines_num()
+{
+    std::string line;
+    int count = 0;
+
+    if (file.is_open())
+    {
+        while (file.peek() != EOF)
+        {
+            std::getline(file, line);
+            count++;
+        }
+    }
+
+    return count;
 }

@@ -7,19 +7,16 @@
 class Client
 {
 private:
-	std::vector<Medicine> medicines;
 	std::string name;
+	std::vector<std::string> symptoms;
 
 public:
 	Client();
 	Client(std::string name);
-	Client(std::string name, std::vector<Medicine> medicines);
+	Client(std::string name, std::vector<std::string> symptoms);
 
 	void set_name(std::string name);
 	std::string get_name();
 
-	std::vector<Medicine> get_medicines();
-
-	void add_medicine(Medicine medicine);
-	//void remove_medicine(Medicine medicine);
+	std::vector<std::string> get_symptoms();
 };
