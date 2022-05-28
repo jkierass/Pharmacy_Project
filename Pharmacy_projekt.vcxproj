@@ -178,6 +178,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="meds.txt" />
+    <Text Include="Med_database.txt" />
     <Text Include="name.txt" />
     <Text Include="symptoms.txt" />
     <Text Include="symptoms_patient.txt" />

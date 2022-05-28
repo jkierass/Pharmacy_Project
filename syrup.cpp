@@ -1,6 +1,6 @@
 #include "syrup.h"
 
-Syrup::Syrup(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, bool receipt, std::string syrup_type) : Medicine(name, producer,  substance, amount, base_price_gr, receipt)
+Syrup::Syrup(std::string name, std::string producer, std::string substance, std::vector<std::string> symptoms, int amount, int base_price_gr, bool prescription, std::string syrup_type) : Medicine(name, producer,  substance, symptoms, amount, base_price_gr, prescription)
 {
 	this->syrup_type = syrup_type;
 	this->med_type = "Syrup";

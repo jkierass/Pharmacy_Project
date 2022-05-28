@@ -1,6 +1,6 @@
 #include "ointment.h"
 
-Ointment::Ointment(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, bool receipt, std::string ointment_type) : Medicine(name, producer, substance, amount, base_price_gr, receipt)
+Ointment::Ointment(std::string name, std::string producer, std::string substance, std::vector<std::string> symptoms, int amount, int base_price_gr, bool prescription, std::string ointment_type) : Medicine(name, producer, substance, symptoms, amount, base_price_gr, prescription)
 {
 	this->ointment_type = ointment_type;
 	this->med_type = "Ointment";

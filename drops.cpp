@@ -1,6 +1,6 @@
 #include "drops.h"
 
-Drops::Drops(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, bool receipt, std::string drops_type) : Medicine(name, producer, substance, amount, base_price_gr, receipt)
+Drops::Drops(std::string name, std::string producer, std::string substance, std::vector<std::string> symptoms, int amount, int base_price_gr, bool prescription, std::string drops_type) : Medicine(name, producer, substance, symptoms, amount, base_price_gr, prescription)
 {
 	this->drops_type = drops_type;
 	this->med_type = "Drops";

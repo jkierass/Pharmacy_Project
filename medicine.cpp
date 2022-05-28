@@ -1,8 +1,9 @@
 #include "medicine.h"
 
-Medicine::Medicine(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, bool receipt)
+Medicine::Medicine(std::string name, std::string producer, std::string substance, std::vector<std::string> symptoms, int amount, int base_price_gr, bool prescription)
 {
-	this->receipt = receipt;
+	this->prescription = prescription;
+	set_sympoms(symptoms);
 	set_name(name);
 	set_producer(producer);
 	set_substance(substance);
@@ -47,6 +48,10 @@ void Medicine::set_position(int position)
 		throw NegativePositionException(position);
 }
 
+void Medicine::set_sympoms(std::vector<std::string> symptoms)
+{
+	this->symptoms = symptoms;
+}
 //getters
 
 int Medicine::get_position() const
@@ -83,6 +88,10 @@ std::string Medicine::get_med_type() const
 	return med_type;
 }
 
+bool Medicine::get_prescription() const
+{
+	return prescription;
+}
 // virtual methods
 
 void Medicine::print(std::ostream& os) const

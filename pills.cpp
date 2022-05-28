@@ -1,6 +1,6 @@
 #include "pills.h"
 
-Pills::Pills(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, bool receipt, std::string pills_type) : Medicine(name, producer, substance, amount, base_price_gr, receipt)
+Pills::Pills(std::string name, std::string producer, std::string substance, std::vector<std::string> symptoms, int amount, int base_price_gr, bool prescription, std::string pills_type) : Medicine(name, producer, substance, symptoms, amount, base_price_gr, prescription)
 {
 	this->pills_type = pills_type;
 	this->med_type = "Pills";

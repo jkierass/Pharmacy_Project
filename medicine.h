@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include <string>
 #include <iostream>
 #include <cmath>
@@ -15,13 +16,14 @@ protected:
 	std::string name;
 	std::string producer;
 	std::string substance;
+	std::vector<std::string> symptoms;
 	int base_price_gr;
-	bool receipt;
+	bool prescription;
 	double calculated_price;
 	std::string med_type = "No data";
 
 public:
-	Medicine(std::string, std::string, std::string, int, int, bool);
+	Medicine(std::string, std::string, std::string, std::vector<std::string>, int, int, bool);
 	friend std::ostream& operator<<(std::ostream& os, const Medicine& Med);
 	virtual void print(std::ostream&) const;
 	virtual void calculate_price();
@@ -35,6 +37,8 @@ public:
 	int get_base_price_gr() const;
 	double get_calculated_price() const;
 	std::string get_med_type() const;
+	bool get_prescription() const;
+	std::vector<std::string> get_symptoms() const;
 
 	void set_name(std::string);
 	void set_producer(std::string);
@@ -42,6 +46,6 @@ public:
 	void set_amount(int);
 	void set_base_price_gr(int);
 	void set_position(int);
-
+	void set_sympoms(std::vector<std::string>);
 };
 

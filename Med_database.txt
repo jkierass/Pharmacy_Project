@@ -1,0 +1,14 @@
+Pills
+
+3 Aspirin Bayer acetylsalicylic_acid pain fever inflammation 10 705 0 swallow
+1 Aripiprazole_STADA Abilify schizophrenia 28 7000 1 disintegrating
+1 Benadryl Bayer diphenhydramine allergy 24 6000 1 disintegrating
+1 Cholinex GlaxoSmithCline Cholini_salicylas 24 2500 0 disintegrating
+2 Valused Hasco Valerianae insomnia tranquilizer 30 2200 0 sublingual
+3 Active_coal Medipharm food_poisoning
+
+Syrup
+
+Ointment
+
+Drops

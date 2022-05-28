@@ -1,5 +1,6 @@
 Pills
 
+Swallow
 Chewable
 Orally-disintegrating
 Sublingual
