@@ -16,10 +16,10 @@ class MDatabase
 	int drops_num = 0;
 	int ointments_num = 0;
 public:
-	void add_Syrup(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, std::string cough_type);
-	void add_Pills(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, std::string pills_type);
-	void add_Drops(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, std::string drops_type);
-	void add_Ointment(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, std::string ointment_type);
+	void add_Syrup(std::string name, std::string producer, std::string substance, std::vector<std::string>, int amount, int base_price_gr, bool, std::string cough_type);
+	void add_Pills(std::string name, std::string producer, std::string substance, std::vector<std::string>, int amount, int base_price_gr, bool, std::string pills_type);
+	void add_Drops(std::string name, std::string producer, std::string substance, std::vector<std::string>, int amount, int base_price_gr, bool, std::string drops_type);
+	void add_Ointment(std::string name, std::string producer, std::string substance, std::vector<std::string>, int amount, int base_price_gr, bool, std::string ointment_type);
 	void print_total_value() const noexcept;
 	void print_all_data() const noexcept;
 	void update_data_and_sort();

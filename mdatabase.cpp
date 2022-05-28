@@ -3,33 +3,33 @@
 bool operator<(const std::unique_ptr<Medicine>& Med, const std::unique_ptr<Medicine>& Med2);
 
 
-void MDatabase::add_Syrup(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, std::string cough_type)
+void MDatabase::add_Syrup(std::string name, std::string producer, std::string substance, std::vector<std::string> syndroms, int amount, int base_price_gr, bool prescription, std::string cough_type)
 {
-	std::unique_ptr<Syrup> ASyrup = std::make_unique<Syrup>(name, producer, substance, amount, base_price_gr, cough_type);
+	std::unique_ptr<Syrup> ASyrup = std::make_unique<Syrup>(name, producer, substance, syndroms, amount, base_price_gr, prescription, cough_type);
 	ASyrup->set_position(syrups_num + 1);
 	med_database.push_back(std::move(ASyrup));
 	med_database.sort();			// already overloaded operator < (sorting by position)
 	syrups_num++;
 }
-void MDatabase::add_Pills(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, std::string pills_type)
+void MDatabase::add_Pills(std::string name, std::string producer, std::string substance, std::vector<std::string> syndroms, int amount, int base_price_gr, bool prescription, std::string pills_type)
 {
-	std::unique_ptr<Pills> APills = std::make_unique<Pills>(name, producer, substance, amount, base_price_gr, pills_type);
+	std::unique_ptr<Pills> APills = std::make_unique<Pills>(name, producer, substance, syndroms, amount, base_price_gr, prescription, pills_type);
 	APills->set_position(pills_num + 101);
 	med_database.push_back(std::move(APills));
 	med_database.sort();
 	pills_num++;
 }
-void MDatabase::add_Drops(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, std::string drops_type)
+void MDatabase::add_Drops(std::string name, std::string producer, std::string substance, std::vector<std::string> syndroms, int amount, int base_price_gr, bool prescription, std::string drops_type)
 {
-	std::unique_ptr<Drops> ADrops = std::make_unique<Drops>(name, producer, substance, amount, base_price_gr, drops_type);
+	std::unique_ptr<Drops> ADrops = std::make_unique<Drops>(name, producer, substance, syndroms, amount, base_price_gr, prescription, drops_type);
 	ADrops->set_position(drops_num + 201);
 	med_database.push_back(std::move(ADrops));
 	med_database.sort();
 	drops_num++;
 }
-void MDatabase::add_Ointment(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, std::string ointment_type)
+void MDatabase::add_Ointment(std::string name, std::string producer, std::string substance, std::vector<std::string> syndroms, int amount, int base_price_gr, bool prescription, std::string ointment_type)
 {
-	std::unique_ptr<Ointment> ANOintment = std::make_unique<Ointment>(name, producer, substance, amount, base_price_gr, ointment_type);
+	std::unique_ptr<Ointment> ANOintment = std::make_unique<Ointment>(name, producer, substance, syndroms, amount, base_price_gr, prescription, ointment_type);
 	ANOintment->set_position(ointments_num + 301);
 	med_database.push_back(std::move(ANOintment));
 	med_database.sort();
