@@ -5,7 +5,7 @@ class Drops :
 {
     std::string drops_type;
 public:
-    Drops(std::string, std::string, std::string, int, int, std::string);
+    Drops(std::string, std::string, std::string, int, int, bool, std::string);
     void print(std::ostream&) const noexcept override;
     void calculate_price() override;
     std::string get_drops_type() const noexcept;

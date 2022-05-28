@@ -1,0 +1,12 @@
+headache
+stomachache
+cuts
+scrapes
+burns
+bites
+hemorrhoids
+dry-cough
+wet-cough
+dry-eye
+allergy
+eye-redness

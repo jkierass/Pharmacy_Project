@@ -1,6 +1,6 @@
 #include "ointment.h"
 
-Ointment::Ointment(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, std::string ointment_type) : Medicine(name, producer, substance, amount, base_price_gr)
+Ointment::Ointment(std::string name, std::string producer, std::string substance, int amount, int base_price_gr, bool receipt, std::string ointment_type) : Medicine(name, producer, substance, amount, base_price_gr, receipt)
 {
 	this->ointment_type = ointment_type;
 	this->med_type = "Ointment";
@@ -17,7 +17,7 @@ void Ointment::calculate_price() noexcept		// 15% tax
 void Ointment::print(std::ostream& os) const noexcept
 {
 	os << "Type: Ointment\nName: " << name << "\nProducer: " << producer << "\nSubstance: " << substance <<
-		"\nCapacity: " << amount << " ml\nPosition: " << position << "\nBase price:" << (double)base_price_gr / 100 << "\nTaxed price: " << calculated_price << "\nType of symptom: " << ointment_type << std::endl << std::endl;
+		"\nCapacity: " << amount << " ml\nPosition: " << position << "\nBase price:" << (double)base_price_gr / 100 << "\nTaxed price: " << calculated_price << "\nOintment type: " << ointment_type << std::endl << std::endl;
 }
 
 
