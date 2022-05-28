@@ -32,10 +32,8 @@ Ointment 2 Traumon Mylan etofenamatum back_pain skin_inflammation 50 3100 0 gel
 Ointment 3 Ibuprom_sport US ibuprofenum muscle_pain back_pain arthritis 25 4500 0 gel
 Ointment 2 Octenisept Schulke octenidinum cuts disinfection 50 2800 0 spray
 
-Drops
-
-2 Krople_zolodkowe Aflofarm ethanol stomachache diarrhea 35 400 0 solution
-2 Lacrimal Polfa_Warszawa hyaluronic_acid eye-redness dry-eye 10 1200 0 solution
-2 THEALOZ_DUO Thea hyaluronic_acid eye-redness dry-eye 10 4100 1 slime
-1 Sinex Vicks eucalyptus runny_nose 15 2100 0 solution
-1 Acatar USP eucalyptus runny_nose 15 1900 0 slime
+Drops 2 Krople_zolodkowe Aflofarm ethanol stomachache diarrhea 35 400 0 solution
+Drops 2 Lacrimal Polfa_Warszawa hyaluronic_acid eye-redness dry-eye 10 1200 0 solution
+Drops 2 THEALOZ_DUO Thea hyaluronic_acid eye-redness dry-eye 10 4100 1 slime
+Drops 1 Sinex Vicks eucalyptus runny_nose 15 2100 0 solution
+Drops 1 Acatar USP eucalyptus runny_nose 15 1900 0 slime
