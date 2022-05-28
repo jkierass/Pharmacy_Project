@@ -7,5 +7,5 @@ int main()
 
 	std::cout << de.get_id();
 
-	return 0;
+	return 1;
 }
