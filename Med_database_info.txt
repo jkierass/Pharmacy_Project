@@ -16,13 +16,11 @@ Pills 1 Lafactin Aurovitas Venlafaxinum depression 28 3300 1 swallow
 Pills 2 Memotropil Polpharma Piracetamum memory_disorder 30 4000 1 swallow
 Pills 1 Stopperan UPS Loperamid diarrhea 20 1150 0 swallow
 Pills 2 Memotropil Polpharma Piracetamum memory_disorder after_stroke 30 4000 1 swallow
-
 Syrup 2 Thiocodin Unia Codeine_phosphoran dry_cough wet_cough 200 1200 0 medicated
 Syrup 1 Pelavo USP Pelargonia runny_nose 150 800 0 flavoured
 Syrup 1 Sinulan Walmark herb_extract sinus 250 1300 0 simple
 Syrup 1 Marshmallow_syrup Hasco polisacharids throatache 150 700 0 simple
 Syrup 2 Antussimin Doz Malva_aborea throat_irritation dry_cough 120 1700 0 flavoured
-
 Ointment 1 RECTOstop Pharmacy_Laboratories aloe hemorrhoids 200 1400 0 gel
 Ointment 2 Altacet Bayer ethanol scrapes bruises 75 1000 0 gel
 Ointment 1 Acnex Gomed bisabolol acne 35 1300 0 cream
@@ -31,7 +29,6 @@ Ointment 1 Heparinum Glaxo heparinum skin_inflammation 30 2800 0 cream
 Ointment 2 Traumon Mylan etofenamatum back_pain skin_inflammation 50 3100 0 gel
 Ointment 3 Ibuprom_sport US ibuprofenum muscle_pain back_pain arthritis 25 4500 0 gel
 Ointment 2 Octenisept Schulke octenidinum cuts disinfection 50 2800 0 spray
-
 Drops 2 Krople_zolodkowe Aflofarm ethanol stomachache diarrhea 35 400 0 solution
 Drops 2 Lacrimal Polfa_Warszawa hyaluronic_acid eye-redness dry-eye 10 1200 0 solution
 Drops 2 THEALOZ_DUO Thea hyaluronic_acid eye-redness dry-eye 10 4100 1 slime
