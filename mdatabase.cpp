@@ -100,30 +100,17 @@ Medicine MDatabase::find_by_name(std::string name) const
 	throw MedicineNotFoundException(name);
 }
 
-//std::unique_ptr<Medicine> MDatabase::find_by_position(int pos) const
-//{
-//	for (const auto& Medicine_ptr : med_database)
-//	{
-//		if (Medicine_ptr->get_position() == pos)
-//		{
-//			std::unique_ptr<Medicine> ptr = std::make_unique<Medicine>(Medicine_ptr);
-//			return &ptr;
-//		}
-//	}
-//	throw MedicineNotFoundException(pos);
-//}
-//std::unique_ptr<Medicine> MDatabase::find_by_name(std::string name) const
-//{
-//	for (const auto& Medicine_ptr : med_database)
-//	{
-//		if (Medicine_ptr->get_name() == name)
-//		{
-//			std::unique_ptr<Medicine> ptr = std::make_unique<Medicine>(Medicine_ptr);
-//			return ptr;
-//		}
-//	}
-//	throw MedicineNotFoundException(name);
-//}
+void MDatabase::print_by_name(std::string name) const
+{
+	for (const auto& Medicine_ptr : med_database)
+	{
+		if (Medicine_ptr->get_name() == name)
+		{
+			std::cout << *Medicine_ptr;
+		}
+	}
+	throw MedicineNotFoundException(name);
+}
 
 // operator to compare objects by position (to use it in sorting)
 
