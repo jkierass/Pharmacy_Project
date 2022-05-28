@@ -15,7 +15,7 @@ Pills
 3 Efferalgan_Codeine Bayer Codeine pain cough headache 10 2500 1 effervescent
 1 Alventa Krka Venlafaxinum depression 28 2700 1 swallow
 1 Lafactin Aurovitas Venlafaxinum depression 28 3300 1 swallow
-2 Memotropil Polpharma Piracetamum memory_disorder 30 4000 1 swallow
+2 Memotropil Polpharma Piracetamum memory_disorder after_stroke 30 4000 1 swallow
 
 Syrup
 
@@ -27,6 +27,10 @@ Syrup
 
 Ointment
 
+1 Heparinum Glaxo heparinum skin_inflammation 30 2800 0 cream
+2 Traumon Mylan etofenamatum back_pain skin_inflammation 50 3100 0 gel
+3 Ibuprom_sport US ibuprofenum muscle_pain back_pain arthritis 25 4500 0 gel
+2 Octenisept Schulke octenidinum cuts disinfection 50 2800 0 spray
 
 
 Drops
