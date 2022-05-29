@@ -76,8 +76,27 @@ std::vector<Client> RandomObjectsGenerator::generate_clients_vector(int max_numb
 	return clients;
 }
 
-std::vector<Pharmacist> RandomObjectsGenerator::generate_pharmacists()
+std::vector<Pharmacist> RandomObjectsGenerator::generate_pharmacists(int max_number, MDatabase database)
 {
 	std::vector<Pharmacist> pharmacists;
+
+	std::random_device r;
+	std::default_random_engine generator(r());
+	std::uniform_int_distribution<int> num_pharmacist(1, max_number);
+	int pharmacists_number = num_pharmacist(generator);
+
+	return pharmacists;
+
+	for (int i = 1; i <= pharmacists_number; i++)
+	{
+
+		std::uniform_int_distribution<int> id_gen(1000, 9999);
+
+		int number = id_gen(generator);
+		Pharmacist pharmacist(number, database);
+
+		pharmacists.push_back(pharmacist);
+	}
+
 	return pharmacists;
 }

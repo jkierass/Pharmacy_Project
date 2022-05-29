@@ -14,8 +14,8 @@ int main()
 	std::string path_name = "name.txt";
 	Database_meds_reader database_reader_file(path);
 	MDatabase my_database;
-	/*my_database = database_reader_file.read_database();
-	my_database.print_all_data();*/
+	my_database = database_reader_file.read_database();
+	//my_database.print_all_data();
 
 	TxtFile file(path_name, path_symptoms);
 

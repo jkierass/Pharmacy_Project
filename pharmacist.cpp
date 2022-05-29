@@ -1,9 +1,9 @@
 #include "pharmacist.h"
 #include <random>
 
-Pharmacist::Pharmacist(MDatabase pharmacist_knowledge)
+Pharmacist::Pharmacist(int id, MDatabase pharmacist_knowledge)
 {
-	this->id = set_id();
+	set_id(id);
 	this->pharmacist_knowledge = pharmacist_knowledge;
 }
 
@@ -12,15 +12,9 @@ int Pharmacist::get_id()
 	return this->id;
 }
 
-int Pharmacist::set_id()
+int Pharmacist::set_id(int id)
 {
-	std::random_device r;
-	std::default_random_engine generator(r());
-	std::uniform_int_distribution<int> id_gen(1000, 9999);
-	 
-	int number = id_gen(generator);
-
-	return number;
+	this->id = id;
 }
 
 std::vector<Medicine> Pharmacist::choose_medicines(std::vector<std::string> patient_symptoms)
