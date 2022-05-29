@@ -6,8 +6,9 @@ class Pharmacist
 {
 	int id;
 	MDatabase pharmacist_knowledge;
+
 public:
-	Pharmacist(MDatabase pharmacist_knowledge);
+	Pharmacist(int id, MDatabase database);
 	std::vector<Medicine> choose_medicines(std::vector<std::string>);
 	int get_id();
 	int set_id();

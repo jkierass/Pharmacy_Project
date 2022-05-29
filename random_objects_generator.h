@@ -3,6 +3,8 @@
 #include "client.h"
 #include <random>
 #include "pharmacist.h"
+#include "mdatabase.h"
+#include "window.h"
 
 class RandomObjectsGenerator
 {
@@ -21,5 +23,7 @@ public:
 
 	std::vector<Client> generate_clients_vector(int max_number);
 
-	std::vector<Pharmacist> generate_pharmacists();
+	std::vector<Pharmacist> generate_pharmacists(int max_number, MDatabase database);
+
+	std::vector<Window> generate_windows(int max_number);
 };
