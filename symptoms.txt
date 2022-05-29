@@ -1,1 +1,24 @@
-pain fever inflammation schizophrenia allergy throatache insomnia pain food_poisoning stomachache fever inflammation bacterial_flore depression depression insomnia cystitis cold flu headache pain cough headache depression depression diarrhea memory_disorder after_stroke dry_cough wet_cough runny_nose sinus throatache throat_irritation dry_cough
+fever
+inflammation
+schizophrenia
+allergy
+throatache
+pain
+food_poisoning
+stomachache
+fever
+bacterial_flore
+depression
+insomnia
+cystitis
+cold
+cough
+headache
+diarrhea
+memory_disorder
+after_stroke
+dry_cough
+wet_cough
+runny_nose
+sinus
+throat_irritation
