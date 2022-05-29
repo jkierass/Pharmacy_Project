@@ -11,9 +11,3 @@ public:
     std::string get_drops_type() const noexcept;
     void set_drops_type(std::string);
 };
-
-/*
-Artificial tears.
-Allergy drops.
-Anti-redness drops.
-*/

@@ -11,10 +11,3 @@ public:
     std::string get_pills_type() const noexcept;
     void set_pills_type(std::string);
 };
-
-/*
-* Chewable tablets
-* Orally disintegrating tablets
-* Sublingual tablets
-* Effervescent tablets
-*/

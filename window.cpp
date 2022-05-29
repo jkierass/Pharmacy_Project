@@ -25,3 +25,8 @@ void Window::status_close()
 {
 	is_open = false;
 }
+
+void Window::start_action()
+{
+
+}

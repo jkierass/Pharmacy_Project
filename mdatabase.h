@@ -7,9 +7,11 @@
 #include "drops.h"
 #include "syrup.h"
 #include "pills.h"
+#include "pharmacist.h"
 
 class MDatabase
 {
+	friend class Pharmacist;
 	std::list<std::unique_ptr<Medicine>> med_database;
 	int syrups_num = 0;
 	int pills_num = 0;

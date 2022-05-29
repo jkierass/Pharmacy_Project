@@ -11,10 +11,3 @@ public:
     std::string get_ointment_type() const noexcept;
     void set_ointment_type(std::string);
 };
-
-/*
-Cuts and scrapes
-Burns
-Bites
-Hemorrhoids
-*/

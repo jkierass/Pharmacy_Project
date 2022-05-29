@@ -11,8 +11,3 @@ public:
     std::string get_cough_type() const noexcept;
     void set_caugh_type(std::string);
 };
-
-/*
-* dry
-* wet
-*/
