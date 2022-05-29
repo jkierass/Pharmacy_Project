@@ -1,6 +1,5 @@
 #pragma once
 #include "pharmacist.h"
-#include <random>
 
 Pharmacist::Pharmacist(int id, MDatabase pharmacist_knowledge)
 {
