@@ -9,7 +9,7 @@ private:
 	bool is_open;
 	bool is_empty;
 	Client window_client;
-	Pharmacist window_pharmacist;
+//	Pharmacist window_pharmacist;
 
 public:
 	Window();
