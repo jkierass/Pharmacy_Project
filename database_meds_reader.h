@@ -3,11 +3,11 @@
 #include <iostream>
 #include "mdatabase.h"
 
-class Database_reader
+class Database_meds_reader
 {
 	std::string path;
 public:
-	Database_reader(std::string path);
+	Database_meds_reader(std::string path);
 	MDatabase read_database();
 };
 

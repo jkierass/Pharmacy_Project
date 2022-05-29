@@ -1,11 +1,11 @@
-#include "database_reader.h"
+#include "database_meds_reader.h"
 
-Database_reader::Database_reader(std::string path)
+Database_meds_reader::Database_meds_reader(std::string path)
 {
 	this->path = path;
 }
 
-MDatabase Database_reader::read_database()
+MDatabase Database_meds_reader::read_database()
 {
 	std::ifstream file_handler;
 	MDatabase my_database;
