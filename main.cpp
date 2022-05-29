@@ -12,9 +12,10 @@ int main()
 	std::string path_symptoms = "symptoms_patient.txt";
 	std::string path = "Med_database_info.txt";
 	std::string path_name = "name.txt";
-	Database_meds_reader database_reader_file(path);
-	MDatabase pharmacist_knowledge;
-	pharmacist_knowledge = database_reader_file.read_database();
+
+	//Database_meds_reader database_reader_file(path);
+	//MDatabase pharmacist_knowledge;
+	//pharmacist_knowledge = database_reader_file.read_database();
 	//my_database.print_all_data();
 
 	//std::vector<std::string> patient_symptoms = { "after_stroke", "dry_cough", "wet_cough", "runny_nose", "sinus"};
