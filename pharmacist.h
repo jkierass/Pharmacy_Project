@@ -11,7 +11,7 @@ public:
 	Pharmacist(int id, MDatabase database);
 	std::vector<Medicine> choose_medicines(std::vector<std::string>);
 	int get_id();
-	int set_id();
+	int set_id(int id);
 };
 
 struct chosen_medicine
