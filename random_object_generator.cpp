@@ -85,8 +85,6 @@ std::vector<Pharmacist> RandomObjectsGenerator::generate_pharmacists(int max_num
 	std::uniform_int_distribution<int> num_pharmacist(1, max_number);
 	int pharmacists_number = num_pharmacist(generator);
 
-	return pharmacists;
-
 	for (int i = 1; i <= pharmacists_number; i++)
 	{
 
@@ -99,4 +97,20 @@ std::vector<Pharmacist> RandomObjectsGenerator::generate_pharmacists(int max_num
 	}
 
 	return pharmacists;
+}
+
+std::vector<Window> RandomObjectsGenerator::generate_windows(int max_number)
+{
+	std::vector<Window> windows;
+
+	std::random_device r;
+	std::default_random_engine generator(r());
+	std::uniform_int_distribution<int> num_windows(1, max_number);
+	int windows_number = num_windows(generator);
+
+	for (int i = 1; i <= windows_number; i++)
+	{
+		windows.push_back(Window());
+	}
+	return windows;
 }
