@@ -4,6 +4,7 @@
 
 class Pharmacist
 {
+	friend class MDatabase;
 	int id;
 	MDatabase pharmacist_knowledge;
 
