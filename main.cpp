@@ -8,7 +8,8 @@
 
 int main()
 {
-	std::string path = "C:\\Users\\jakub\\source\\repos\\Pharmacy_projekt\\Med_database_info.txt";
+	std::string path_name = "symptoms_patient.txt";
+	std::string path = "Med_database_info.txt";
 	Database_meds_reader database_reader_file(path);
 	MDatabase my_database;
 	my_database = database_reader_file.read_database();

@@ -2,58 +2,83 @@
 #include <string>
 #include "txt_file.h"
 
-TxtFile::TxtFile(std::string path)
+TxtFile::TxtFile(std::string path_name, std::string path_symptoms)
 {
-    set_path(path);
+    set_path_name(path_name);
+    set_path_symptoms(path_symptoms);
 }
 
-void TxtFile::set_path(std::string path)
+void TxtFile::set_path_name(std::string path_name)
 {
-    this->path = path;
+    this->path_name = path_name;
 }
 
-std::string TxtFile::get_path()
+void TxtFile::set_path_symptoms(std::string path_symptoms)
 {
-    return path;
+    this->path_symptoms = path_symptoms;
 }
 
-std::ifstream& TxtFile::get_file()
+std::list<std::string> TxtFile::read_names()
 {
-    return file;
+    std::ifstream file_handle;
+    std::list<std::string> names;
+
+    file_handle.open(path_name.c_str());
+
+	if (!file_handle.fail())
+	{
+		if (file_handle.is_open())
+		{
+			std::string name;
+			do
+			{
+				file_handle >> name;
+                names.push_back(name);
+				
+			} while(!file_handle.eof());
+			file_handle.close();
+		}
+		else
+		{
+			throw std::invalid_argument("not opened");
+		}
+	}
+	else
+	{
+		throw std::invalid_argument("not found");
+	}
+
+    return names;
 }
 
-bool TxtFile::openFile()
+std::list<std::string> TxtFile::read_symptoms()
 {
-    file.open(path.c_str());
-    if (!file.good())
-        throw std::invalid_argument("This file does not exist");
-    return true;
-}
+	std::ifstream file_handle;
+	std::list<std::string> symptoms;
 
-bool TxtFile::closeFile()
-{
-    file.close();
-    return true;
-}
+	file_handle.open(path_symptoms.c_str());
 
-Client TxtFile::create_client(std::string name, std::vector<std::string> symptoms)
-{
-    return Client(name, symptoms);
-}
+	if (!file_handle.fail())
+	{
+		if (file_handle.is_open())
+		{
+			std::string symptom;
+			do
+			{
+				file_handle >> symptom;
+				symptoms.push_back(symptom);
 
-int TxtFile::lines_num()
-{
-    std::string line;
-    int count = 0;
-
-    if (file.is_open())
-    {
-        while (file.peek() != EOF)
-        {
-            std::getline(file, line);
-            count++;
-        }
-    }
-
-    return count;
+			} while (!file_handle.eof());
+			file_handle.close();
+		}
+		else
+		{
+			throw std::invalid_argument("not opened");
+		}
+	}
+	else
+	{
+		throw std::invalid_argument("not found");
+	}
+	return symptoms;
 }

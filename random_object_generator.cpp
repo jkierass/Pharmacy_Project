@@ -4,27 +4,38 @@
 #include <ctime>
 #include "txt_file.h"
 
-RandomObjectsGenerator::RandomObjectsGenerator() {};
+RandomObjectsGenerator::RandomObjectsGenerator(std::list<std::string> names, std::list<std::string> symptoms)
+{
+	set_names(names);
+	set_symptoms(symptoms);
+}
+
+void RandomObjectsGenerator::set_names(std::list<std::string> names)
+{
+	this->names = names;
+}
+
+void RandomObjectsGenerator::set_symptoms(std::list<std::string> symptoms)
+{
+	this->symptoms = symptoms;
+}
 
 std::vector<std::string> RandomObjectsGenerator::generate_symptoms()
 {
-	std::string path_name = "symptoms_patient.txt";
 	std::random_device r;
 	std::default_random_engine generator(r());
 	std::uniform_int_distribution<int> sym_gen(1, 3);
 	int symptoms_num = sym_gen(generator);
 
 	std::vector<std::string> symptoms;
-
-	TxtFile name_file(path_name);
-	name_file.openFile();
-	int line_number = name_file.lines_num();
+	symptoms_num = symptoms.size();
 
 	for (int i = 0; i <= symptoms_num; i++)
 	{
 		std::string symptom;
 
-		std::uniform_int_distribution<int> line_gen(1, line_number);
+		std::uniform_int_distribution<int> line_gen(1, symptoms_num);
+
 		int line = line_gen(generator);
 
 		for (int i = 1; i < line+1; i++)
@@ -45,7 +56,7 @@ std::vector<std::string> RandomObjectsGenerator::generate_symptoms()
 	return symptoms;
 }
 
-std::vector<Client> RandomObjectsGenerator::generate_clients()
+std::vector<Client> RandomObjectsGenerator::generate_queue()
 {
 	std::string path_name = "name.txt";
 	std::string name;
@@ -84,4 +95,9 @@ std::vector<Client> RandomObjectsGenerator::generate_clients()
 	name_file.closeFile();
 
 	return clients;
+}
+
+std::vector<Pharmacist> RandomObjectsGenerator::generate_pharmacists()
+{
+
 }

@@ -2,8 +2,8 @@
 
 Window::Window()
 {
-	bool is_open = false;
-	bool is_empty = true;
+	this->is_open = false;
+	this->is_empty = true;
 }
 
 void Window::status_empty()

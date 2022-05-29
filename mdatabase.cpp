@@ -142,3 +142,12 @@ bool operator<(const std::unique_ptr<Medicine>& Med, const std::unique_ptr<Medic
 	return Med2->get_position() < Med->get_position();
 }
 
+void MDatabase::set_names(std::list<std::string> names)
+{
+	this->names = names;
+}
+
+void MDatabase::set_symptoms(std::list<std::string> symptoms)
+{
+	this->symptoms = symptoms;
+}

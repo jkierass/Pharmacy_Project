@@ -2,27 +2,22 @@
 #include <fstream>
 #include <string>
 #include "client.h"
+#include <list>
 
 class TxtFile
 {
 private:
-    std::string path;
-    std::ifstream file;
+    std::string path_name;
+    std::string path_symptoms;
 
 public:
-    TxtFile(std::string path);
+    TxtFile(std::string path_name, std::string path_symptoms);
 
-    void set_path(std::string path);
-    std::string get_path();
+    void set_path_name(std::string path_name);
+    void set_path_symptoms(std::string path_symptoms);
 
-    Client create_client(std::string name, std::vector<std::string> symptoms);
+    std::list<std::string> read_names();
+    std::list<std::string> read_symptoms();
 
-    std::ifstream& get_file();
-
-    int lines_num();
-
-    bool openFile();
-
-    bool closeFile();
-
+    int lines_num(std::string path);
 };
