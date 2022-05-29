@@ -16,8 +16,12 @@ void Ointment::calculate_price() noexcept		// 15% tax
 
 void Ointment::print(std::ostream& os) const noexcept
 {
-	os << "Type: Ointment\nName: " << name << "\nProducer: " << producer << "\nSubstance: " << substance <<
-		"\nCapacity: " << amount << " ml\nPosition: " << position << "\nBase price:" << (double)base_price_gr / 100 << "\nTaxed price: " << calculated_price << "\nOintment type: " << ointment_type << std::endl << std::endl;
+	os << "Type: Ointment\nName: " << name << "\nProducer: " << producer << "\nSubstance: " << substance << "\nPrescripted: " << prescription << "\nPosition : " << position << "\nSymptoms : ";
+	for (int i = 0; i < symptoms.size(); i++)
+	{
+		os << symptoms[i] + " ";
+	}
+	os << "\nBase price: " << (double)base_price_gr / 100 << " zl\nTaxed price: " << calculated_price << " zl\nOintment consistency: " << ointment_type << std::endl << std::endl;
 }
 
 

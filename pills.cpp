@@ -16,8 +16,12 @@ void Pills::calculate_price() noexcept		// 8% tax
 
 void Pills::print(std::ostream& os) const noexcept
 {
-	os << "Type: Pills\nName: " << name << "\nProducer: " << producer << "\nSubstance: " << substance <<
-		"\nAmount: " << amount << " tablets\nPosition: " << position << "\nBase price:" << (double)base_price_gr / 100 << "\nTaxed price: " << calculated_price << "\nType of dosing: "<< pills_type << std::endl << std::endl;
+	os << "Type: Pills\nName: " << name << "\nProducer: " << producer << "\nSubstance: " << substance << "\nPrescripted: " << prescription << "\nPosition : " << position << "\nSymptoms : ";
+	for (int i = 0; i < symptoms.size(); i++)
+	{
+		os << symptoms[i] + " ";
+	}
+	os << "\nBase price: " << (double)base_price_gr / 100 << " zl\nTaxed price: " << calculated_price << " zl\nTaxed price: " << calculated_price << "\nType of dosing: "<< pills_type << std::endl << std::endl;
 }
 
 

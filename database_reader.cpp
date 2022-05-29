@@ -25,7 +25,6 @@ MDatabase Database_reader::read_database()
 			bool tmp_prescription;
 			std::string tmp_special_type;
 			std::string tmp_symptom;
-			int a = 0;
 			do
 			{
 				file_handler >> argument >> tmp_symptoms_num >> tmp_name >> tmp_producer >> tmp_substance;
@@ -59,8 +58,8 @@ MDatabase Database_reader::read_database()
 				{
 					my_database.add_Drops(tmp_name, tmp_producer, tmp_substance, tmp_symptoms, tmp_amount, tmp_base_price_gr, tmp_prescription, tmp_special_type);
 				}
-				a++;
-			} while(a < 10);
+				tmp_symptoms.clear();
+			} while(!file_handler.eof());
 			file_handler.close();
 		}
 		else

@@ -6,6 +6,7 @@ private:
 	bool is_open;
 	bool is_empty;
 public:
+	Window();
 	void status_close();
 	void status_open();
 

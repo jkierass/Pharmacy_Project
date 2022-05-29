@@ -16,8 +16,12 @@ void Drops::calculate_price()		// 12% tax
 
 void Drops::print(std::ostream& os) const noexcept
 {
-	os << "Type: Drops\nName: " << name << "\nProducer: " << producer << "\nSubstance: " << substance <<
-		"\nCapacity: " << amount << " ml\nPosition: " << position << "\nBase price:" << (double)base_price_gr / 100 << "\nTaxed price: " << calculated_price << "\nDrops type: " << drops_type << std::endl << std::endl;
+	os << "Type: Drops\nName: " << name << "\nProducer: " << producer << "\nSubstance: " << substance << "\nPrescripted: " << prescription << "\nPosition : " << position << "\nSymptoms : ";
+		for (int i = 0; i < symptoms.size(); i++)
+		{
+			os << symptoms[i] + " ";
+		}
+	os << "\nBase price: " << (double)base_price_gr / 100 << " zl\nTaxed price: " << calculated_price << " zl\nDrops type: " << drops_type << std::endl << std::endl;
 }
 
 
