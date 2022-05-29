@@ -1,11 +1,9 @@
 #pragma once
 #include "pharmacist.h"
-#include <algorithm>
 
-Pharmacist::Pharmacist(int id, MDatabase pharmacist_knowledge)
+Pharmacist::Pharmacist(int id)
 {
 	set_id(id);
-	this->pharmacist_knowledge = pharmacist_knowledge;
 }
 
 int Pharmacist::get_id()
@@ -18,7 +16,7 @@ void Pharmacist::set_id(int id)
 	this->id = id;
 }
 
-std::vector<Medicine> Pharmacist::choose_medicines(std::vector<std::string> patient_symptoms)
+std::vector<Medicine> Pharmacist::choose_medicines(std::vector<std::string> patient_symptoms, MDatabase& pharmacist_knowledge)
 {
 	std::vector<std::string> tmp_symptoms = patient_symptoms;
 	std::vector<chosen_medicine> tmp_chosen_meds;
@@ -56,5 +54,6 @@ std::vector<Medicine> Pharmacist::choose_medicines(std::vector<std::string> pati
 			}
 		}
 	}
+	return medicines;
 	//tmp_Medicines.push_back(pharmacist_knowledge.find_by_name(medicine_ptr->get_name()));
 }
