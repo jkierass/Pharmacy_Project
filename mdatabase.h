@@ -1,13 +1,11 @@
 #pragma once
 #include <list>
 #include <memory>
-#include <map>
 #include "medicine.h"
 #include "ointment.h"
 #include "drops.h"
 #include "syrup.h"
 #include "pills.h"
-#include "pharmacist.h"
 
 class MDatabase
 {
