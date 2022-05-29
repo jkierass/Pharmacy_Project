@@ -92,6 +92,11 @@ bool Medicine::get_prescription() const
 {
 	return prescription;
 }
+
+std::vector<std::string> Medicine::get_symptoms() const
+{
+	return symptoms;
+}
 // virtual methods
 
 void Medicine::print(std::ostream& os) const

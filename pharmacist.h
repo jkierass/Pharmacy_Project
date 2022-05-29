@@ -1,15 +1,16 @@
 #pragma once
 #include "mdatabase.h"
 #include <vector>
+#include <algorithm>
+
 
 class Pharmacist
 {
 	int id;
-	MDatabase pharmacist_knowledge;
 
 public:
-	Pharmacist(int id, MDatabase database);
-	std::vector<Medicine> choose_medicines(std::vector<std::string>);
+	Pharmacist(int id);
+	std::vector<Medicine> choose_medicines(std::vector<std::string>, MDatabase&);
 	int get_id();
 	void set_id(int id);
 };
