@@ -18,10 +18,10 @@ void TxtFile::set_path_symptoms(std::string path_symptoms)
     this->path_symptoms = path_symptoms;
 }
 
-std::list<std::string> TxtFile::read_names()
+std::vector<std::string> TxtFile::read_names()
 {
     std::ifstream file_handle;
-    std::list<std::string> names;
+    std::vector<std::string> names;
 
     file_handle.open(path_name.c_str());
 
@@ -51,10 +51,10 @@ std::list<std::string> TxtFile::read_names()
     return names;
 }
 
-std::list<std::string> TxtFile::read_symptoms()
+std::vector<std::string> TxtFile::read_symptoms()
 {
 	std::ifstream file_handle;
-	std::list<std::string> symptoms;
+	std::vector<std::string> symptoms;
 
 	file_handle.open(path_symptoms.c_str());
 

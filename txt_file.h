@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include "client.h"
-#include <list>
+#include <vector>
 
 class TxtFile
 {
@@ -16,8 +16,6 @@ public:
     void set_path_name(std::string path_name);
     void set_path_symptoms(std::string path_symptoms);
 
-    std::list<std::string> read_names();
-    std::list<std::string> read_symptoms();
-
-    int lines_num(std::string path);
+    std::vector<std::string> read_names();
+    std::vector<std::string> read_symptoms();
 };
