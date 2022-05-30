@@ -18,12 +18,12 @@ int main()
 	//my_database.print_all_data();
 
 	std::vector<std::string> patient_symptoms = { "after_stroke", "dry_cough", "wet_cough"};
-	std::vector<std::string> tmp_symptoms = patient_symptoms;
-	std::vector<chosen_medicine> tmp_chosen_meds;
 	std::vector<Medicine> medicines;
-	chosen_medicine tmp_med;
-	std::string tmp_med_name;
-
-
+	Pharmacist John(121);
+	medicines = John.choose_medicines(patient_symptoms, pharmacist_knowledge);
+	for(int i = 0; i<medicines.size(); i++)
+	{
+		std::cout << medicines[i] << std::endl;
+	}
 	return 0;
 }
