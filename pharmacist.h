@@ -9,6 +9,7 @@ class Pharmacist
 	int id;
 
 public:
+	Pharmacist();
 	Pharmacist(int id);
 	std::vector<Medicine> choose_medicines(std::vector<std::string>, MDatabase&);
 	int get_id();

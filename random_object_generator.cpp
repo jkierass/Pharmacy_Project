@@ -106,9 +106,11 @@ std::vector<Window> RandomObjectsGenerator::generate_windows(int max_number)
 	std::uniform_int_distribution<int> num_windows(1, max_number);
 	int windows_number = num_windows(generator);
 
+	Window window;
+
 	for (int i = 1; i <= windows_number; i++)
 	{
-		windows.push_back(Window());
+		windows.push_back(window);
 	}
 	return windows;
 }

@@ -12,6 +12,8 @@ private:
 	Pharmacist window_pharmacist;
 
 public:
+	Window();
+
 	void start_action();
 
 	void status_close();

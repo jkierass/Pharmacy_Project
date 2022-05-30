@@ -1,5 +1,7 @@
 #include "window.h"
 
+Window::Window() {};
+
 void Window::status_empty()
 {
 	is_empty = true;
