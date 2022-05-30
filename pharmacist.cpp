@@ -1,6 +1,8 @@
 #pragma once
 #include "pharmacist.h"
 
+Pharmacist::Pharmacist() {};
+
 Pharmacist::Pharmacist(int id)
 {
 	set_id(id);

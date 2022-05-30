@@ -6,17 +6,21 @@
 class Window
 {
 private:
-	bool is_open;
-	bool is_empty;
+	bool is_open = false;
+	bool is_empty = true;
 	Client window_client;
-//	Pharmacist window_pharmacist;
+	Pharmacist window_pharmacist;
 
 public:
 	Window();
+
 	void start_action();
+
 	void status_close();
 	void status_open();
-
 	void status_busy();
 	void status_empty();
+
+	void set_pharmacist(Pharmacist pharmacist);
+	void set_client(Client client);
 };

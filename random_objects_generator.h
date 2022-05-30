@@ -23,7 +23,7 @@ public:
 
 	std::vector<Client> generate_clients_vector(int max_number);
 
-	std::vector<Pharmacist> generate_pharmacists(int max_number, MDatabase database);
+	std::vector<Pharmacist> generate_pharmacists(int max_number);
 
 	std::vector<Window> generate_windows(int max_number);
 };
