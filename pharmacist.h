@@ -13,10 +13,13 @@ public:
 	Pharmacist();
 	Pharmacist(int id);
 	std::vector<Medicine> choose_medicines(Client, MDatabase&);
-	Medicine choose_cheaper_replacement(Client, MDatabase&, Medicine);
+	//Medicine choose_cheaper_replacement(Client, MDatabase&, Medicine);
 	int get_id();
 	void set_id(int id);
+	friend std::ostream& operator<<(std::ostream& os, const Pharmacist& pharmacist);
 };
+
+std::ostream& operator<<(std::ostream& os, const Pharmacist& pharmacist);
 
 struct chosen_medicine
 {

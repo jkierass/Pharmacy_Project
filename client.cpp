@@ -23,6 +23,11 @@ void Client::set_action(std::string action)
 	this->action = action;
 }
 
+void Client::set_basket(std::vector<Medicine> basket)
+{
+	this->basket = basket;
+}
+
 std::string Client::get_name()
 {
 	return this->name;
@@ -35,6 +40,6 @@ std::vector<std::string> Client::get_symptoms()
 
 std::ostream& operator<<(std::ostream& os, const Client& client)
 {
-	os << "Client: " << client.name << client.action << std::endl;
+	os << "Client: " << client.name << " Action: " << client.action << std::endl;
 	return os;
 }

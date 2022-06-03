@@ -50,3 +50,18 @@ Client& Window::get_client()
 {
 	return this->window_client;
 }
+
+Pharmacist Window::get_pharmacist()
+{
+	return this->window_pharmacist;
+}
+
+void Window::set_client_operation(int num)
+{
+	this->client_operation = num;
+}
+
+int Window::get_client_operation()
+{
+	return this->client_operation;
+}

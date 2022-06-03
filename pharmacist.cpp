@@ -82,7 +82,13 @@ std::vector<Medicine> Pharmacist::choose_medicines(Client my_client, MDatabase& 
 	return medicines;
 }
 
-Medicine choose_cheaper_replacement(Client my_client, MDatabase& pharmacist_knowledge, Medicine med_to_replace)
+//Medicine choose_cheaper_replacement(Client my_client, MDatabase& pharmacist_knowledge, Medicine med_to_replace)
+//{
+//	
+//}
+
+std::ostream& operator<<(std::ostream& os, const Pharmacist& pharmacist)
 {
-	
+	os << "Pharmacist id " << pharmacist.id << " supports client" << std::endl;
+	return os;
 }

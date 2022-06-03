@@ -8,6 +8,7 @@ class Window
 private:
 	bool is_open = false;
 	bool is_empty = true;
+	int client_operation = 0;
 	Client window_client;
 	Pharmacist window_pharmacist;
 
@@ -20,9 +21,12 @@ public:
 
 	bool get_open_status();
 	bool get_empty_status();
+	int get_client_operation();
 
 	void set_pharmacist(Pharmacist pharmacist);
 	void set_client(Client client);
+	void set_client_operation(int num);
 
 	Client& get_client();
+	Pharmacist get_pharmacist();
 };
