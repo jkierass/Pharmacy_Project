@@ -9,6 +9,7 @@ class Client
 private:
 	std::string name;
 	std::vector<std::string> symptoms;
+	int logic_status = 1;
 
 public:
 	Client();
