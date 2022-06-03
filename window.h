@@ -21,6 +21,11 @@ public:
 	void status_busy();
 	void status_empty();
 
+	bool get_open_status();
+	bool get_empty_status();
+
 	void set_pharmacist(Pharmacist pharmacist);
 	void set_client(Client client);
+
+	Client get_client();
 };

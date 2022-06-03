@@ -2,6 +2,15 @@
 
 Window::Window() {};
 
+bool Window::get_open_status()
+{
+	return this->is_open;
+}
+bool Window::get_empty_status()
+{
+	return this->is_empty;
+}
+
 void Window::status_empty()
 {
 	is_empty = true;
@@ -37,4 +46,9 @@ void Window::set_client(Client client)
 {
 	this->window_client = client;
 	status_busy();
+}
+
+Client Window::get_client()
+{
+	return this->window_client;
 }
