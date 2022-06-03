@@ -48,7 +48,7 @@ void Window::set_client(Client client)
 	status_busy();
 }
 
-Client Window::get_client()
+Client& Window::get_client()
 {
 	return this->window_client;
 }

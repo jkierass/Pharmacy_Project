@@ -63,17 +63,22 @@ int main()
 		//Iterate throw windows. Clients make their actions
 		for (int i = 0; i < windows.size(); i++)
 		{
-			int action_number = generator.generate_number(6);
+			int action_number = generator.generate_number(3);
 			
 			switch (action_number)
 			{
 			case 1:
-					//kup leki
-					break;
+				windows[i].get_client().set_action(" buy medicines");
+				std::cout << windows[i].get_client() << std::endl;
+				break;
 			case 2:
+				windows[i].get_client().set_action(" leave Pharmacy");
+				std::cout << windows[i].get_client() << std::endl;
 				//nie kup (odejdŸ)
 				break;
 			case 3:
+				windows[i].get_client().set_action(" leave Pharmacy");
+				std::cout << windows[i].get_client() << std::endl;
 				//kup tañszy zamiennik
 				break;
 			case 4:

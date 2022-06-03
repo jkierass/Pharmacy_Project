@@ -27,5 +27,5 @@ public:
 	void set_pharmacist(Pharmacist pharmacist);
 	void set_client(Client client);
 
-	Client get_client();
+	Client& get_client();
 };
