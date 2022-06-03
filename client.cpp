@@ -4,6 +4,8 @@
 #include <string>
 #pragma once
 
+Client::Client() {}
+
 Client::Client(std::string name, std::vector<std::string> symptoms)
 {
 	this->set_name(name);

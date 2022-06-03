@@ -65,7 +65,7 @@ std::vector<Client> RandomObjectsGenerator::generate_clients_vector(int max_numb
 
 	std::random_device r;
 	std::default_random_engine generator(r());
-	std::uniform_int_distribution<int> num_client(0, max_number);
+	std::uniform_int_distribution<int> num_client(2, max_number);
 	int clients_number = num_client(generator);
 	
 	for (int i = 1; i <= clients_number; i++)

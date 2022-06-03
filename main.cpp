@@ -26,15 +26,15 @@ int main()
 
 	std::vector<Window> windows = generator.generate_windows(5);
 	Queue queue(generator.generate_clients_vector(10));
+	std::vector<Pharmacist> pharmacists;
 
 	//while (iteration_num > 0)
 	//{
-		iteration_num = iteration_num - 1;
 		/*Go to if when program start or in half program iterations.
 		It simulates shifts between Pharmacy employees*/
 		if (iteration_num == start_iteration || iteration_num == start_iteration / 2)
 		{
-			std::vector<Pharmacist> pharmacists = generator.generate_pharmacists(5);
+			pharmacists = generator.generate_pharmacists(5);
 			//Assigning employees to windows
 			for (int i = 0; i < windows.size(); i++)
 			{
@@ -44,7 +44,7 @@ int main()
 					if (windows[i].get_open_status() == false)
 					{
 						windows[i].set_pharmacist(pharmacists.front());
-						pharmacists.erase(pharmacists.begin());
+						//pharmacists.erase(pharmacists.begin());
 						windows[i].status_open();
 					}
 				}
@@ -52,47 +52,52 @@ int main()
 		}
 
 		std::cout << windows.size() << std::endl;
+		std::cout << pharmacists.size() << std::endl;
+		std::cout << queue.get_clients().size() << std::endl;
 
 		//Assigning Clients to window
 		for (int i = 0; i < windows.size(); i++)
 		{
 			if (windows[i].get_open_status() == true && windows[i].get_empty_status() == true)
 			{
-				windows[i].set_client(queue.get_clients().front());
-				std::cout << windows[i].get_client().get_symptoms()[0];
-				queue.remove_client();
-				windows[i].status_busy();
+				if (queue.get_clients().size() != 0)
+				{
+					windows[i].set_client(queue.get_clients().front());
+					std::cout << windows[i].get_client().get_symptoms()[0];
+					queue.remove_client();
+					windows[i].status_busy();
+				}
 			}
 		}
 
 		//Iterate throw windows. Clients make their actions
 		for (int i = 0; i < windows.size(); i++)
 		{
-			int action_number = generator.generate_number(3);
-			
-			switch (action_number)
+			if (windows[i].get_open_status() == true && windows[i].get_empty_status() == false)
 			{
-			case 1:
-				windows[i].get_client().set_action(" buy medicines");
-				std::cout << windows[i].get_client() << std::endl;
-				break;
-			case 2:
-				windows[i].get_client().set_action(" leave Pharmacy");
-				std::cout << windows[i].get_client() << std::endl;
-				//nie kup (odejdŸ)
-				break;
-			case 3:
-				windows[i].get_client().set_action(" leave Pharmacy");
-				std::cout << windows[i].get_client() << std::endl;
-				//kup tañszy zamiennik
-				break;
-			case 4:
-				break;
+				int action_number = generator.generate_number(3);
+
+				switch (action_number)
+				{
+				case 1:
+					windows[i].get_client().set_action(" buy medicines");
+					std::cout << windows[i].get_client() << std::endl;
+					break;
+				case 2:
+					windows[i].get_client().set_action(" leave Pharmacy");
+					std::cout << windows[i].get_client() << std::endl;
+					//nie kup (odejdŸ)
+					break;
+				case 3:
+					windows[i].get_client().set_action(" leave Pharmacy");
+					std::cout << windows[i].get_client() << std::endl;
+					//kup tañszy zamiennik
+					break;
+				case 4:
+					break;
+				}
 			}
-
 		}
-	
-
 	//}
 
 	//my_database.print_all_data();
