@@ -1,7 +1,5 @@
 #include "window.h"
 
-Window::Window() {};
-
 bool Window::get_open_status()
 {
 	return this->is_open;
@@ -31,10 +29,10 @@ void Window::status_close()
 	is_open = false;
 }
 
-void Window::start_action()
-{
-
-}
+//void Window::start_action()
+//{
+//
+//}
 
 void Window::set_pharmacist(Pharmacist pharmacist)
 {

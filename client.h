@@ -12,7 +12,6 @@ private:
 	std::string action;
 
 public:
-	Client();
 	Client(std::string name, std::vector<std::string> symptoms);
 
 	void set_name(std::string name);

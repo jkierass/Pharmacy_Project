@@ -11,8 +11,6 @@ Client::Client(std::string name, std::vector<std::string> symptoms)
 	this->set_action("");
 }
 
-Client::Client() {}
-
 void Client::set_name(std::string name)
 {
 	this->name = name;

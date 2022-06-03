@@ -12,10 +12,7 @@ private:
 	Pharmacist window_pharmacist;
 
 public:
-	Window();
-
-	void start_action();
-
+	/*void start_action(Pharmacist& my_pharmacist, Client& my_client);*/
 	void status_close();
 	void status_open();
 	void status_busy();

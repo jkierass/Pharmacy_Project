@@ -19,6 +19,8 @@ int main()
 	TxtFile file(path_name, path_symptoms);
 	RandomObjectsGenerator generator(file.read_names(), file.read_symptoms());
 	
+
+
 	int start_iteration = 10;
 	int iteration_num = start_iteration;
 
@@ -49,12 +51,15 @@ int main()
 			}
 		}
 
+		std::cout << windows.size() << std::endl;
+
 		//Assigning Clients to window
 		for (int i = 0; i < windows.size(); i++)
 		{
 			if (windows[i].get_open_status() == true && windows[i].get_empty_status() == true)
 			{
 				windows[i].set_client(queue.get_clients().front());
+				std::cout << windows[i].get_client().get_symptoms()[0];
 				queue.remove_client();
 				windows[i].status_busy();
 			}
