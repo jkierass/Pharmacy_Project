@@ -26,4 +26,6 @@ public:
 	std::vector<Pharmacist> generate_pharmacists(int max_number);
 
 	std::vector<Window> generate_windows(int max_number);
+
+	int generate_number(int max_number);
 };

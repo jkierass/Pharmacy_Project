@@ -176,7 +176,9 @@
     <ClCompile Include="queue.cpp" />
     <ClCompile Include="random_object_generator.cpp" />
     <ClCompile Include="syrup.cpp" />
-    <ClCompile Include="tests.cpp" />
+    <ClCompile Include="tests.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="txt_file.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>

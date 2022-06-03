@@ -1,6 +1,13 @@
 #include "window.h"
 
-Window::Window() {};
+bool Window::get_open_status()
+{
+	return this->is_open;
+}
+bool Window::get_empty_status()
+{
+	return this->is_empty;
+}
 
 void Window::status_empty()
 {
@@ -22,10 +29,10 @@ void Window::status_close()
 	is_open = false;
 }
 
-void Window::start_action()
-{
-
-}
+//void Window::start_action()
+//{
+//
+//}
 
 void Window::set_pharmacist(Pharmacist pharmacist)
 {
@@ -37,4 +44,9 @@ void Window::set_client(Client client)
 {
 	this->window_client = client;
 	status_busy();
+}
+
+Client& Window::get_client()
+{
+	return this->window_client;
 }
