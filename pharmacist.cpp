@@ -26,36 +26,58 @@ std::vector<Medicine> Pharmacist::choose_medicines(std::vector<std::string> pati
 	chosen_medicine tmp_med;
 	std::string tmp_med_name;
 
-	for (int i = 0; i < tmp_symptoms.size(); i++)
+	while (tmp_symptoms.size() > 0)
 	{
-		for (const auto& medicine_ptr : pharmacist_knowledge.med_database)
+		for (int i = 0; i < tmp_symptoms.size(); i++)
 		{
-			for (const auto& med_symptom : medicine_ptr->get_symptoms())
+			for (const auto& medicine_ptr : pharmacist_knowledge.med_database)
 			{
-				if (tmp_symptoms[i] == med_symptom)
+				for (const auto& med_symptom : medicine_ptr->get_symptoms())
 				{
-					tmp_med_name = medicine_ptr->get_name();
-					if (std::any_of(tmp_chosen_meds.begin(), tmp_chosen_meds.end(), [tmp_med_name](const chosen_medicine& a)->bool {return a.chosen_med_name == tmp_med_name; }))
+					if (tmp_symptoms[i] == med_symptom)
 					{
-						for (int ite = 0; ite < tmp_chosen_meds.size(); ite++)
+						tmp_med_name = medicine_ptr->get_name();
+						if (std::any_of(tmp_chosen_meds.begin(), tmp_chosen_meds.end(), [tmp_med_name](const chosen_medicine& a)->bool {return a.chosen_med_name == tmp_med_name; }))
 						{
-							if (medicine_ptr->get_name() == tmp_chosen_meds[ite].chosen_med_name)
+							for (int ite = 0; ite < tmp_chosen_meds.size(); ite++)
 							{
-								tmp_chosen_meds[ite].num_of_symptoms += 1;
+								if (medicine_ptr->get_name() == tmp_chosen_meds[ite].chosen_med_name)
+								{
+									tmp_chosen_meds[ite].num_of_symptoms++;
+									tmp_chosen_meds[ite].chosen_med_symptoms.push_back(med_symptom);
+								}
 							}
-						}
 
-					}
-					else
-					{
-						tmp_med.chosen_med_name = medicine_ptr->get_name();
-						tmp_med.num_of_symptoms = 1;
-						tmp_chosen_meds.push_back(tmp_med);
+						}
+						else
+						{
+							tmp_med.chosen_med_name = medicine_ptr->get_name();
+							tmp_med.num_of_symptoms = 1;
+							tmp_med.chosen_med_symptoms.push_back(med_symptom);
+							tmp_chosen_meds.push_back(tmp_med);
+							tmp_med.chosen_med_symptoms.clear();
+						}
 					}
 				}
 			}
 		}
+		int iterator2 = 0;
+		std::sort(tmp_chosen_meds.begin(), tmp_chosen_meds.end(), [](const chosen_medicine& a, const chosen_medicine& b)->bool {return a.num_of_symptoms < b.num_of_symptoms; });
+		medicines.push_back(pharmacist_knowledge.find_by_name(tmp_chosen_meds.back().chosen_med_name)); // ZABEZPIECZYÆ PRZED DUBLOWANIEM LEKOW NA TE SAME SYMPTOMY
+		std::string tmp_symptom_to_remove;
+		for (int iterat = 0; iterat < tmp_chosen_meds.back().num_of_symptoms; iterat++)
+		{
+		tmp_symptom_to_remove = tmp_chosen_meds.back().chosen_med_symptoms[iterat];
+			for (int iterator1 = 0; iterator1 < tmp_symptoms.size(); iterator1++)
+				{
+				if (tmp_symptoms[iterator1] == tmp_symptom_to_remove)
+				{
+					tmp_symptoms.erase(tmp_symptoms.begin() + iterator1);
+				}
+			}
+		}
+		iterator2++;
+		tmp_chosen_meds.clear();
 	}
 	return medicines;
-	//tmp_Medicines.push_back(pharmacist_knowledge.find_by_name(medicine_ptr->get_name()));
 }

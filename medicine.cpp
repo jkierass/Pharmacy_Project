@@ -101,8 +101,12 @@ std::vector<std::string> Medicine::get_symptoms() const
 
 void Medicine::print(std::ostream& os) const
 {
-	os << "Type: "<< med_type <<"\n Name: " << name << "\nProducer: " << producer << "\nSubstance: " << substance <<
-		"\nCapacity: " << amount << " ml\nPosition: " << position << "\nBase price:" << (double)base_price_gr / 100 << "\nTaxed price: " << calculated_price << std::endl;
+	os << "Type: "<< med_type <<"\nName: " << name << "\nProducer: " << producer << "\nSubstance: " << substance << "\nPrescripted: " << prescription << "\nPosition : " << position << "\nSymptoms : ";
+	for (int i = 0; i < symptoms.size(); i++)
+	{
+		os << symptoms[i] + " ";
+	}
+	os << "\nBase price: " << (double)base_price_gr / 100 << " zl\nTaxed price: " << calculated_price << " zl\n" << std::endl;
 }
 void Medicine::calculate_price()
 {

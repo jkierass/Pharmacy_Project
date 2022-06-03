@@ -22,3 +22,11 @@ wet_cough
 runny_nose
 sinus
 throat_irritation
+muscle_pain
+back_pain
+arthritis
+cuts
+disinfection
+eye_redness
+dry_eye
+diarrhea

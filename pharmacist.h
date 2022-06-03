@@ -20,4 +20,5 @@ struct chosen_medicine
 {
 	std::string chosen_med_name;
 	int num_of_symptoms;
+	std::vector<std::string> chosen_med_symptoms;
 };
