@@ -10,6 +10,7 @@ private:
 	std::string name;
 	std::vector<std::string> symptoms;
 	std::string action;
+	int logic_status = 1;
 
 public:
 	Client();

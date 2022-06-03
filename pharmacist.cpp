@@ -18,9 +18,9 @@ void Pharmacist::set_id(int id)
 	this->id = id;
 }
 
-std::vector<Medicine> Pharmacist::choose_medicines(std::vector<std::string> patient_symptoms, MDatabase& pharmacist_knowledge)
+std::vector<Medicine> Pharmacist::choose_medicines(Client my_client, MDatabase& pharmacist_knowledge)
 {
-	std::vector<std::string> tmp_symptoms = patient_symptoms;
+	std::vector<std::string> tmp_symptoms = my_client.get_symptoms();
 	std::vector<chosen_medicine> tmp_chosen_meds;
 	std::vector<Medicine> medicines;
 	chosen_medicine tmp_med;
@@ -67,7 +67,7 @@ std::vector<Medicine> Pharmacist::choose_medicines(std::vector<std::string> pati
 		std::string tmp_symptom_to_remove;
 		for (int iterat = 0; iterat < tmp_chosen_meds.back().num_of_symptoms; iterat++)
 		{
-		tmp_symptom_to_remove = tmp_chosen_meds.back().chosen_med_symptoms[iterat];
+			tmp_symptom_to_remove = tmp_chosen_meds.back().chosen_med_symptoms[iterat];
 			for (int iterator1 = 0; iterator1 < tmp_symptoms.size(); iterator1++)
 				{
 				if (tmp_symptoms[iterator1] == tmp_symptom_to_remove)
@@ -80,4 +80,9 @@ std::vector<Medicine> Pharmacist::choose_medicines(std::vector<std::string> pati
 		tmp_chosen_meds.clear();
 	}
 	return medicines;
+}
+
+Medicine choose_cheaper_replacement(Client my_client, MDatabase& pharmacist_knowledge, Medicine med_to_replace)
+{
+	
 }

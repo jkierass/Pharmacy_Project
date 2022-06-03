@@ -1,4 +1,5 @@
 #pragma once
+#include "client.h"
 #include "mdatabase.h"
 #include <vector>
 #include <algorithm>
@@ -11,7 +12,8 @@ class Pharmacist
 public:
 	Pharmacist();
 	Pharmacist(int id);
-	std::vector<Medicine> choose_medicines(std::vector<std::string>, MDatabase&);
+	std::vector<Medicine> choose_medicines(Client, MDatabase&);
+	Medicine choose_cheaper_replacement(Client, MDatabase&, Medicine);
 	int get_id();
 	void set_id(int id);
 };
