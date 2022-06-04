@@ -8,12 +8,12 @@ class Client
 {
 private:
 	std::string name;
-	std::vector<std::string> symptoms;
 	std::string action;
 	int logic_status = 1;
 	std::vector<Medicine> cart;
 	friend class Pharmacist;
 public:
+	std::vector<std::string> symptoms;
 	Client();
 	Client(std::string name, std::vector<std::string> symptoms);
 
