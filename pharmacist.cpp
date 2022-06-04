@@ -152,8 +152,8 @@ void Pharmacist::print_receipt(Client my_client)
 		std::cout << "|" << std::setw(60) << "|" << std::endl;
 		std::cout << "|" << std::setw(60) << "|" << std::endl;
 		std::cout << "|" << std::setw(60) << "|" << std::endl;
-		std::cout << "|" << std::setw(20) << "name" << std::setw(16)
-			<< "producer" << std::setw(8) << "tax" << std::setw(7) << "base" << std::setw(8) << "total" << "|" << std::endl;
+		std::cout << "|" << std::setw(20) << "name:" << std::setw(16)
+			<< "producer:" << std::setw(8) << "tax:" << std::setw(7) << "base:" << std::setw(8) << "total:" << "|" << std::endl;
 		for (const auto& medicine_in_cart : my_client.cart)
 		{
 			medicine_in_cart.print_on_receipt(std::cout);
