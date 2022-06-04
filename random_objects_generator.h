@@ -27,5 +27,5 @@ public:
 
 	std::vector<Window> generate_windows(int max_number);
 
-	int generate_number(int max_number);
+	int generate_number(int min_number, int max_number);
 };

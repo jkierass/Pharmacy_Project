@@ -77,119 +77,83 @@ int main()
 		{
 			if (windows[i].get_open_status() == true && windows[i].get_empty_status() == false)
 			{
+				int action_number = 3;
+
+				//Wchodzi jak klient jeszcze nie podj¹³ ¿adnej akcji
 				if (windows[i].get_client_operation() == 0)
 				{
-					int action_number = generator.generate_number(3);
-
-					switch (action_number)
-					{
-						//Klient kupuje odrazu leki, czyli program mu je wybiera i on je odrazu kupuje - dostaje paragon
-					case 1:
-					{
-						windows[i].get_client().set_action("buy medicines");
-						std::vector<Medicine> medicines = windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
-						windows[i].get_client().set_basket(medicines);
-						windows[i].status_empty();
-						std::cout << windows[i].get_pharmacist();
-						std::cout << windows[i].get_client() << std::endl;
-						//zatrzymuje czas ale nie wiem na ile chyba 2 s XD
-						Sleep(2000);
-						break;
-					}
-
-						//Klient pyta o leki, czyli wyœwietlaj¹ siê proponowane leki i zapisuj¹ siê u niego w koszyku
-					case 2:
-					{
-						windows[i].get_client().set_action("ask about medicines");
-						//Ustawienie operacji na 1
-						windows[i].set_client_operation(1);
-						std::vector<Medicine> medicines = windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
-						windows[i].get_client().set_basket(medicines);
-						std::cout << windows[i].get_pharmacist();
-						std::cout << windows[i].get_client() << std::endl;
-						Sleep(2000);
-						break;
-					}
-						
-						//Klient odchodzi - opró¿nia siê okno
-					case 3:
-					{
-						windows[i].get_client().set_action("leave Pharmacy");
-						windows[i].status_empty();
-						std::cout << windows[i].get_pharmacist();
-						std::cout << windows[i].get_client() << std::endl;
-						Sleep(2000);
-						break;
-					}
-					}
+					//Program wybiera opcjê od 1 do 3
+					action_number = generator.generate_number(1,3);
 				}
-				
-				//Tu wchodzimy jak klient zapyta³ o leki
+
+				//Wchodzi jak klient zapyta³ o leki
 				if (windows[i].get_client_operation() == 1)
 				{
-					int action_number = generator.generate_number(3);
+					//Program wybiera opcjê od 2 do 4
+					action_number = generator.generate_number(2,4);
+				}
 
-					switch (action_number)
-					{
-					case 1:
-						windows[i].get_client().set_action("ask about substitute");
-						windows[i].set_client_operation(2);
-						std::cout << windows[i].get_pharmacist();
-						std::cout << windows[i].get_client() << std::endl;
-						Sleep(2000);
-						break;
+				//Wchodzi jak klient zapyta³ o substytut
+				if (windows[i].get_client_operation() == 2)
+				{
+					//Program wybiera opcjê od 2 do 3
+					action_number = generator.generate_number(2,3);
+				}
 
-						//Klient kupuje odrazu leki, czyli program mu je wybiera i on je odrazu kupuje - dostaje paragon
-					case 2:
-						windows[i].get_client().set_action("buy medicines");
-						windows[i].status_empty();
-						std::cout << windows[i].get_pharmacist();
-						std::cout << windows[i].get_client() << std::endl;
-						Sleep(2000);
-						break;
-						//Klient odchodzi - opró¿nia siê okno
-					case 3:
-						windows[i].get_client().set_action("leave Pharmacy");
-						windows[i].status_empty();
-						std::cout << windows[i].get_pharmacist();
-						std::cout << windows[i].get_client() << std::endl;
-						Sleep(2000);
-						break;
-					}
+				switch(action_number)
+				{
+					//Klient pyta o leki, czyli wyœwietlaj¹ siê proponowane leki i zapisuj¹ siê u niego w koszyku
+				case 1:
+				{
+					windows[i].get_client().set_action("ask about medicines");
+					//Ustawienie operacji na 1
+					windows[i].set_client_operation(1);
+					std::vector<Medicine> medicines = windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
+					windows[i].get_client().set_basket(medicines);
+					std::cout << windows[i].get_pharmacist();
+					std::cout << windows[i].get_client() << std::endl;
+					Sleep(2000);
+					break;
+				}
 
-					//Tu wchodzimy jak klient zapyta o substytut
-					if (windows[i].get_client_operation() == 2)
-					{
-						int action_number = generator.generate_number(3);
+				//Klient kupuje odrazu leki, czyli program mu je wybiera i on je odrazu kupuje - dostaje paragon
+				case 2:
+				{
+					windows[i].get_client().set_action("buy medicines");
+					std::vector<Medicine> medicines = windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
+					windows[i].get_client().set_basket(medicines);
+					windows[i].status_empty();
+					std::cout << windows[i].get_pharmacist();
+					std::cout << windows[i].get_client() << std::endl;
+					//zatrzymuje czas ale nie wiem na ile chyba 2 s XD
+					Sleep(2000);
+					break;
+				}
+						
+					//Klient odchodzi - opró¿nia siê okno
+				case 3:
+				{
+					windows[i].get_client().set_action("leave Pharmacy");
+					windows[i].status_empty();
+					std::cout << windows[i].get_pharmacist();
+					std::cout << windows[i].get_client() << std::endl;
+					Sleep(2000);
+					break;
+				}
 
-						switch (action_number)
-						{
-
-							//Klient kupuje odrazu leki, czyli program mu je wybiera i on je odrazu kupuje - dostaje paragon
-						case 1:
-							windows[i].get_client().set_action("buy medicines");
-							windows[i].status_empty();
-							std::cout << windows[i].get_pharmacist();
-							std::cout << windows[i].get_client() << std::endl;
-							Sleep(2000);
-							break;
-							//Klient odchodzi - opró¿nia siê okno
-						case 2:
-							windows[i].get_client().set_action("leave Pharmacy");
-							windows[i].status_empty();
-							std::cout << windows[i].get_pharmacist();
-							std::cout << windows[i].get_client() << std::endl;
-							Sleep(2000);
-							break;
-						}
-					}
+					//Klient pyta o zamiennik
+				case 4:
+				{
+					windows[i].get_client().set_action("ask about substitute");
+					windows[i].set_client_operation(2);
+					std::cout << windows[i].get_pharmacist();
+					std::cout << windows[i].get_client() << std::endl;
+					Sleep(2000);
+					break;
+				}
 				}
 			}
 		}
-
-
 	}
-
-
 	return 0;
 }

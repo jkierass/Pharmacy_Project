@@ -115,11 +115,11 @@ std::vector<Window> RandomObjectsGenerator::generate_windows(int max_number)
 	return windows;
 }
 
-int RandomObjectsGenerator::generate_number(int max_number)
+int RandomObjectsGenerator::generate_number(int min_number, int max_number)
 {
 	std::random_device r;
 	std::default_random_engine generator(r());
-	std::uniform_int_distribution<int> num(1, max_number);
+	std::uniform_int_distribution<int> num(min_number, max_number);
 	int number = num(generator);
 
 	return number;
