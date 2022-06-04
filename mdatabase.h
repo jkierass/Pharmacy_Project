@@ -7,6 +7,8 @@
 #include "syrup.h"
 #include "pills.h"
 
+struct chosen_medicine;
+
 class MDatabase
 {
 	friend class Pharmacist;
@@ -14,8 +16,9 @@ class MDatabase
 	int pills_num = 0;
 	int drops_num = 0;
 	int ointments_num = 0;
-public:
 	std::list<std::unique_ptr<Medicine>> med_database;
+	friend std::vector<chosen_medicine> get_all_meds_for_symptoms(std::vector<std::string> vector_symptoms, MDatabase& database);
+public:
 	void add_Syrup(std::string name, std::string producer, std::string substance, std::vector<std::string>, int amount, int base_price_gr, bool, std::string cough_type);
 	void add_Pills(std::string name, std::string producer, std::string substance, std::vector<std::string>, int amount, int base_price_gr, bool, std::string pills_type);
 	void add_Drops(std::string name, std::string producer, std::string substance, std::vector<std::string>, int amount, int base_price_gr, bool, std::string drops_type);

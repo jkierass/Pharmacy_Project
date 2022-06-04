@@ -11,6 +11,7 @@
 class Medicine
 {
 protected:
+	double tax_value = 0.0;
 	int amount;
 	int position = 0;
 	std::string name;
@@ -26,6 +27,7 @@ public:
 	Medicine(std::string, std::string, std::string, std::vector<std::string>, int, int, bool);
 	friend std::ostream& operator<<(std::ostream& os, const Medicine& Med);
 	virtual void print(std::ostream&) const;
+	void print_on_receipt(std::ostream&) const noexcept;
 	virtual void calculate_price();
 	virtual ~Medicine();
 
@@ -39,6 +41,7 @@ public:
 	std::string get_med_type() const;
 	bool get_prescription() const;
 	std::vector<std::string> get_symptoms() const;
+	double get_tax_value() const;
 
 	void set_name(std::string);
 	void set_producer(std::string);

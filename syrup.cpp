@@ -4,18 +4,19 @@ Syrup::Syrup(std::string name, std::string producer, std::string substance, std:
 {
 	this->syrup_type = syrup_type;
 	this->med_type = "Syrup";
+	this->tax_value = 1.8;
 	calculate_price();
 }
 
 
 void Syrup::calculate_price() noexcept		// 23% tax
 {
-	this->calculated_price = round(base_price_gr * 1.23) / 100;
+	this->calculated_price = round(base_price_gr * tax_value) / 100;
 }
 
 
 
-void Syrup::print(std::ostream& os) const
+void Syrup::print(std::ostream& os) const noexcept
 {
 	os << "Type: Syrup\nName: " << name << "\nProducer: " << producer << "\nSubstance: " << substance <<
 		"\nCapacity: " << amount << "ml\nPrescripted: " << prescription << "\nPosition: " << position << "\nSymptoms: ";

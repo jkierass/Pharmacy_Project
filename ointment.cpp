@@ -4,13 +4,14 @@ Ointment::Ointment(std::string name, std::string producer, std::string substance
 {
 	this->ointment_type = ointment_type;
 	this->med_type = "Ointment";
+	this->tax_value = 1.15;
 	calculate_price();
 }
 
 
 void Ointment::calculate_price() noexcept		// 15% tax
 {
-	this->calculated_price = round(base_price_gr * 1.15) / 100;
+	this->calculated_price = round(base_price_gr * tax_value) / 100;
 }
 
 
@@ -23,6 +24,7 @@ void Ointment::print(std::ostream& os) const noexcept
 	}
 	os << "\nBase price: " << (double)base_price_gr / 100 << " zl\nTaxed price: " << calculated_price << " zl\nOintment consistency: " << ointment_type << std::endl << std::endl;
 }
+
 
 
 std::string Ointment::get_ointment_type() const noexcept

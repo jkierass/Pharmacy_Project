@@ -1,4 +1,5 @@
 #include "medicine.h"
+#include <iomanip> 
 
 Medicine::Medicine(std::string name, std::string producer, std::string substance, std::vector<std::string> symptoms, int amount, int base_price_gr, bool prescription)
 {
@@ -98,6 +99,10 @@ std::vector<std::string> Medicine::get_symptoms() const
 	return symptoms;
 }
 // virtual methods
+double Medicine::get_tax_value() const
+{
+	return this->tax_value;
+}
 
 void Medicine::print(std::ostream& os) const
 {
@@ -108,6 +113,16 @@ void Medicine::print(std::ostream& os) const
 	}
 	os << "\nBase price: " << (double)base_price_gr / 100 << " zl\nTaxed price: " << calculated_price << " zl\n" << std::endl;
 }
+
+void Medicine::print_on_receipt(std::ostream& os) const noexcept
+{
+	double base_price_zl = double(base_price_gr) / 100;
+	std::string string_tax_value = std::to_string((tax_value - 1) * 100) + " %";
+	os.fill(' ');
+	os << "|" << std::setw(16) << med_type << ": " << std::setw(20) << name << std::setw(16)
+		<< producer << std::setw(6) << tax_value << std::setw(6) << base_price_zl << std::setw(6) << calculated_price << std::setw(8) << "|" << std::endl;
+}
+
 void Medicine::calculate_price()
 {
 	this->calculated_price = (double)base_price_gr / 100;

@@ -23,9 +23,9 @@ void Client::set_action(std::string action)
 	this->action = action;
 }
 
-void Client::set_basket(std::vector<Medicine> basket)
+void Client::set_cart(std::vector<Medicine> cart)
 {
-	this->basket = basket;
+	this->cart = cart;
 }
 
 std::string Client::get_name()
