@@ -19,8 +19,6 @@ int main()
 	pharmacist_knowledge = database_reader_file.read_database();
 	TxtFile file(path_name, path_symptoms);
 	RandomObjectsGenerator generator(file.read_names(), file.read_symptoms());
-	
-
 
 	int start_iteration = 10;
 	int iteration_num = start_iteration;
@@ -109,7 +107,7 @@ int main()
 					//Ustawienie operacji na 1
 					windows[i].set_client_operation(1);
 					std::vector<Medicine> medicines = windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
-					windows[i].get_client().set_basket(medicines);
+					windows[i].get_client().set_cart(medicines);
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
 					Sleep(2000);
@@ -121,7 +119,7 @@ int main()
 				{
 					windows[i].get_client().set_action("buy medicines");
 					std::vector<Medicine> medicines = windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
-					windows[i].get_client().set_basket(medicines);
+					windows[i].get_client().set_cart(medicines);
 					windows[i].status_empty();
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
