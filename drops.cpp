@@ -4,13 +4,14 @@ Drops::Drops(std::string name, std::string producer, std::string substance, std:
 {
 	this->drops_type = drops_type;
 	this->med_type = "Drops";
+	this->tax_value = 1.12;
 	calculate_price();
 }
 
 
 void Drops::calculate_price()		// 12% tax
 {
-	this->calculated_price = round(base_price_gr * 1.12) / 100;
+	this->calculated_price = round(base_price_gr * tax_value) / 100;
 }
 
 

@@ -4,13 +4,14 @@ Pills::Pills(std::string name, std::string producer, std::string substance, std:
 {
 	this->pills_type = pills_type;
 	this->med_type = "Pills";
+	this->tax_value = 1.23;
 	calculate_price();
 }
 
 
 void Pills::calculate_price() noexcept		// 8% tax
 {
-	this->calculated_price = round(base_price_gr * 1.08) / 100;
+	this->calculated_price = round(base_price_gr * tax_value) / 100;
 }
 
 
