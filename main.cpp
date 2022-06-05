@@ -26,7 +26,7 @@ int main()
 	int iteration_num = start_iteration;
 
 	std::vector<Window> windows = generator.generate_windows(5);
-	Queue queue(generator.generate_clients_vector(10));
+	Queue queue(generator.generate_clients_vector(2, 10));
 	std::vector<Pharmacist> pharmacists;
 
 	while (iteration_num > 0)
@@ -124,6 +124,8 @@ int main()
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
 					windows[i].get_pharmacist().print_receipt(windows[i].get_client());
+					//Zresetowanie akcji okienka
+					windows[i].set_client_operation(0);
 					//zatrzymuje czas ale nie wiem na ile chyba 2 s XD
 					Sleep(2000);
 					break;
@@ -136,6 +138,7 @@ int main()
 					windows[i].status_empty();
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
+					windows[i].set_client_operation(0);
 					Sleep(2000);
 					break;
 				}
@@ -166,6 +169,10 @@ int main()
 				}
 			}
 		}
+		
+		int client_num = generator.generate_number(0, 2);
+		std::vector<Client> new_clients = generator.generate_clients_vector(0, client_num);
+
 	}
 	return 0;
 }
