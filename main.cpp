@@ -1,13 +1,4 @@
-#include <iostream>
-#include "pharmacist.h"
-#include "random_objects_generator.h"
-#include <vector>
-#include "client.h"
-#include "mdatabase.h"
-#include "database_meds_reader.h"
-#include "txt_file.h"
-#include "queue.h"
-#include<windows.h>
+#include "test_and_main_includes.h"
 
 int main()
 {

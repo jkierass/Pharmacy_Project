@@ -11,12 +11,12 @@ Pills 1 Florcontrol Doz Bifidobacterium_animalis bacterial_flore 20 1000 0 swall
 Pills 1 Alventa Krka Venlafaxinum depression 28 2700 1 swallow
 Pills 1 Lafactin Aurovitas Venlafaxinum depression 28 3300 1 swallow
 Pills 1 Efectin Upjohn Venlafaxinum depression 28 3000 1 chewable
-Pills 2 Trittico_CR Angelini Trazodoni_hydrochloridum depression insomnia 60 10000 1 swallow
-Pills 2 Trazdodonix Hasco Trazodoni_hydrochloridum depression insomnia 60 5000 1 swallow
+Pills 2 Trittico_CR Angelini Trazodoni depression insomnia 60 10000 1 swallow
+Pills 2 Trazdodonix Hasco Trazodoni depression insomnia 60 5000 1 swallow
 Pills 1 Furaginum Hasco Furazidinum cystitis 30 3400 0 swallow
 Pills 3 Scorbolamid Polpharma Salicylamidum cold flu headache 30 2300 0 swallow
-Pills 3 Efferalgan_Codeine Bayer Codeine pain cough headache 10 2500 1 effervescent
-Pills 3 Codeinex Hasco Codeine pain cough headache 10 3500 1 swallow
+Pills 3 Efferalgan_Codeine Bayer Codeine pain dry_cough headache 10 2500 1 effervescent
+Pills 3 Codeinex Hasco Codeine pain dry_cough headache 10 3500 1 swallow
 Pills 1 Stopperan UPS Loperamid diarrhea 20 1100 0 swallow
 Pills 2 Memotropil Polpharma Piracetamum memory_disorder after_stroke 30 4000 1 swallow
 Pills 2 123_Ratio Glaxo Piracetamum memory_disorder after_stroke 30 2000 1 chewable
