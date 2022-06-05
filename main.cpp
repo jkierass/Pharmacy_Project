@@ -123,6 +123,7 @@ int main()
 					windows[i].status_empty();
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
+					windows[i].get_pharmacist().print_receipt(windows[i].get_client());
 					//zatrzymuje czas ale nie wiem na ile chyba 2 s XD
 					Sleep(2000);
 					break;
