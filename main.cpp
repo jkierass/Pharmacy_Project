@@ -14,11 +14,13 @@ int main()
 	std::string path_symptoms = "symptoms.txt";
 	std::string path = "Med_database_info.txt";
 	std::string path_name = "name.txt";
+	std::string path_medicine_prescription = "Medicines_prescription.txt";
 	Database_meds_reader database_reader_file(path);
 	MDatabase pharmacist_knowledge;
 	pharmacist_knowledge = database_reader_file.read_database();
-	TxtFile file(path_name, path_symptoms);
-	RandomObjectsGenerator generator(file.read_names(), file.read_symptoms());
+	TxtFile file(path_name, path_symptoms, path_medicine_prescription);
+
+	RandomObjectsGenerator generator(file.read_names(), file.read_symptoms(), file.read_prescripted_medicines());
 
 	int start_iteration = 10;
 	int iteration_num = start_iteration;

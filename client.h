@@ -10,13 +10,12 @@ private:
 	std::string name;
 	std::string action;
 	std::string prescription_medicine;
-	int logic_status = 1;
 	std::vector<Medicine> cart;
 	friend class Pharmacist;
 public:
 	std::vector<std::string> symptoms;
 	Client();
-	Client(std::string name, std::vector<std::string> symptoms);
+	Client(std::string name, std::vector<std::string> symptoms, std::string prescription_medicine);
 
 	void set_name(std::string name);
 	void set_action(std::string action);

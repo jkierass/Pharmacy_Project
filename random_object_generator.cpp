@@ -8,6 +8,7 @@ RandomObjectsGenerator::RandomObjectsGenerator(std::vector<std::string> names, s
 {
 	set_names(names);
 	set_symptoms(symptoms);
+	set_prescripted_medicines(prescripted_medicines);
 }
 
 void RandomObjectsGenerator::set_names(std::vector<std::string> names)
@@ -20,7 +21,21 @@ void RandomObjectsGenerator::set_symptoms(std::vector<std::string> symptoms)
 	this->symptoms = symptoms;
 }
 
-void RandomObjectsGenerator::
+void RandomObjectsGenerator::set_prescripted_medicines(std::vector<std::string> prescripted_medicines)
+{
+	this->prescripted_medicines = prescripted_medicines;
+}
+
+std::string RandomObjectsGenerator::generate_p_medcicine()
+{
+	std::random_device r;
+	std::default_random_engine generator(r());
+	int med_num = prescripted_medicines.size();
+	std::uniform_int_distribution<int> num_gen_med(0, med_num - 1);
+	int num = num_gen_med(generator);
+	std::string med = prescripted_medicines[num];
+	return med;
+}
 
 std::vector<std::string> RandomObjectsGenerator::generate_symptoms()
 {
@@ -48,6 +63,7 @@ Client RandomObjectsGenerator::generate_client()
 {
 	int names_size = names.size();
 	std::vector<std::string> client_symptoms = generate_symptoms();
+	std::string med = generate_p_medcicine();
 
 	std::random_device r;
 	std::default_random_engine generator(r());
@@ -56,7 +72,7 @@ Client RandomObjectsGenerator::generate_client()
 
 	std::string name = names[name_number];
 
-	Client client(name, client_symptoms);
+	Client client(name, client_symptoms, med);
 
 	return client;
 }
