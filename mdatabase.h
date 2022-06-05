@@ -31,4 +31,8 @@ public:
 	Medicine find_by_name(std::string name) const;
 	bool check_if_exist_pos(int pos) const;
 	bool check_if_exist_name(std::string name) const;
+	int get_syrups_num() const;
+	int get_pills_num() const;
+	int get_drops_num() const;
+	int get_ointments_num() const;
 };

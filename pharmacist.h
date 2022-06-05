@@ -12,11 +12,11 @@ class Pharmacist
 public:
 	Pharmacist();
 	Pharmacist(int id);
-	std::vector<Medicine> choose_medicines(Client&, MDatabase&);
-	std::vector<Medicine> choose_cheaper_replacements_and_replace(Client&, MDatabase&, Medicine);
-	void print_receipt(Client);
-	void print_invoide(Client);
-	int get_id();
+	std::vector<Medicine> choose_medicines(Client&, MDatabase&) const;
+	std::vector<Medicine> choose_cheaper_replacements_and_replace(Client&, MDatabase&, Medicine) const;
+	void print_receipt(Client) const;
+	void print_invoide(Client) const;
+	int get_id() const;
 	void set_id(int id);
 	friend std::ostream& operator<<(std::ostream& os, const Pharmacist& pharmacist);
 };

@@ -11,7 +11,7 @@ Pharmacist::Pharmacist(int id)
 	set_id(id);
 }
 
-int Pharmacist::get_id()
+int Pharmacist::get_id() const
 {
 	return this->id;
 }
@@ -21,7 +21,7 @@ void Pharmacist::set_id(int id)
 	this->id = id;
 }
 
-std::vector<Medicine> Pharmacist::choose_medicines(Client& my_client, MDatabase& pharmacist_knowledge)
+std::vector<Medicine> Pharmacist::choose_medicines(Client& my_client, MDatabase& pharmacist_knowledge) const
 {
 	std::vector<std::string> tmp_symptoms = my_client.symptoms;
 	std::vector<chosen_medicine> tmp_chosen_meds;
@@ -56,7 +56,7 @@ std::vector<Medicine> Pharmacist::choose_medicines(Client& my_client, MDatabase&
 	return medicines;
 }
 
-std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client& my_client, MDatabase& pharmacist_knowledge, Medicine med_to_replace)
+std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client& my_client, MDatabase& pharmacist_knowledge, Medicine med_to_replace) const
 {
 	std::string tmp_substance = med_to_replace.get_substance();
 	bool is_prescripted = med_to_replace.get_prescription();
@@ -167,7 +167,7 @@ std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client
 	}
 }
 
-void Pharmacist::print_receipt(Client my_client)
+void Pharmacist::print_receipt(Client my_client) const
 {
 	if (my_client.cart.size() > 0)
 	{
@@ -219,7 +219,7 @@ void Pharmacist::print_receipt(Client my_client)
 	}
 }
 
-void Pharmacist::print_invoide(Client)
+void Pharmacist::print_invoide(Client) const
 {
 
 }

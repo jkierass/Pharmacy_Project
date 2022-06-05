@@ -73,9 +73,10 @@ void MDatabase::delete_medicine(int pos)
 		if (it->get()->get_position() == pos)
 		{
 			med_database.erase(it);
-			break;
+			return;
 		}
 	}
+	throw MedicineNotFoundException(pos);
 }
 Medicine MDatabase::find_by_position(int pos) const
 {
@@ -112,8 +113,6 @@ void MDatabase::print_by_name(std::string name) const
 	throw MedicineNotFoundException(name);
 }
 
-// operator to compare objects by position (to use it in sorting)
-
 bool MDatabase::check_if_exist_pos(int pos) const
 {
 	for (const auto& Medicine_ptr : med_database)
@@ -136,6 +135,29 @@ bool MDatabase::check_if_exist_name(std::string name) const
 	}
 	return false;
 }
+
+int MDatabase::get_drops_num() const
+{
+	return drops_num;
+}
+
+int MDatabase::get_pills_num() const
+{
+	return pills_num;
+}
+
+int MDatabase::get_syrups_num() const
+{
+	return syrups_num;
+}
+
+int MDatabase::get_ointments_num() const
+{
+	return ointments_num;
+} 
+
+// operator to compare objects by position (to use it in sorting)
+
 
 bool operator<(const std::unique_ptr<Medicine>& Med, const std::unique_ptr<Medicine>& Med2)
 {
