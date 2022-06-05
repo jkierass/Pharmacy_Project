@@ -53,7 +53,11 @@ std::vector<Medicine> Pharmacist::choose_medicines(Client& my_client, MDatabase&
 	{
 		my_client.cart.push_back(medicines[iterator]);
 	}
-	my_client.cart.push_back(pharmacist_knowledge.find_by_name(my_client.prescription_medicine));
+	if (my_client.prescription_medicine.size() > 0)
+	{
+		my_client.cart.push_back(pharmacist_knowledge.find_by_name(my_client.prescription_medicine));
+		my_client.prescription_medicine.clear();
+	}
 	std::cout << "chosen success\n";
 	return medicines;
 }

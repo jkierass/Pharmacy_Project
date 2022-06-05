@@ -192,7 +192,7 @@ int main(int argc, char* argv[])
 					std::cout << windows[i].get_client().get_cart().size() << std::endl;
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
-					//Sleep(2000);
+					Sleep(2000);
 					break;
 				}
 
@@ -200,6 +200,10 @@ int main(int argc, char* argv[])
 				case 2:
 				{
 					std::cout << "c" << std::endl;
+					for (int z = 0; z < windows[i].get_client().get_symptoms().size(); z++)
+					{
+						std::cout << windows[i].get_client().get_symptoms()[z] << std::endl;
+					}
 					windows[i].get_client().set_action("buy medicines");
 					windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
 					windows[i].status_empty();
@@ -210,7 +214,7 @@ int main(int argc, char* argv[])
 					//Zresetowanie akcji okienka
 					windows[i].set_client_operation(0);
 					//zatrzymuje czas ale nie wiem na ile chyba 2 s XD
-					//Sleep(2000);
+					Sleep(2000);
 					break;
 				}
 						
@@ -224,7 +228,7 @@ int main(int argc, char* argv[])
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
 					windows[i].set_client_operation(0);
-					//Sleep(2000);
+					Sleep(2000);
 					break;
 				}
 
@@ -239,18 +243,18 @@ int main(int argc, char* argv[])
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
 					std::cout << windows[i].get_client().get_cart()[0].get_name() << " -replace status:";
-					//try
-					//{
-					//	std::vector<Medicine> replaced_meds;
-					//	
-					//	//replaced_meds = windows[i].get_pharmacist().choose_cheaper_replacements_and_replace(windows[i].get_client(), pharmacist_knowledge, windows[i].get_client().get_cart()[0]);
-					//	std::cout << " Replaced" << std::endl;
-					//}
-		/*			catch (MedicineNotFoundException)
+					try
+					{
+						std::vector<Medicine> replaced_meds;
+						
+						replaced_meds = windows[i].get_pharmacist().choose_cheaper_replacements_and_replace(windows[i].get_client(), pharmacist_knowledge, windows[i].get_client().get_cart()[0]);
+						std::cout << " Replaced" << std::endl;
+					}
+					catch (MedicineNotFoundException)
 					{
 						std::cout << " No replacement" << std::endl;
-					}*/
-					//Sleep(2000);
+					}
+					Sleep(2000);
 					break;
 				}
 				}

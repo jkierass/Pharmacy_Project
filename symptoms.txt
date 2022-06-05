@@ -8,7 +8,6 @@ stomachache
 bacterial_flore
 cystitis
 cold
-cough
 headache
 diarrhea
 dry_cough
