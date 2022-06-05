@@ -77,13 +77,13 @@ Client RandomObjectsGenerator::generate_client()
 	return client;
 }
 
-std::vector<Client> RandomObjectsGenerator::generate_clients_vector(int max_number)
+std::vector<Client> RandomObjectsGenerator::generate_clients_vector(int min_number, int max_number)
 {
 	std::vector<Client> clients;
 
 	std::random_device r;
 	std::default_random_engine generator(r());
-	std::uniform_int_distribution<int> num_client(2, max_number);
+	std::uniform_int_distribution<int> num_client(min_number, max_number);
 	int clients_number = num_client(generator);
 	
 	for (int i = 1; i <= clients_number; i++)

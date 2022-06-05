@@ -6,7 +6,6 @@ throatache
 pain
 food_poisoning
 stomachache
-fever
 bacterial_flore
 depression
 insomnia

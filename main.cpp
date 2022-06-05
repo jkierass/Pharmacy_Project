@@ -1,11 +1,18 @@
 #include "test_and_main_includes.h"
 
-int main()
+int main(int argc, char* argv[])
 {
-	std::string path_symptoms = "symptoms.txt";
-	std::string path = "Med_database_info.txt";
-	std::string path_name = "name.txt";
-	std::string path_medicine_prescription = "Medicines_prescription.txt";
+	if (argc != 5)
+	{
+		std::cerr << "Incorrect number of command line arguments - expected 5, got " << argc << std::endl;
+		return 1;
+	}
+	
+	std::string path_symptoms = argv[1];
+	std::string path = argv[2];
+	std::string path_name = argv[3];
+	std::string path_medicine_prescription = argv[4];
+
 	Database_meds_reader database_reader_file(path);
 	MDatabase pharmacist_knowledge;
 	pharmacist_knowledge = database_reader_file.read_database();
@@ -17,7 +24,7 @@ int main()
 	int iteration_num = start_iteration;
 
 	std::vector<Window> windows = generator.generate_windows(5);
-	Queue queue(generator.generate_clients_vector(10));
+	Queue queue(generator.generate_clients_vector(2, 10));
 	std::vector<Pharmacist> pharmacists;
 
 	while (iteration_num > 0)
@@ -45,9 +52,9 @@ int main()
 
 		iteration_num = iteration_num - 1;
 
-		std::cout << windows.size() << std::endl;
-		std::cout << pharmacists.size() << std::endl;
-		std::cout << queue.get_clients().size() << std::endl;
+		std::cout << "Windows number: " << windows.size() << std::endl;
+		std::cout << "Pharmacists number: " << pharmacists.size() << std::endl;
+		std::cout << "Clients in queue number: " << queue.get_clients().size() << std::endl << std::endl;
 
 		//Assigning Clients to window
 		for (int i = 0; i < windows.size(); i++)
@@ -115,6 +122,8 @@ int main()
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
 					windows[i].get_pharmacist().print_receipt(windows[i].get_client());
+					//Zresetowanie akcji okienka
+					windows[i].set_client_operation(0);
 					//zatrzymuje czas ale nie wiem na ile chyba 2 s XD
 					Sleep(2000);
 					break;
@@ -127,6 +136,7 @@ int main()
 					windows[i].status_empty();
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
+					windows[i].set_client_operation(0);
 					Sleep(2000);
 					break;
 				}
@@ -157,6 +167,16 @@ int main()
 				}
 			}
 		}
+		
+		int client_num = generator.generate_number(0, 2);
+		std::vector<Client> new_clients = generator.generate_clients_vector(0, client_num);
+		
+		//appendinng queue
+		for (int i = 0; i < new_clients.size(); i++)
+		{
+			queue.add_client(new_clients[i]);
+		}
+
 	}
 	return 0;
 }
