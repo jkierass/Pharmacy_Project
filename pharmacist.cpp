@@ -172,7 +172,7 @@ void Pharmacist::print_receipt(Client my_client)
 	{
 		std::cout.unsetf(std::ios::right);
 		double total_price = 0.0;
-		double total_price_base = 0.0;
+		int total_price_base = 0;
 		double total_tax_value = 0.0;
 		std::cout.setf(std::ios::left);
 		std::cout.fill('_');
@@ -196,7 +196,7 @@ void Pharmacist::print_receipt(Client my_client)
 		for (const auto& medicine_in_cart : my_client.cart)
 		{
 			medicine_in_cart.print_on_receipt(std::cout);
-			total_price_base += double(medicine_in_cart.get_base_price_gr())/100;
+			total_price_base += medicine_in_cart.get_base_price_gr()/100;
 			total_price += medicine_in_cart.get_calculated_price();
 		}
 		total_tax_value = total_price - total_price_base;
@@ -204,7 +204,7 @@ void Pharmacist::print_receipt(Client my_client)
 		std::cout << "_" << std::setw(60) << "_" << std::endl;
 		std::cout.fill(' ');
 		std::cout << "|" << std::setw(60) << "|" << std::endl;
-		std::cout << "|" << std::setw(30) << "TOTAL BASE: " << std::setw(29) << total_price_base << "|" << std::endl;
+		std::cout << "|" << std::setw(30) << "TOTAL BASE: " << std::setw(29) << std::to_string(total_price_base)+".00" << "|" << std::endl;
 		std::cout << "|" << std::setw(30) << "TOTAL TAX: " << std::setw(29) << total_tax_value << "|" << std::endl;
 		std::cout << "|" << std::setw(30) << "TOTAL: " << std::setw(29) << total_price  << "|" << std::endl;
 		std::cout << "|" << std::setw(60) << "|" << std::endl;

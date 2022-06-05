@@ -9,7 +9,6 @@ class Client
 private:
 	std::string name;
 	std::string action;
-	int logic_status = 1;
 	std::vector<Medicine> cart;
 	friend class Pharmacist;
 public:
