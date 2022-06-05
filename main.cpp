@@ -148,18 +148,17 @@ int main()
 					windows[i].set_client_operation(2);
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
-
-					for (int j = 0; j < windows[i].get_client().get_cart().size(); j++)
+					try
 					{
-						try
-						{
-							windows[i].get_pharmacist().choose_cheaper_replacements_and_replace(windows[i].get_client(), pharmacist_knowledge, windows[i].get_client().get_cart()[j]);
-							std::cout << "Replaced" << windows[i].get_client().get_cart()[j].get_name();
-						}
-						catch (MedicineNotFoundException)
-						{
-							std::cout << windows[i].get_client().get_cart()[j].get_name() << "no replacement";
-						}
+						std::vector<Medicine> replaced_meds;
+
+						replaced_meds = windows[i].get_pharmacist().choose_cheaper_replacements_and_replace(windows[i].get_client(), pharmacist_knowledge, windows[i].get_client().get_cart()[0]);
+						std::cout << "Replaced" << windows[i].get_client().get_cart()[0].get_name();
+						windows[i].get_client().set_cart(replaced_meds);
+					}
+					catch (MedicineNotFoundException)
+					{
+						std::cout << windows[i].get_client().get_cart()[0].get_name() << "no replacement";
 					}
 					Sleep(2000);
 					break;
