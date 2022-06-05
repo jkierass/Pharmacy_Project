@@ -1,4 +1,4 @@
-Pills 3 Aspirin Bayer acetylsalicylic_acid pain fever inflammation 10 7050 0 swallow
+Pills 3 Aspirin Bayer acetylsalicylic_acid pain fever inflammation 10 7000 0 swallow
 Pills 1 Aripiprazole_STADA Abilify aripiprazolum schizophrenia 28 7000 1 disintegrating
 Pills 1 Aripiprazolumid Unia aripiprazolum schizophrenia 28 3500 1 swallow
 Pills 1 Aripix Bayer aripiprazolum schizophrenia 28 10000 1 chewable
@@ -17,7 +17,7 @@ Pills 1 Furaginum Hasco Furazidinum cystitis 30 3400 0 swallow
 Pills 3 Scorbolamid Polpharma Salicylamidum cold flu headache 30 2300 0 swallow
 Pills 3 Efferalgan_Codeine Bayer Codeine pain cough headache 10 2500 1 effervescent
 Pills 3 Codeinex Hasco Codeine pain cough headache 10 3500 1 swallow
-Pills 1 Stopperan UPS Loperamid diarrhea 20 1150 0 swallow
+Pills 1 Stopperan UPS Loperamid diarrhea 20 1100 0 swallow
 Pills 2 Memotropil Polpharma Piracetamum memory_disorder after_stroke 30 4000 1 swallow
 Pills 2 123_Ratio Glaxo Piracetamum memory_disorder after_stroke 30 2000 1 chewable
 Pills 2 Memoxin Walmark Piracetamum memory_disorder after_stroke 30 2800 1 disintegrating

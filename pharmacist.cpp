@@ -89,7 +89,7 @@ std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client
 				std::sort(tmp_chosen_meds.begin(), tmp_chosen_meds.end(), [](const chosen_medicine& a, const chosen_medicine& b)->bool {return a.taxed_price < b.taxed_price; });
 				do {
 					the_one_chosen_med_name = tmp_chosen_meds[0].chosen_med_name;
-					if (!(the_one_chosen_med_name == med_to_replace.get_name()))
+					if (!(the_one_chosen_med_name == med_to_replace.get_name()) && tmp_chosen_meds[0].prescripted == false)
 					{
 						replacement_medicines.push_back(pharmacist_knowledge.find_by_name(the_one_chosen_med_name));
 						replacement_found = true;
@@ -105,6 +105,10 @@ std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client
 					{
 						tmp_chosen_meds.erase(tmp_chosen_meds.begin());
 						replacement_found = false;
+						if (tmp_chosen_meds.size() == 0)
+						{
+							throw MedicineNotFoundException("There is none replacement available");
+						}
 					}
 				} while (replacement_found = false);
 				tmp_chosen_meds.clear();
@@ -168,7 +172,7 @@ void Pharmacist::print_receipt(Client my_client)
 	{
 		std::cout.unsetf(std::ios::right);
 		double total_price = 0.0;
-		double total_price_base = 0.0;
+		int total_price_base = 0;
 		double total_tax_value = 0.0;
 		std::cout.setf(std::ios::left);
 		std::cout.fill('_');
@@ -192,7 +196,7 @@ void Pharmacist::print_receipt(Client my_client)
 		for (const auto& medicine_in_cart : my_client.cart)
 		{
 			medicine_in_cart.print_on_receipt(std::cout);
-			total_price_base += double(medicine_in_cart.get_base_price_gr())/100;
+			total_price_base += medicine_in_cart.get_base_price_gr()/100;
 			total_price += medicine_in_cart.get_calculated_price();
 		}
 		total_tax_value = total_price - total_price_base;
@@ -200,7 +204,7 @@ void Pharmacist::print_receipt(Client my_client)
 		std::cout << "_" << std::setw(60) << "_" << std::endl;
 		std::cout.fill(' ');
 		std::cout << "|" << std::setw(60) << "|" << std::endl;
-		std::cout << "|" << std::setw(30) << "TOTAL BASE: " << std::setw(29) << total_price_base << "|" << std::endl;
+		std::cout << "|" << std::setw(30) << "TOTAL BASE: " << std::setw(29) << std::to_string(total_price_base)+".00" << "|" << std::endl;
 		std::cout << "|" << std::setw(30) << "TOTAL TAX: " << std::setw(29) << total_tax_value << "|" << std::endl;
 		std::cout << "|" << std::setw(30) << "TOTAL: " << std::setw(29) << total_price  << "|" << std::endl;
 		std::cout << "|" << std::setw(60) << "|" << std::endl;
@@ -254,7 +258,7 @@ std::vector<chosen_medicine> get_all_meds_for_symptoms(std::vector<std::string> 
 					else
 					{
 						tmp_med.chosen_med_name = medicine_ptr->get_name();
-						tmp_med.num_of_symptoms = 1;
+						tmp_med.prescripted = medicine_ptr->get_prescription();
 						tmp_med.chosen_med_symptoms.push_back(med_symptom);
 						chosen_meds.push_back(tmp_med);
 						tmp_med.chosen_med_symptoms.clear();

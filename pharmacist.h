@@ -26,7 +26,8 @@ std::ostream& operator<<(std::ostream& os, const Pharmacist& pharmacist);
 struct chosen_medicine
 {
 	std::string chosen_med_name;
-	int num_of_symptoms = 0;
+	int num_of_symptoms = 1;
 	std::vector<std::string> chosen_med_symptoms;
 	double taxed_price = 0.0;
+	bool prescripted = false;
 };
