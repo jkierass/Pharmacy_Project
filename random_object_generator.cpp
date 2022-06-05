@@ -54,8 +54,14 @@ std::vector<std::string> RandomObjectsGenerator::generate_symptoms()
 		std::uniform_int_distribution<int> num_gen(0, symptoms_num-1);
 
 		int num = num_gen(generator);
-
-		generated_symptoms.push_back(symptoms[num]);
+		if (std::find(generated_symptoms.begin(), generated_symptoms.end(), symptoms[num]) == generated_symptoms.end())
+		{
+			generated_symptoms.push_back(symptoms[num]);
+		}
+		else
+		{
+			i = i - 1;
+		}
 	}
 	return generated_symptoms;
 }

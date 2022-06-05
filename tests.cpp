@@ -68,7 +68,40 @@ TEST_CASE("test random object generator")
 {
 	std::string path_symptoms = "symptoms.txt";
 	std::string path_name = "name.txt";
-	std::string path_medicine_prescription = argv[4];
+	std::string path_medicine_prescription = "Medicines_prescription.txt";
+
+	TxtFile file(path_name, path_symptoms, path_medicine_prescription);
+
+	std::vector<std::string> names;
+	std::vector<std::string> symptoms;
+	std::vector<std::string> prescripted_medicines;
+
+	names = file.read_names();
+	symptoms = file.read_symptoms();
+	prescripted_medicines = file.read_prescripted_medicines();
+
+	RandomObjectsGenerator generator(names, symptoms, prescripted_medicines);
+
+	REQUIRE(generator.generate_number(0,2) < 3);
+
+	REQUIRE(generator.generate_clients_vector(3, 5).size() < 6);
+
+	REQUIRE(generator.generate_pharmacists(0, 4).size() < 5);
+
+	REQUIRE(generator.generate_symptoms().size() < 4);
+
+	REQUIRE(generator.generate_number(0, 2) < 3);
+
+	REQUIRE(generator.generate_windows(4, 6).size() < 7);
+
+	SECTION("test static generation")
+	{
+		REQUIRE(generator.generate_clients_vector(5).size() == 5);
+
+		REQUIRE(generator.generate_pharmacists(4).size() == 4);
+
+		REQUIRE(generator.generate_windows(6).size() ==6);
+	}
 }
 
 TEST_CASE("Testing base class methods")
