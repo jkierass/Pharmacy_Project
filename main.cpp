@@ -54,9 +54,9 @@ int main()
 
 		iteration_num = iteration_num - 1;
 
-		std::cout << windows.size() << std::endl;
-		std::cout << pharmacists.size() << std::endl;
-		std::cout << queue.get_clients().size() << std::endl;
+		std::cout << "Windows number: " << windows.size() << std::endl;
+		std::cout << "Pharmacists number: " << pharmacists.size() << std::endl;
+		std::cout << "Clients in queue number: " << queue.get_clients().size() << std::endl;
 
 		//Assigning Clients to window
 		for (int i = 0; i < windows.size(); i++)
@@ -172,6 +172,12 @@ int main()
 		
 		int client_num = generator.generate_number(0, 2);
 		std::vector<Client> new_clients = generator.generate_clients_vector(0, client_num);
+		
+		//appendinng queue
+		for (int i = 0; i < new_clients.size(); i++)
+		{
+			queue.add_client(new_clients[i]);
+		}
 
 	}
 	return 0;
