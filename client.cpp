@@ -38,6 +38,11 @@ std::vector<std::string> Client::get_symptoms()
 	return this->symptoms;
 }
 
+std::vector<Medicine> Client::get_cart()
+{
+	return this->cart;
+}
+
 std::ostream& operator<<(std::ostream& os, const Client& client)
 {
 	os << "Client: " << client.name << " Action: " << client.action << std::endl;

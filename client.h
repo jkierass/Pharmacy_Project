@@ -22,7 +22,7 @@ public:
 	void set_cart(std::vector<Medicine> cart);
 
 	std::string get_name();
-
+	std::vector<Medicine> get_cart();
 	std::vector<std::string> get_symptoms();
 
 	friend std::ostream& operator<<(std::ostream& os, const Client& client);
