@@ -15,8 +15,8 @@ Pills 2 Trittico_CR Angelini Trazodoni depression insomnia 60 10000 1 swallow
 Pills 2 Trazdodonix Hasco Trazodoni depression insomnia 60 5000 1 swallow
 Pills 1 Furaginum Hasco Furazidinum cystitis 30 3400 0 swallow
 Pills 3 Scorbolamid Polpharma Salicylamidum cold flu headache 30 2300 0 swallow
-Pills 3 Efferalgan_Codeine Bayer Codeine pain dry_cough headache 10 2500 1 effervescent
-Pills 3 Codeinex Hasco Codeine pain dry_cough headache 10 3500 1 swallow
+Pills 3 Efferalgan_Codeine Bayer Codeine pain dry_cough headache 10 2500 0 effervescent
+Pills 3 Codeinex Hasco Codeine pain dry_cough headache 10 3500 0 swallow
 Pills 1 Stopperan UPS Loperamid diarrhea 20 1100 0 swallow
 Pills 2 Memotropil Polpharma Piracetamum memory_disorder after_stroke 30 4000 1 swallow
 Pills 2 123_Ratio Glaxo Piracetamum memory_disorder after_stroke 30 2000 1 chewable
@@ -29,7 +29,7 @@ Syrup 1 Marshmallow_syrup Hasco polisacharids throatache 150 700 0 simple
 Syrup 2 Antussimin Doz Malva_aborea throat_irritation dry_cough 120 1700 0 flavoured
 Ointment 1 RECTOstop Pharmacy_Laboratories aloe hemorrhoids 200 1400 0 gel
 Ointment 2 Altacet Bayer ethanol scrapes bruises 75 1000 0 gel
-Ointment 1 Acnex Gomed bisabolol acne 35 1300 0 cream
+Ointment 1 Acnex Gomed bisabolol acne 35 1300 1 cream
 Ointment 1 Rosacure Synchronile dimethyl_sulfone acne 30 7700 1 cream
 Ointment 1 Antiacne Hasco dimethyl_sulfone acne 30 2700 1 gel
 Ointment 1 Acnidol Doz dimethyl_sulfone acne 30 3500 1 cream
