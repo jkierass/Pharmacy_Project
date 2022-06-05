@@ -4,7 +4,7 @@
 #include <ctime>
 #include "txt_file.h"
 
-RandomObjectsGenerator::RandomObjectsGenerator(std::vector<std::string> names, std::vector<std::string> symptoms)
+RandomObjectsGenerator::RandomObjectsGenerator(std::vector<std::string> names, std::vector<std::string> symptoms, std::vector<std::string> prescripted_medicines)
 {
 	set_names(names);
 	set_symptoms(symptoms);
@@ -19,6 +19,8 @@ void RandomObjectsGenerator::set_symptoms(std::vector<std::string> symptoms)
 {
 	this->symptoms = symptoms;
 }
+
+void RandomObjectsGenerator::
 
 std::vector<std::string> RandomObjectsGenerator::generate_symptoms()
 {

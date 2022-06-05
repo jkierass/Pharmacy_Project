@@ -28,6 +28,11 @@ void Client::set_cart(std::vector<Medicine> cart)
 	this->cart = cart;
 }
 
+void Client::set_prescription_medicine(std::string prescription_medicine)
+{
+	this->prescription_medicine = prescription_medicine;
+}
+
 std::string Client::get_name()
 {
 	return this->name;
@@ -41,6 +46,11 @@ std::vector<std::string> Client::get_symptoms()
 std::vector<Medicine> Client::get_cart()
 {
 	return this->cart;
+}
+
+std::string Client::get_prescription_medicine()
+{
+	return this->prescription_medicine;
 }
 
 std::ostream& operator<<(std::ostream& os, const Client& client)

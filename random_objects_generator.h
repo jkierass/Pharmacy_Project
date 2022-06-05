@@ -11,11 +11,13 @@ class RandomObjectsGenerator
 private:
 	std::vector<std::string> names;
 	std::vector<std::string> symptoms;
+	std::vector<std::string> prescripted_medicines;
 public:
-	RandomObjectsGenerator(std::vector<std::string> names, std::vector<std::string> symptoms);
+	RandomObjectsGenerator(std::vector<std::string> names, std::vector<std::string> symptoms, std::vector<std::string> prescripted_medicines);
 
 	void set_names(std::vector<std::string> names);
 	void set_symptoms(std::vector<std::string> symptoms);
+	void set_prescripted_medicines(std::vector<std::string> prescripted_medicines);
 
 	std::vector<std::string> generate_symptoms();
 

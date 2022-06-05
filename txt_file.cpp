@@ -18,6 +18,11 @@ void TxtFile::set_path_symptoms(std::string path_symptoms)
     this->path_symptoms = path_symptoms;
 }
 
+void TxtFile::set_path_medicine_prescription(std::string path_medicine_prescription)
+{
+	this->path_medicine_prescription = path_medicine_prescription;
+}
+
 std::vector<std::string> TxtFile::read_names()
 {
     std::ifstream file_handle;
@@ -81,4 +86,36 @@ std::vector<std::string> TxtFile::read_symptoms()
 		throw std::invalid_argument("not found");
 	}
 	return symptoms;
+}
+
+std::vector<std::string> TxtFile::read_prescripted_medicines()
+{
+	std::ifstream file_handle;
+	std::vector<std::string> medicines;
+
+	file_handle.open(path_medicine_prescription.c_str());
+
+	if (!file_handle.fail())
+	{
+		if (file_handle.is_open())
+		{
+			std::string med;
+			do
+			{
+				file_handle >> med;
+				medicines.push_back(med);
+
+			} while (!file_handle.eof());
+			file_handle.close();
+		}
+		else
+		{
+			throw std::invalid_argument("not opened");
+		}
+	}
+	else
+	{
+		throw std::invalid_argument("not found");
+	}
+	return medicines;
 }
