@@ -135,39 +135,42 @@ void Pharmacist::print_receipt(Client my_client)
 		double total_price = 0.0;
 		double total_price_base = 0.0;
 		double total_tax_value = 0.0;
+		std::cout.setf(std::ios::left);
 		std::cout.fill('_');
-		std::cout << "_" << std::setw(78) << "_" << std::endl;
+		std::cout << "_" << std::setw(60) << "_" << std::endl;
 		std::cout.fill(' ');
-		std::cout << "|" << std::setw(78) << "|" << std::endl;
-		std::cout << "|" << std::setw(78) << "|" << std::endl;
-		std::cout << "|" << std::setw(39) << "Pharmacy 'Pharmax' limited liability company" << std::setw(39) << "|" << std::endl;
-		std::cout << "|" << std::setw(39) << "Siedmiogrodzka street 13c" << std::setw(39) << "|" << std::endl;
-		std::cout << "|" << std::setw(39) << "01-204 Warsaw, Poland" << std::setw(39) << "|" << std::endl;
-		std::cout << "|" << std::setw(39) << "NIP: 0123456789" << std::setw(39) << "|" << std::endl;
-		std::cout << "|" << std::setw(39) << "Phone: +48 321 243 967" << std::setw(39) << "|" << std::endl;
-		std::cout << "|" << std::setw(78) << "|" << std::endl;
-		std::cout << "|" << std::setw(78) << "|" << std::endl;
-		std::cout << "|" << std::setw(39) << "FISCAL RECEIPT" << std::setw(39) << "|" << std::endl;
-		std::cout << "|" << std::setw(78) << "|" << std::endl;
-		std::cout << "|" << std::setw(78) << "|" << std::endl;
-		std::cout << "|" << std::setw(78) << "|" << std::endl;
-		std::cout << "|" << std::setw(16) << "Medicine type" << ": " << std::setw(20) << "name" << std::setw(16)
-			<< "producer" << std::setw(6) << "tax" << std::setw(6) << "base" << std::setw(6) << "total" << std::setw(8) << "|" << std::endl;
+		std::cout << std::setw(60) << "|" << "|" << std::endl;
+		std::cout << std::setw(60) << "| Pharmacy 'Pharmax' limited liability company" <<  "|" << std::endl;
+		std::cout << std::setw(60) << "| Siedmiogrodzka street 13c" << "|" << std::endl;
+		std::cout << std::setw(60) << "| 01-204 Warsaw, Poland" << "|" << std::endl;
+		std::cout << std::setw(60) << "| NIP: 0123456609" << "|" << std::endl;
+		std::cout << std::setw(60) << "| Phone: +48 321 243 967" << "|" << std::endl;
+		std::cout << std::setw(60) << "|" << "|" << std::endl;
+		std::cout << std::setw(60) << "|" << "|" << std::endl;
+		std::cout << std::setw(20) << "|" << "FISCAL RECEIPT" << std::setiosflags(std::ios::right) << std::setw(27) << "|" << std::endl;
+		std::cout.setf(std::ios::left);
+		std::cout << "|" << std::setw(60) << "|" << std::endl;
+		std::cout << "|" << std::setw(60) << "|" << std::endl;
+		std::cout << "|" << std::setw(60) << "|" << std::endl;
+		std::cout << "|" << std::setw(20) << "name:" << std::setw(16)
+			<< "producer:" << std::setw(8) << "tax:" << std::setw(7) << "base:" << std::setw(8) << "total:" << "|" << std::endl;
 		for (const auto& medicine_in_cart : my_client.cart)
 		{
 			medicine_in_cart.print_on_receipt(std::cout);
 			total_price_base += double(medicine_in_cart.get_base_price_gr())/100;
-			total_tax_value += medicine_in_cart.get_tax_value() - 1;
 			total_price += medicine_in_cart.get_calculated_price();
 		}
+		total_tax_value = total_price - total_price_base;
 		std::cout.fill('_');
-		std::cout << "_" << std::setw(78) << "_" << std::endl;
+		std::cout << "_" << std::setw(60) << "_" << std::endl;
 		std::cout.fill(' ');
-		std::cout << "|" << std::setw(78) << "|" << std::endl;
-		std::cout << "|" << std::setw(39) << "TOTAL: " << std::setw(24) << total_price << std::setw(8) << "|" << std::endl;
-		std::cout << "|" << std::setw(78) << "|" << std::endl;
+		std::cout << "|" << std::setw(60) << "|" << std::endl;
+		std::cout << "|" << std::setw(30) << "TOTAL BASE: " << std::setw(29) << total_price_base << "|" << std::endl;
+		std::cout << "|" << std::setw(30) << "TOTAL TAX: " << std::setw(29) << total_tax_value << "|" << std::endl;
+		std::cout << "|" << std::setw(30) << "TOTAL: " << std::setw(29) << total_price  << "|" << std::endl;
+		std::cout << "|" << std::setw(60) << "|" << std::endl;
 		std::cout.fill('_');
-		std::cout << "_" << std::setw(78) << "_" << std::endl;
+		std::cout << "_" << std::setw(60) << "_" << std::endl;
 		std::cout.fill(' ');
 	}
 	else
