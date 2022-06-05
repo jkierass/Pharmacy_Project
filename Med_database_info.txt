@@ -1,21 +1,27 @@
-Pills 3 Aspirin Bayer acetylsalicylic_acid pain fever inflammation 10 705 0 swallow
+Pills 3 Aspirin Bayer acetylsalicylic_acid pain fever inflammation 10 7050 0 swallow
 Pills 1 Aripiprazole_STADA Abilify aripiprazolum schizophrenia 28 7000 1 disintegrating
+Pills 1 Aripiprazolumid Unia aripiprazolum schizophrenia 28 3500 1 swallow
+Pills 1 Aripix Bayer aripiprazolum schizophrenia 28 10000 1 chewable
 Pills 1 Benadryl Bayer diphenhydramine allergy 24 6000 1 chewable
 Pills 1 Cholinex GlaxoSmithCline Cholini_salicylas throatache 24 2500 0 disintegrating
 Pills 2 Valused Hasco Valerianae insomnia pain 30 2200 0 sublingual
 Pills 2 Active_coal Medipharm active_coal food_poisoning stomachache 20 1500 0 swallow
 Pills 2 Paracetamol Aurovitas Piracetamum fever inflammation 10 800 0 swallow
 Pills 1 Florcontrol Doz Bifidobacterium_animalis bacterial_flore 20 1000 0 swallow
-Pills 1 Efectin Upjohn Venlafaxinum depression 28 3000 1 swallow
+Pills 1 Alventa Krka Venlafaxinum depression 28 2700 1 swallow
+Pills 1 Lafactin Aurovitas Venlafaxinum depression 28 3300 1 swallow
+Pills 1 Efectin Upjohn Venlafaxinum depression 28 3000 1 chewable
 Pills 2 Trittico_CR Angelini Trazodoni_hydrochloridum depression insomnia 60 10000 1 swallow
 Pills 1 Furaginum Hasco Furazidinum cystitis 30 3400 0 swallow
 Pills 3 Scorbolamid Polpharma Salicylamidum cold flu headache 30 2300 0 swallow
 Pills 3 Efferalgan_Codeine Bayer Codeine pain cough headache 10 2500 1 effervescent
-Pills 1 Alventa Krka Venlafaxinum depression 28 2700 1 swallow
-Pills 1 Lafactin Aurovitas Venlafaxinum depression 28 3300 1 swallow
+Pills 3 Codeinex Hasco Codeine pain cough headache 10 3500 1 swallow
 Pills 1 Stopperan UPS Loperamid diarrhea 20 1150 0 swallow
 Pills 2 Memotropil Polpharma Piracetamum memory_disorder after_stroke 30 4000 1 swallow
+Pills 2 123_Ratio Glaxo Piracetamum memory_disorder after_stroke 30 2000 1 chewable
+Pills 2 Memexin Walmark Piracetamum memory_disorder after_stroke 30 2800 1 disintegrating
 Syrup 2 Thiocodin Unia Codeine_phosphoran dry_cough wet_cough 200 1200 0 medicated
+Syrup 3 Coughix Synchronile Codeine_phosphoran dry_cough wet_cough throatache 250 1400 0 medicated
 Syrup 1 Pelavo USP Pelargonia runny_nose 150 800 0 flavoured
 Syrup 1 Sinulan Walmark herb_extract sinus 250 1300 0 simple
 Syrup 1 Marshmallow_syrup Hasco polisacharids throatache 150 700 0 simple
@@ -24,6 +30,8 @@ Ointment 1 RECTOstop Pharmacy_Laboratories aloe hemorrhoids 200 1400 0 gel
 Ointment 2 Altacet Bayer ethanol scrapes bruises 75 1000 0 gel
 Ointment 1 Acnex Gomed bisabolol acne 35 1300 0 cream
 Ointment 1 Rosacure Synchronile dimethyl_sulfone acne 30 7700 1 cream
+Ointment 1 Antiacne Hasco dimethyl_sulfone acne 30 2700 1 gel
+Ointment 1 Acnidol Doz dimethyl_sulfone acne 30 3500 1 cream
 Ointment 1 Heparinum Glaxo heparinum skin_inflammation 30 2800 0 cream
 Ointment 2 Traumon Mylan etofenamatum back_pain skin_inflammation 50 3100 0 gel
 Ointment 3 Ibuprom_sport US ibuprofenum muscle_pain back_pain arthritis 25 4500 0 gel
@@ -31,5 +39,6 @@ Ointment 2 Octenisept Schulke octenidinum cuts disinfection 50 2800 0 spray
 Drops 2 Krople_zoladkowe Aflofarm ethanol stomachache diarrhea 35 400 0 solution
 Drops 2 Lacrimal Polfa_Warszawa hyaluronic_acid eye_redness dry_eye 10 1200 0 solution
 Drops 2 THEALOZ_DUO Thea hyaluronic_acid eye_redness dry_eye 10 4100 1 slime
+Drops 2 THEALOZIX Upjohn hyaluronic_acid eye_redness dry_eye 10 2100 1 soultion
 Drops 1 Sinex Vicks eucalyptus runny_nose 15 2100 0 solution
 Drops 1 Acatar USP eucalyptus runny_nose 15 1900 0 slime

@@ -30,3 +30,8 @@ disinfection
 eye_redness
 dry_eye
 diarrhea
+acne
+bruises
+bites
+burns
+scrapes
