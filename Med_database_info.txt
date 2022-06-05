@@ -12,6 +12,7 @@ Pills 1 Alventa Krka Venlafaxinum depression 28 2700 1 swallow
 Pills 1 Lafactin Aurovitas Venlafaxinum depression 28 3300 1 swallow
 Pills 1 Efectin Upjohn Venlafaxinum depression 28 3000 1 chewable
 Pills 2 Trittico_CR Angelini Trazodoni_hydrochloridum depression insomnia 60 10000 1 swallow
+Pills 2 Trazdodonix Hasco Trazodoni_hydrochloridum depression insomnia 60 5000 1 swallow
 Pills 1 Furaginum Hasco Furazidinum cystitis 30 3400 0 swallow
 Pills 3 Scorbolamid Polpharma Salicylamidum cold flu headache 30 2300 0 swallow
 Pills 3 Efferalgan_Codeine Bayer Codeine pain cough headache 10 2500 1 effervescent
@@ -19,7 +20,7 @@ Pills 3 Codeinex Hasco Codeine pain cough headache 10 3500 1 swallow
 Pills 1 Stopperan UPS Loperamid diarrhea 20 1150 0 swallow
 Pills 2 Memotropil Polpharma Piracetamum memory_disorder after_stroke 30 4000 1 swallow
 Pills 2 123_Ratio Glaxo Piracetamum memory_disorder after_stroke 30 2000 1 chewable
-Pills 2 Memexin Walmark Piracetamum memory_disorder after_stroke 30 2800 1 disintegrating
+Pills 2 Memoxin Walmark Piracetamum memory_disorder after_stroke 30 2800 1 disintegrating
 Syrup 2 Thiocodin Unia Codeine_phosphoran dry_cough wet_cough 200 1200 0 medicated
 Syrup 3 Coughix Synchronile Codeine_phosphoran dry_cough wet_cough throatache 250 1400 0 medicated
 Syrup 1 Pelavo USP Pelargonia runny_nose 150 800 0 flavoured

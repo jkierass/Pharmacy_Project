@@ -166,6 +166,7 @@ void Pharmacist::print_receipt(Client my_client)
 {
 	if (my_client.cart.size() > 0)
 	{
+		std::cout.unsetf(std::ios::right);
 		double total_price = 0.0;
 		double total_price_base = 0.0;
 		double total_tax_value = 0.0;
