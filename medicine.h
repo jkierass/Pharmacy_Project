@@ -27,7 +27,7 @@ public:
 	Medicine(std::string, std::string, std::string, std::vector<std::string>, int, int, bool);
 	friend std::ostream& operator<<(std::ostream& os, const Medicine& Med);
 	virtual void print(std::ostream&) const;
-	void print_on_receipt(std::ostream&) const noexcept;
+	void print_on_receipt() const noexcept;
 	virtual void calculate_price();
 	virtual ~Medicine();
 

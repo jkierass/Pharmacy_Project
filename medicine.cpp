@@ -114,12 +114,12 @@ void Medicine::print(std::ostream& os) const
 	os << "\nBase price: " << (double)base_price_gr / 100 << " zl\nTaxed price: " << calculated_price << " zl\n" << std::endl;
 }
 
-void Medicine::print_on_receipt(std::ostream& os) const noexcept
+void Medicine::print_on_receipt() const noexcept
 {
 	int tax_value_to_pr = (tax_value - 1) * 100;
 	std::string string_tax_value = std::to_string(tax_value_to_pr) + "%";
-	os.fill(' ');
-	os << "|" << std::setw(20) << name << std::setw(16)
+	std::cout.fill(' ');
+	std::cout << "|" << std::setw(20) << name << std::setw(16)
 		<< producer << std::setw(8) << string_tax_value << std::setw(7) << std::to_string(base_price_gr/100) + ".00" << std::setw(8) << calculated_price << "|" << std::endl;
 }
 
