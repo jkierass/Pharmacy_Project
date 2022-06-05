@@ -30,37 +30,37 @@ TEST_CASE("Test Queue")
 		REQUIRE(queue.get_clients().size() == 1);
 	}
 }
-/*
-TEST_CASE("test client")
-{
-	Medicine first;
-	Medicine second;
-	Medicine third;
 
-	std::vector<Medicine> medicines = { first, second };
-
-	Client First_c("Andrzej", medicines);
-
-	SECTION("test name")
-	{
-		REQUIRE(First_c.get_name() == "Andrzej");
-	}
-
-	SECTION("add medicine")
-	{
-		REQUIRE(First_c.get_medicines().size() == 2);
-		First_c.add_medicine(third);
-		REQUIRE(First_c.get_medicines().size() == 3);
-	}
-	*/
-/*
-	SECTION("remove medicine")
-	{
-		REQUIRE(First_c.get_medicines().size() == 2);
-		First_c.remove_medicine(first);
-		REQUIRE(First_c.get_medicines().size() == 1);
-	}
-	*/
+//TEST_CASE("test client")
+//{
+//	Medicine first;
+//	Medicine second;
+//	Medicine third;
+//
+//	std::vector<Medicine> medicines = { first, second };
+//
+//	Client First_c("Andrzej", medicines);
+//
+//	SECTION("test name")
+//	{
+//		REQUIRE(First_c.get_name() == "Andrzej");
+//	}
+//
+//	SECTION("add medicine")
+//	{
+//		REQUIRE(First_c.get_medicines().size() == 2);
+//		First_c.add_medicine(third);
+//		REQUIRE(First_c.get_medicines().size() == 3);
+//	}
+//	
+//
+//	SECTION("remove medicine")
+//	{
+//		REQUIRE(First_c.get_medicines().size() == 2);
+//		First_c.remove_medicine(first);
+//		REQUIRE(First_c.get_medicines().size() == 1);
+//	}
+//	
 
 
 

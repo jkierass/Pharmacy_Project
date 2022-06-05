@@ -196,7 +196,7 @@ void Pharmacist::print_receipt(Client my_client) const
 			<< "producer:" << std::setw(8) << "tax:" << std::setw(7) << "base:" << std::setw(8) << "total:" << "|" << std::endl;
 		for (const auto& medicine_in_cart : my_client.cart)
 		{
-			medicine_in_cart.print_on_receipt(std::cout);
+			medicine_in_cart.print_on_receipt();
 			total_price_base += medicine_in_cart.get_base_price_gr()/100;
 			total_price += medicine_in_cart.get_calculated_price();
 		}
