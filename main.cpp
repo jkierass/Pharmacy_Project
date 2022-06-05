@@ -106,8 +106,7 @@ int main()
 					windows[i].get_client().set_action("ask about medicines");
 					//Ustawienie operacji na 1
 					windows[i].set_client_operation(1);
-					std::vector<Medicine> medicines = windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
-					windows[i].get_client().set_cart(medicines);
+					windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
 					Sleep(2000);
@@ -118,8 +117,7 @@ int main()
 				case 2:
 				{
 					windows[i].get_client().set_action("buy medicines");
-					std::vector<Medicine> medicines = windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
-					windows[i].get_client().set_cart(medicines);
+					windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
 					windows[i].status_empty();
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
@@ -148,17 +146,17 @@ int main()
 					windows[i].set_client_operation(2);
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
+					std::cout << windows[i].get_client().get_cart()[0].get_name() << " -replace status:";
 					try
 					{
 						std::vector<Medicine> replaced_meds;
-
+						
 						replaced_meds = windows[i].get_pharmacist().choose_cheaper_replacements_and_replace(windows[i].get_client(), pharmacist_knowledge, windows[i].get_client().get_cart()[0]);
-						std::cout << "Replaced" << windows[i].get_client().get_cart()[0].get_name();
-						windows[i].get_client().set_cart(replaced_meds);
+						std::cout << " Replaced" << std::endl;
 					}
 					catch (MedicineNotFoundException)
 					{
-						std::cout << windows[i].get_client().get_cart()[0].get_name() << "no replacement";
+						std::cout << " No replacement" << std::endl;
 					}
 					Sleep(2000);
 					break;
