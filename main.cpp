@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
 {
 	if (argc != 5 && argc != 9)
 	{
-		std::cerr << "Incorrect number of command line arguments - expected 5 or 9, got " << argc << std::endl;
+		std::cerr << "Incorrect number of command line arguments - expected 4 or 8, got " << argc << std::endl;
 		return 1;
 	}
 
