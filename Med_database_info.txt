@@ -1,4 +1,4 @@
-Pills 3 Aspirin Bayer acetylsalicylic_acid pain fever inflammation 10 7000 0 swallow
+Pills 3 Aspirin Bayer acetylsalicylic_acid pain fever inflammation inso000 0 swallow
 Pills 1 Aripiprazole_STADA Abilify aripiprazolum schizophrenia 28 7000 1 disintegrating
 Pills 1 Aripiprazolumid Unia aripiprazolum schizophrenia 28 3500 1 swallow
 Pills 1 Aripix Bayer aripiprazolum schizophrenia 28 10000 1 chewable
