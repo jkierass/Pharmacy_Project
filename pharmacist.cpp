@@ -89,7 +89,7 @@ std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client
 				std::sort(tmp_chosen_meds.begin(), tmp_chosen_meds.end(), [](const chosen_medicine& a, const chosen_medicine& b)->bool {return a.taxed_price < b.taxed_price; });
 				do {
 					the_one_chosen_med_name = tmp_chosen_meds[0].chosen_med_name;
-					if (!(the_one_chosen_med_name == med_to_replace.get_name()))
+					if (!(the_one_chosen_med_name == med_to_replace.get_name()) && tmp_chosen_meds[0].prescripted == false)
 					{
 						replacement_medicines.push_back(pharmacist_knowledge.find_by_name(the_one_chosen_med_name));
 						replacement_found = true;
@@ -105,6 +105,10 @@ std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client
 					{
 						tmp_chosen_meds.erase(tmp_chosen_meds.begin());
 						replacement_found = false;
+						if (tmp_chosen_meds.size() == 0)
+						{
+							throw MedicineNotFoundException("There is none replacement available");
+						}
 					}
 				} while (replacement_found = false);
 				tmp_chosen_meds.clear();
@@ -254,7 +258,7 @@ std::vector<chosen_medicine> get_all_meds_for_symptoms(std::vector<std::string> 
 					else
 					{
 						tmp_med.chosen_med_name = medicine_ptr->get_name();
-						tmp_med.num_of_symptoms = 1;
+						tmp_med.prescripted = medicine_ptr->get_prescription();
 						tmp_med.chosen_med_symptoms.push_back(med_symptom);
 						chosen_meds.push_back(tmp_med);
 						tmp_med.chosen_med_symptoms.clear();
