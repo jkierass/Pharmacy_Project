@@ -2,9 +2,9 @@ Pills 3 Aspirin Bayer acetylsalicylic_acid pain fever inflammation 10 7000 0 swa
 Pills 1 Aripiprazole_STADA Abilify aripiprazolum schizophrenia 28 7000 1 disintegrating
 Pills 1 Aripiprazolumid Unia aripiprazolum schizophrenia 28 3500 1 swallow
 Pills 1 Aripix Bayer aripiprazolum schizophrenia 28 10000 1 chewable
-Pills 1 Benadryl Bayer diphenhydramine allergy 24 6000 1 chewable
+Pills 1 Benadryl Bayer diphenhydramine allergy 24 6000 0 chewable
 Pills 1 Cholinex GlaxoSmithCline Cholini_salicylas throatache 24 2500 0 disintegrating
-Pills 2 Valused Hasco Valerianae insomnia pain 30 2200 0 sublingual
+Pills 2 Valused Hasco Valerianae insomnia pain 30 2200 1 sublingual
 Pills 2 Active_coal Medipharm active_coal food_poisoning stomachache 20 1500 0 swallow
 Pills 2 Paracetamol Aurovitas Piracetamum fever inflammation 10 800 0 swallow
 Pills 1 Florcontrol Doz Bifidobacterium_animalis bacterial_flore 20 1000 0 swallow
