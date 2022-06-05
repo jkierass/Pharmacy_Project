@@ -23,6 +23,7 @@ void Pharmacist::set_id(int id)
 
 std::vector<Medicine> Pharmacist::choose_medicines(Client& my_client, MDatabase& pharmacist_knowledge) const
 {
+	std::cout << "choose\n";
 	std::vector<std::string> tmp_symptoms = my_client.symptoms;
 	std::vector<chosen_medicine> tmp_chosen_meds;
 	std::vector<Medicine> medicines;
@@ -53,11 +54,13 @@ std::vector<Medicine> Pharmacist::choose_medicines(Client& my_client, MDatabase&
 		my_client.cart.push_back(medicines[iterator]);
 	}
 	my_client.cart.push_back(pharmacist_knowledge.find_by_name(my_client.prescription_medicine));
+	std::cout << "chosen success\n";
 	return medicines;
 }
 
 std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client& my_client, MDatabase& pharmacist_knowledge, Medicine med_to_replace) const
 {
+	std::cout << "replacement\n";
 	std::string tmp_substance = med_to_replace.get_substance();
 	bool is_prescripted = med_to_replace.get_prescription();
 	std::string tmp_med_to_replace_name = med_to_replace.get_name();
@@ -171,6 +174,7 @@ void Pharmacist::print_receipt(Client my_client) const
 {
 	if (my_client.cart.size() > 0)
 	{
+		std::cout.fill(' ');
 		std::cout.unsetf(std::ios::right);
 		double total_price = 0.0;
 		int total_price_base = 0;
@@ -211,7 +215,6 @@ void Pharmacist::print_receipt(Client my_client) const
 		std::cout << "|" << std::setw(60) << "|" << std::endl;
 		std::cout.fill('_');
 		std::cout << "_" << std::setw(60) << "_" << std::endl;
-		std::cout.fill(' ');
 	}
 	else
 	{
@@ -235,6 +238,7 @@ std::ostream& operator<<(std::ostream& os, const Pharmacist& pharmacist)
 
 std::vector<chosen_medicine> get_all_meds_for_symptoms(std::vector<std::string> vector_symptoms, MDatabase& database)
 {
+	std::cout << "get all meds" << std::endl;
 	std::vector<std::string> tmp_symptoms = vector_symptoms;
 	std::vector<chosen_medicine> chosen_meds;
 	chosen_medicine tmp_med;
@@ -245,7 +249,7 @@ std::vector<chosen_medicine> get_all_meds_for_symptoms(std::vector<std::string> 
 		{
 			for (const auto& med_symptom : medicine_ptr->get_symptoms())
 			{
-				if (tmp_symptoms[i] == med_symptom)
+				if (tmp_symptoms[i] == med_symptom && medicine_ptr->get_prescription() == false)
 				{
 					tmp_med_name = medicine_ptr->get_name();
 					if (std::any_of(chosen_meds.begin(), chosen_meds.end(), [tmp_med_name](const chosen_medicine& a)->bool {return a.chosen_med_name == tmp_med_name; }))

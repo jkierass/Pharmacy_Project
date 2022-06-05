@@ -1,21 +1,17 @@
 fever
 inflammation
-schizophrenia
 allergy
 throatache
 pain
 food_poisoning
 stomachache
 bacterial_flore
-depression
 insomnia
 cystitis
 cold
 cough
 headache
 diarrhea
-memory_disorder
-after_stroke
 dry_cough
 wet_cough
 runny_nose
@@ -29,4 +25,3 @@ disinfection
 eye_redness
 dry_eye
 diarrhea
-acne

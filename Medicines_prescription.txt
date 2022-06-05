@@ -3,8 +3,6 @@ Lafactin
 Efectin
 Trittico_CR
 Trazdodonix
-Efferalgan_Codeine
-Codeinex
 Memotropil
 123_Ratio
 Memoxin
@@ -13,3 +11,4 @@ Antiacne
 Acnidol
 THEALOZ_DUO
 THEALOZIX
+Acnex

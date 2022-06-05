@@ -93,6 +93,7 @@ int main(int argc, char* argv[])
 			{
 				std::cerr << "Wrong start arguments. Fourth, fifth, sixth and seventh argument should be number!" << std::endl;
 				return 1;
+
 			}
 			argv_ints.push_back(conv);
 		}
