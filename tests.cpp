@@ -31,38 +31,45 @@ TEST_CASE("Test Queue")
 	}
 }
 
-//TEST_CASE("test client")
-//{
-//	Medicine first;
-//	Medicine second;
-//	Medicine third;
-//
-//	std::vector<Medicine> medicines = { first, second };
-//
-//	Client First_c("Andrzej", medicines);
-//
-//	SECTION("test name")
-//	{
-//		REQUIRE(First_c.get_name() == "Andrzej");
-//	}
-//
-//	SECTION("add medicine")
-//	{
-//		REQUIRE(First_c.get_medicines().size() == 2);
-//		First_c.add_medicine(third);
-//		REQUIRE(First_c.get_medicines().size() == 3);
-//	}
-//	
-//
-//	SECTION("remove medicine")
-//	{
-//		REQUIRE(First_c.get_medicines().size() == 2);
-//		First_c.remove_medicine(first);
-//		REQUIRE(First_c.get_medicines().size() == 1);
-//	}
-//	
+TEST_CASE("test client")
+{
+	std::vector<std::string> symptoms = { "dsdsd", "safsafas", "fasfaas" };
+	Medicine first("safasfa", "Bayer", "DDD", symptoms, 2, 20, 0);
+	Medicine second("safasfa", "Bayer", "DDD", symptoms, 2, 20, 0);
+	Medicine third("safasfa", "Bayer", "DDD", symptoms, 2, 20, 0);
 
+	std::vector<Medicine> medicines = {first, second, third};
 
+	Client First_c("Andrzej", symptoms, "derrr");
+	REQUIRE(First_c.get_name() == "Andrzej");
+	REQUIRE(First_c.get_symptoms().size() == 3);
+	REQUIRE(First_c.get_cart().size() == 0);
+	REQUIRE(First_c.get_prescription_medicine() == "derrr");
+
+	SECTION("set cart")
+	{
+		//Lack of error while setting cart
+		First_c.set_cart(medicines);
+	}
+}
+
+TEST_CASE("test pharmacist")
+{
+	Pharmacist pharmacist(12342);
+
+	REQUIRE(pharmacist.get_id() == 12342);
+
+	pharmacist.set_id(1324124);
+
+	REQUIRE(pharmacist.get_id() == 1324124);
+}
+
+TEST_CASE("test random object generator")
+{
+	std::string path_symptoms = "symptoms.txt";
+	std::string path_name = "name.txt";
+	std::string path_medicine_prescription = argv[4];
+}
 
 TEST_CASE("Testing base class methods")
 {
