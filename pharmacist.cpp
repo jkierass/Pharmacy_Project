@@ -52,6 +52,7 @@ std::vector<Medicine> Pharmacist::choose_medicines(Client& my_client, MDatabase&
 	{
 		my_client.cart.push_back(medicines[iterator]);
 	}
+	my_client.cart.push_back(pharmacist_knowledge.find_by_name(my_client.prescription_medicine));
 	return medicines;
 }
 
