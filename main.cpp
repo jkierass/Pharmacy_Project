@@ -93,6 +93,7 @@ int main(int argc, char* argv[])
 			{
 				std::cerr << "Wrong start arguments. Fourth, fifth, sixth and seventh argument should be number!" << std::endl;
 				return 1;
+
 			}
 			argv_ints.push_back(conv);
 		}
@@ -180,7 +181,7 @@ int main(int argc, char* argv[])
 					windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
-					Sleep(2000);
+					//Sleep(2000);
 					break;
 				}
 
@@ -196,7 +197,7 @@ int main(int argc, char* argv[])
 					//Zresetowanie akcji okienka
 					windows[i].set_client_operation(0);
 					//zatrzymuje czas ale nie wiem na ile chyba 2 s XD
-					Sleep(2000);
+					//Sleep(2000);
 					break;
 				}
 						
@@ -208,7 +209,7 @@ int main(int argc, char* argv[])
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
 					windows[i].set_client_operation(0);
-					Sleep(2000);
+					//Sleep(2000);
 					break;
 				}
 
@@ -232,7 +233,7 @@ int main(int argc, char* argv[])
 					{
 						std::cout << " No replacement" << std::endl;
 					}
-					Sleep(2000);
+					//Sleep(2000);
 					break;
 				}
 				}

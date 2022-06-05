@@ -171,6 +171,7 @@ void Pharmacist::print_receipt(Client my_client) const
 {
 	if (my_client.cart.size() > 0)
 	{
+		std::cout.fill(' ');
 		std::cout.unsetf(std::ios::right);
 		double total_price = 0.0;
 		int total_price_base = 0;
@@ -196,7 +197,7 @@ void Pharmacist::print_receipt(Client my_client) const
 			<< "producer:" << std::setw(8) << "tax:" << std::setw(7) << "base:" << std::setw(8) << "total:" << "|" << std::endl;
 		for (const auto& medicine_in_cart : my_client.cart)
 		{
-			medicine_in_cart.print_on_receipt(std::cout);
+			medicine_in_cart.print_on_receipt();
 			total_price_base += medicine_in_cart.get_base_price_gr()/100;
 			total_price += medicine_in_cart.get_calculated_price();
 		}
@@ -211,7 +212,6 @@ void Pharmacist::print_receipt(Client my_client) const
 		std::cout << "|" << std::setw(60) << "|" << std::endl;
 		std::cout.fill('_');
 		std::cout << "_" << std::setw(60) << "_" << std::endl;
-		std::cout.fill(' ');
 	}
 	else
 	{
