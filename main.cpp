@@ -9,12 +9,19 @@
 #include "queue.h"
 #include<windows.h>
 
-int main()
+int main(int argc, char* argv[])
 {
-	std::string path_symptoms = "symptoms.txt";
-	std::string path = "Med_database_info.txt";
-	std::string path_name = "name.txt";
-	std::string path_medicine_prescription = "Medicines_prescription.txt";
+	if (argc != 5)
+	{
+		std::cerr << "Incorrect number of command line arguments - expected 5, got " << argc << std::endl;
+		return 1;
+	}
+	
+	std::string path_symptoms = argv[1];
+	std::string path = argv[2];
+	std::string path_name = argv[3];
+	std::string path_medicine_prescription = argv[4];
+
 	Database_meds_reader database_reader_file(path);
 	MDatabase pharmacist_knowledge;
 	pharmacist_knowledge = database_reader_file.read_database();
@@ -56,7 +63,7 @@ int main()
 
 		std::cout << "Windows number: " << windows.size() << std::endl;
 		std::cout << "Pharmacists number: " << pharmacists.size() << std::endl;
-		std::cout << "Clients in queue number: " << queue.get_clients().size() << std::endl;
+		std::cout << "Clients in queue number: " << queue.get_clients().size() << std::endl << std::endl;
 
 		//Assigning Clients to window
 		for (int i = 0; i < windows.size(); i++)
