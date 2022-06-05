@@ -4,7 +4,7 @@ Syrup::Syrup(std::string name, std::string producer, std::string substance, std:
 {
 	this->syrup_type = syrup_type;
 	this->med_type = "Syrup";
-	this->tax_value = 1.8;
+	this->tax_value = 1.08;
 	calculate_price();
 }
 

@@ -142,7 +142,7 @@
     <Text Include="symptoms.txt">
       <Filter>Pliki zasobów</Filter>
     </Text>
-    <Text Include="symptoms_patient.txt">
+    <Text Include="Medicines_prescription.txt">
       <Filter>Pliki zasobów</Filter>
     </Text>
     <Text Include="Med_database_info.txt">
