@@ -41,9 +41,13 @@ TEST_CASE("test client")
 	std::vector<Medicine> medicines = {first, second, third};
 
 	Client First_c("Andrzej", symptoms, "derrr");
+
 	REQUIRE(First_c.get_name() == "Andrzej");
+
 	REQUIRE(First_c.get_symptoms().size() == 3);
+
 	REQUIRE(First_c.get_cart().size() == 0);
+
 	REQUIRE(First_c.get_prescription_medicine() == "derrr");
 
 	SECTION("set cart")
@@ -62,6 +66,24 @@ TEST_CASE("test pharmacist")
 	pharmacist.set_id(1324124);
 
 	REQUIRE(pharmacist.get_id() == 1324124);
+}
+
+TEST_CASE("test txt file")
+{
+	SECTION("wrong symptom path")
+	{
+		std::string path_symptoms = "sympfasfsaoms.txt";
+		std::string path_name = "nasdasfe.txt";
+		std::string path_medicine_prescription = "Mediciasfanes_prescription.txt";
+
+		TxtFile file(path_name, path_symptoms, path_medicine_prescription);
+
+		REQUIRE_THROWS_AS(file.read_symptoms(), std::invalid_argument);
+
+		REQUIRE_THROWS_AS(file.read_names(), std::invalid_argument);
+
+		REQUIRE_THROWS_AS(file.read_prescripted_medicines(), std::invalid_argument);
+	}
 }
 
 TEST_CASE("test random object generator")
@@ -128,18 +150,31 @@ TEST_CASE("Testing base class methods")
 */
 	std::vector<std::string> test_med_symptoms = {"dry_cough", "wet_cough", "runny_nose", "sinus"};
 	Medicine TestMed("Test medicine", "Bayer", "Paracetamol", test_med_symptoms, 10, 6550, false);
+
 	REQUIRE(TestMed.get_name() == "Test medicine");
+
 	REQUIRE(TestMed.get_producer() == "Bayer");
+
 	REQUIRE(TestMed.get_substance() == "Paracetamol");
+
 	REQUIRE(TestMed.get_symptoms() == test_med_symptoms);
+
 	REQUIRE(TestMed.get_amount() == 10);
+
 	REQUIRE(TestMed.get_base_price_gr() == 6550);
+
 	REQUIRE(TestMed.get_calculated_price() == 65.5);
+
 	REQUIRE(TestMed.get_prescription() == false);
+
 	REQUIRE(TestMed.get_med_type() == "No data");
+
 	REQUIRE(TestMed.get_position() == 0);
+
 	REQUIRE_THROWS_AS(TestMed.set_amount(-1), NegativeAmountException);
+
 	REQUIRE_THROWS_AS(TestMed.set_base_price_gr(-100), NegativePriceTagException);
+
 	REQUIRE_THROWS_AS(TestMed.set_position(-1), NegativePositionException);
 }
 
@@ -155,76 +190,132 @@ TEST_CASE("Testing derived classes")
 	{
 		std::vector<std::string> test_med_symptoms1 = { "dry_cough", "pain", "headache" };
 		Syrup SyrupTest("Syrup_test", "Polpharm", "Vitamin", test_med_symptoms1, 15, 5671, true, "dry");
+
 		REQUIRE(SyrupTest.get_name() == "Syrup_test");
+
 		REQUIRE(SyrupTest.get_producer() == "Polpharm");
+
 		REQUIRE(SyrupTest.get_substance() == "Vitamin");
+
 		REQUIRE(SyrupTest.get_symptoms() == test_med_symptoms1);
+
 		REQUIRE(SyrupTest.get_amount() == 15);
+
 		REQUIRE(SyrupTest.get_base_price_gr() == 5671);
+
 		REQUIRE(SyrupTest.get_calculated_price() == 61.25);
+
 		REQUIRE(SyrupTest.get_prescription() == true);
+
 		REQUIRE(SyrupTest.get_med_type() == "Syrup");
+
 		REQUIRE(SyrupTest.get_cough_type() == "dry");
+
 		REQUIRE(SyrupTest.get_position() == 0);
+
 		REQUIRE_THROWS_AS(SyrupTest.set_amount(-4), NegativeAmountException);
+
 		REQUIRE_THROWS_AS(SyrupTest.set_base_price_gr(-200), NegativePriceTagException);
+
 		REQUIRE_THROWS_AS(SyrupTest.set_position(-8), NegativePositionException);
 	}
 	SECTION("Testing Drops class")
 	{
 		std::vector<std::string> test_med_symptoms2 = { "dry_cough", "headache", "sinus" };
 		Drops DropsTest("Drops_test", "Polpharm", "Glucose", test_med_symptoms2, 400, 31244, true,"solution");
+
 		REQUIRE(DropsTest.get_name() == "Drops_test");
+
 		REQUIRE(DropsTest.get_producer() == "Polpharm");
+
 		REQUIRE(DropsTest.get_substance() == "Glucose");
+
 		REQUIRE(DropsTest.get_symptoms() == test_med_symptoms2);
+
 		REQUIRE(DropsTest.get_amount() == 400);
+
 		REQUIRE(DropsTest.get_base_price_gr() == 31244);
+
 		REQUIRE(DropsTest.get_calculated_price() == 349.93);
+
 		REQUIRE(DropsTest.get_prescription() == true);
+
 		REQUIRE(DropsTest.get_med_type() == "Drops");
+
 		REQUIRE(DropsTest.get_drops_type() == "solution");
+
 		REQUIRE(DropsTest.get_position() == 0);
+
 		REQUIRE_THROWS_AS(DropsTest.set_amount(-5), NegativeAmountException);
+
 		REQUIRE_THROWS_AS(DropsTest.set_base_price_gr(-654), NegativePriceTagException);
+
 		REQUIRE_THROWS_AS(DropsTest.set_position(-83), NegativePositionException);
 	}
 	SECTION("Testing Pills class")
 	{
 		std::vector<std::string> test_med_symptoms3 = {"memory_disorder", "after_stroke"};
 		Pills PillsTest("Pills_test", "Bayer", "Magnesium", test_med_symptoms3, 25, 768, false, "disintegrating");
+
 		REQUIRE(PillsTest.get_name() == "Pills_test");
+
 		REQUIRE(PillsTest.get_producer() == "Bayer");
+
 		REQUIRE(PillsTest.get_substance() == "Magnesium");
+
 		REQUIRE(PillsTest.get_symptoms() == test_med_symptoms3);
+
 		REQUIRE(PillsTest.get_amount() == 25);
+
 		REQUIRE(PillsTest.get_base_price_gr() == 768);
+
 		REQUIRE(PillsTest.get_calculated_price() == 9.45);
+
 		REQUIRE(PillsTest.get_prescription() == false);
+
 		REQUIRE(PillsTest.get_med_type() == "Pills");
+
 		REQUIRE(PillsTest.get_pills_type() == "disintegrating");
+
 		REQUIRE(PillsTest.get_position() == 0);
+
 		REQUIRE_THROWS_AS(PillsTest.set_amount(-87), NegativeAmountException);
+
 		REQUIRE_THROWS_AS(PillsTest.set_base_price_gr(-62), NegativePriceTagException);
+
 		REQUIRE_THROWS_AS(PillsTest.set_position(-843), NegativePositionException);
 	}
 	SECTION("Testing Ointment class")
 	{
 		std::vector<std::string> test_med_symptoms4 = { "ethanol", "scrapes", "bruises" };
 		Ointment OintmentTest("Ointment_Test", "Medicineproducer", "Ketamin", test_med_symptoms4, 250, 64567, true, "cream");
+
 		REQUIRE(OintmentTest.get_name() == "Ointment_Test");
+
 		REQUIRE(OintmentTest.get_producer() == "Medicineproducer");
+
 		REQUIRE(OintmentTest.get_substance() == "Ketamin");
+
 		REQUIRE(OintmentTest.get_symptoms() == test_med_symptoms4);
+
 		REQUIRE(OintmentTest.get_amount() == 250);
+
 		REQUIRE(OintmentTest.get_base_price_gr() == 64567);
+
 		REQUIRE(OintmentTest.get_calculated_price() == 742.52);
+
 		REQUIRE(OintmentTest.get_prescription() == true);
+
 		REQUIRE(OintmentTest.get_med_type() == "Ointment");
+
 		REQUIRE(OintmentTest.get_ointment_type() == "cream");
+
 		REQUIRE(OintmentTest.get_position() == 0);
+
 		REQUIRE_THROWS_AS(OintmentTest.set_amount(-87), NegativeAmountException);
+
 		REQUIRE_THROWS_AS(OintmentTest.set_base_price_gr(-62), NegativePriceTagException);
+
 		REQUIRE_THROWS_AS(OintmentTest.set_position(-843), NegativePositionException);
 	}
 }
@@ -268,26 +359,46 @@ Public database methods testing:
 	data_base.add_Syrup("Syrup_test2", "Polpharm", "VitaminC", test_med_symptoms5, 30, 5983, false, "wet");
 
 	REQUIRE(data_base.find_by_position(1).get_med_type() == "Syrup");
+
 	REQUIRE(data_base.find_by_position(1).get_name() == "Syrup_test");
+
 	REQUIRE(data_base.find_by_position(1).get_position() == 1);
+
 	REQUIRE(data_base.find_by_position(2).get_med_type() == "Syrup");
+
 	REQUIRE(data_base.find_by_position(2).get_name() == "Syrup_test2");
+
 	REQUIRE(data_base.find_by_position(2).get_position() == 2);
+
 	REQUIRE(data_base.check_if_exist_pos(1) == true);
+
 	REQUIRE(data_base.get_syrups_num() == 2);
+
 	data_base.delete_medicine(1);
 	REQUIRE_THROWS_AS(data_base.find_by_position(1), MedicineNotFoundException);
+
 	REQUIRE(data_base.check_if_exist_pos(1) == false);
+
 	REQUIRE(data_base.find_by_position(101).get_med_type() == "Pills");
+
 	REQUIRE(data_base.find_by_position(101).get_position() == 101);
+
 	REQUIRE(data_base.find_by_name("Drops_test").get_med_type() == "Drops");
+
 	REQUIRE(data_base.find_by_name("Drops_test").get_position() == 201);
+
 	REQUIRE(data_base.find_by_name("Ointment_test").get_med_type() == "Ointment");
+
 	REQUIRE(data_base.find_by_name("Ointment_test").get_position() == 301);
+
 	REQUIRE(data_base.get_pills_num() == 1);
+
 	REQUIRE(data_base.get_ointments_num() == 1);
+
 	REQUIRE(data_base.get_drops_num() == 1);
+
 	std::vector<std::string> test_med_symptoms6 = { "wet_cough", "throatache", "sinus" };
+
 	data_base.add_Drops("Drops_test2", "Polpharm", "codeine_phosphoran", test_med_symptoms6, 3000, 2100, false, "slime");
 	REQUIRE(data_base.get_drops_num() == 2);
 

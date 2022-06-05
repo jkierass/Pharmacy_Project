@@ -10,6 +10,8 @@
 #include<windows.h>
 #include <cstdlib>
 
+//symptoms.txt Med_database_info.txt name.txt Medicines_prescription.txt
+
 int main(int argc, char* argv[])
 {
 	if (argc != 5 && argc != 9)
@@ -50,7 +52,6 @@ int main(int argc, char* argv[])
 	std::vector<Window> windows;
 	int iteration_num = 0;
 	Queue queue;
-
 
 	//Start parameters without user input
 	if (argc == 5)
