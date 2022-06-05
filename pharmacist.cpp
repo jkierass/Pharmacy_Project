@@ -152,7 +152,7 @@ std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client
 			my_client.cart.erase(std::remove_if(my_client.cart.begin(), my_client.cart.end(),
 				[tmp_med_to_replace_name](const Medicine& A)->bool {return A.get_name() == tmp_med_to_replace_name; }));
 			my_client.cart.push_back(pharmacist_knowledge.find_by_name(the_one_chosen_med_name));
-			added_to_cart_medicines.push_back(my_client.cart.back());
+			added_to_cart_medicines.push_back(pharmacist_knowledge.find_by_name(the_one_chosen_med_name));
 			return added_to_cart_medicines;
 		}
 		else
@@ -249,7 +249,6 @@ std::vector<chosen_medicine> get_all_meds_for_symptoms(std::vector<std::string> 
 								chosen_meds[ite].chosen_med_symptoms.push_back(med_symptom);
 							}
 						}
-
 					}
 					else
 					{
