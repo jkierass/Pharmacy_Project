@@ -22,6 +22,7 @@ MDatabase Database_meds_reader::read_database()
 			std::vector<std::string> tmp_symptoms;
 			int tmp_amount;
 			int tmp_base_price_gr;
+			int tmp_convert_prescription;
 			bool tmp_prescription;
 			std::string tmp_special_type;
 			std::string tmp_symptom;
@@ -33,8 +34,8 @@ MDatabase Database_meds_reader::read_database()
 					file_handler >> tmp_symptom;
 					tmp_symptoms.push_back(tmp_symptom);
 				}
-				file_handler >> tmp_amount >> tmp_base_price_gr >> tmp_prescription >> tmp_special_type;
-				if (tmp_prescription = 1)
+				file_handler >> tmp_amount >> tmp_base_price_gr >> tmp_convert_prescription >> tmp_special_type;
+				if (tmp_convert_prescription == 1)
 				{
 					tmp_prescription = true;
 				}

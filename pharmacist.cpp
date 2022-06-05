@@ -219,7 +219,10 @@ void Pharmacist::print_receipt(Client my_client)
 	}
 }
 
+void Pharmacist::print_invoide(Client)
+{
 
+}
 
 
 
