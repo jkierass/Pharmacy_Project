@@ -19,6 +19,8 @@ public:
 	void set_symptoms(std::vector<std::string> symptoms);
 	void set_prescripted_medicines(std::vector<std::string> prescripted_medicines);
 
+	std::string generate_p_medcicine();
+
 	std::vector<std::string> generate_symptoms();
 
 	Client generate_client();

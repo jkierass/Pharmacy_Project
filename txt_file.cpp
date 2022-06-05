@@ -2,10 +2,11 @@
 #include <string>
 #include "txt_file.h"
 
-TxtFile::TxtFile(std::string path_name, std::string path_symptoms)
+TxtFile::TxtFile(std::string path_name, std::string path_symptoms, std::string path_medicine_prescription)
 {
     set_path_name(path_name);
     set_path_symptoms(path_symptoms);
+	set_path_medicine_prescription(path_medicine_prescription);
 }
 
 void TxtFile::set_path_name(std::string path_name)

@@ -6,11 +6,12 @@
 
 Client::Client() {}
 
-Client::Client(std::string name, std::vector<std::string> symptoms)
+Client::Client(std::string name, std::vector<std::string> symptoms, std::string prescription_medicine)
 {
 	this->set_name(name);
 	this->symptoms = symptoms;
 	this->set_action("");
+	this->set_prescription_medicine(prescription_medicine);
 }
 
 void Client::set_name(std::string name)
