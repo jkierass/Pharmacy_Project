@@ -6,7 +6,6 @@ pain
 food_poisoning
 stomachache
 bacterial_flore
-insomnia
 cystitis
 cold
 cough
