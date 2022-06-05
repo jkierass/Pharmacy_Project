@@ -145,6 +145,8 @@ int main(int argc, char* argv[])
 		//Iterate throw windows. Clients make their actions
 		for (int i = 0; i < windows.size(); i++)
 		{
+			std::cout << "a" << std::endl;
+
 			if (windows[i].get_open_status() == true && windows[i].get_empty_status() == false)
 			{
 				int action_number = 3;
@@ -175,10 +177,19 @@ int main(int argc, char* argv[])
 					//Klient pyta o leki, czyli wyœwietlaj¹ siê proponowane leki i zapisuj¹ siê u niego w koszyku
 				case 1:
 				{
+					std::cout << "b" << std::endl;
 					windows[i].get_client().set_action("ask about medicines");
 					//Ustawienie operacji na 1
 					windows[i].set_client_operation(1);
+					std::cout << "f" << std::endl;
+					std::cout << windows[i].get_client().get_symptoms().size() << std::endl;
+					for (int z = 0; z < windows[i].get_client().get_symptoms().size(); z++)
+					{
+						std::cout << windows[i].get_client().get_symptoms()[z] << std::endl;
+					}
 					windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
+					std::cout << "g" << std::endl;
+					std::cout << windows[i].get_client().get_cart().size() << std::endl;
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
 					//Sleep(2000);
@@ -188,9 +199,11 @@ int main(int argc, char* argv[])
 				//Klient kupuje odrazu leki, czyli program mu je wybiera i on je odrazu kupuje - dostaje paragon
 				case 2:
 				{
+					std::cout << "c" << std::endl;
 					windows[i].get_client().set_action("buy medicines");
 					windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
 					windows[i].status_empty();
+					std::cout << windows[i].get_client().get_cart().size() << std::endl;
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
 					windows[i].get_pharmacist().print_receipt(windows[i].get_client());
@@ -204,8 +217,10 @@ int main(int argc, char* argv[])
 					//Klient odchodzi - opró¿nia siê okno
 				case 3:
 				{
+					std::cout << "d" << std::endl;
 					windows[i].get_client().set_action("leave Pharmacy");
 					windows[i].status_empty();
+					std::cout << windows[i].get_client().get_cart().size() << std::endl;
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
 					windows[i].set_client_operation(0);
@@ -217,22 +232,24 @@ int main(int argc, char* argv[])
 				//Klient pyta o zamiennik
 				case 4:
 				{
+					std::cout << "e" << std::endl;
 					windows[i].get_client().set_action("ask about substitute");
 					windows[i].set_client_operation(2);
+					std::cout << windows[i].get_client().get_cart().size() << std::endl;
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
 					std::cout << windows[i].get_client().get_cart()[0].get_name() << " -replace status:";
-					try
-					{
-						std::vector<Medicine> replaced_meds;
-						
-						replaced_meds = windows[i].get_pharmacist().choose_cheaper_replacements_and_replace(windows[i].get_client(), pharmacist_knowledge, windows[i].get_client().get_cart()[0]);
-						std::cout << " Replaced" << std::endl;
-					}
-					catch (MedicineNotFoundException)
+					//try
+					//{
+					//	std::vector<Medicine> replaced_meds;
+					//	
+					//	//replaced_meds = windows[i].get_pharmacist().choose_cheaper_replacements_and_replace(windows[i].get_client(), pharmacist_knowledge, windows[i].get_client().get_cart()[0]);
+					//	std::cout << " Replaced" << std::endl;
+					//}
+		/*			catch (MedicineNotFoundException)
 					{
 						std::cout << " No replacement" << std::endl;
-					}
+					}*/
 					//Sleep(2000);
 					break;
 				}
