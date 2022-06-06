@@ -20,7 +20,6 @@ int main(int argc, char* argv[])
 		std::cerr << "Incorrect number of command line arguments - expected 5 or 9, got " << argc << std::endl;
 		return 1;
 	}
-
 	std::string path_symptoms = argv[1];
 	std::string path = argv[2];
 	std::string path_name = argv[3];
