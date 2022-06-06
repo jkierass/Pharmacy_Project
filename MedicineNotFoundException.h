@@ -6,7 +6,7 @@ class MedicineNotFoundException :
     public std::invalid_argument
 {
 public:
-    MedicineNotFoundException(std::string wrong_name);
+    MedicineNotFoundException(std::string msg);
     MedicineNotFoundException(int wrong_position);
 };
 

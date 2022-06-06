@@ -65,12 +65,12 @@ MDatabase Database_meds_reader::read_database()
 		}
 		else
 		{
-			throw std::invalid_argument("not opened");
+			throw std::invalid_argument("File with database could not opened properly");
 		}
 	}
 	else
 	{
-		throw std::invalid_argument("not found");
+		throw std::invalid_argument("File with database not found");
 	}
 
 	return my_database;

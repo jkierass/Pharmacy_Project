@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
 	}
 	catch (std::invalid_argument const& ex)
 	{
-		std::cerr << "Wrong path to file " << std::endl;
+		std::cerr << ex.what() << std::endl;
 		return 1;
 	}
 
@@ -191,7 +191,15 @@ int main(int argc, char* argv[])
 					{
 						std::cout << "*" << windows[i].get_client().get_symptoms()[z] << std::endl;
 					}
-					windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
+					try
+					{
+						windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
+					}
+					catch(MedicineNotFoundException& b)
+					{
+						std::cerr << b.what() << std::endl;
+					}
+
 					std::cout << "- Hello! There you go: \n\n";
 					for (int it = 0; it < windows[i].get_client().get_cart().size(); it++)
 					{
@@ -250,9 +258,9 @@ int main(int argc, char* argv[])
 							std::cout << med_replaced.get_name() << " ";
 						std::cout << std::endl;
 					}
-					catch (MedicineNotFoundException)
+					catch (MedicineNotFoundException& a)
 					{
-						std::cout << " No replacement" << std::endl;
+						std::cerr << a.what() << std::endl;
 					}
 					//Sleep(2000);
 					break;
