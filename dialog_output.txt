@@ -1,14 +1,46 @@
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 7
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 10
 
-Pharmacist id 9459 supports client
-Client: Suzanne Action: buy medicines
+Pharmacist id 7767 supports client
+Client: Luis Action: leave Pharmacy
+
+Pharmacist id 6088 supports client
+Client: Grant Action: leave Pharmacy
 
 - Hello, please help me with my symptoms: 
-*disinfection
 *inflammation
-*muscle_pain
+*headache
+- Hello! There you go: 
+
+Type: Pills
+Name: Scorbolamid
+Producer: Polpharma
+Substance: Salicylamidum
+Prescripted: 0
+Position : 117
+Symptoms : cold flu headache 
+Base price: 23 zl
+Taxed price: 28.29 zl
+
+ Type: Pills
+Name: Aspirin
+Producer: Bayer
+Substance: acetylsalicylic_acid
+Prescripted: 0
+Position : 101
+Symptoms : pain fever inflammation 
+Base price: 70 zl
+Taxed price: 86.1 zl
+
+ 
+Pharmacist id 3232 supports client
+Client: Jennifer Action: ask about medicines
+
+- Hello, please help me with my symptoms: 
+*back_pain
+*runny_nose
+*arthritis
 - Hello! There you go: 
 
 Type: Ointment
@@ -21,7 +53,56 @@ Symptoms : muscle_pain back_pain arthritis
 Base price: 45 zl
 Taxed price: 51.75 zl
 
- Type: Pills
+ Type: Syrup
+Name: Pelavo
+Producer: USP
+Substance: Pelargonia
+Prescripted: 0
+Position : 3
+Symptoms : runny_nose 
+Base price: 8 zl
+Taxed price: 8.64 zl
+
+ 
+Pharmacist id 5087 supports client
+Client: Ricky Action: ask about medicines
+
+Pharmacist id 5313 supports client
+Client: Blake Action: buy medicines
+
+Pharmacist id 3354 supports client
+Client: Richard Action: leave Pharmacy
+
+- Hello, please help me with my symptoms: 
+*diarrhea
+- Hello! There you go: 
+
+Type: Pills
+Name: Stopperan
+Producer: UPS
+Substance: Loperamid
+Prescripted: 0
+Position : 120
+Symptoms : diarrhea 
+Base price: 11 zl
+Taxed price: 13.53 zl
+
+ 
+Pharmacist id 1746 supports client
+Client: Bethany Action: ask about medicines
+
+Pharmacist id 2127 supports client
+Client: Cristina Action: leave Pharmacy
+
+Pharmacist id 1980 supports client
+Client: Calvin Action: leave Pharmacy
+
+- Hello, please help me with my symptoms: 
+*throat_irritation
+*pain
+- Hello! There you go: 
+
+Type: Pills
 Name: Aspirin
 Producer: Bayer
 Substance: acetylsalicylic_acid
@@ -31,25 +112,72 @@ Symptoms : pain fever inflammation
 Base price: 70 zl
 Taxed price: 86.1 zl
 
- Type: Ointment
-Name: Octenisept
-Producer: Schulke
-Substance: octenidinum
+ Type: Syrup
+Name: Antussimin
+Producer: Doz
+Substance: Malva_aborea
 Prescripted: 0
-Position : 310
-Symptoms : cuts disinfection 
-Base price: 28 zl
-Taxed price: 32.2 zl
+Position : 6
+Symptoms : throat_irritation dry_cough 
+Base price: 17 zl
+Taxed price: 18.36 zl
 
  
-Pharmacist id 6842 supports client
-Client: Olivia Action: ask about medicines
+Pharmacist id 8298 supports client
+Client: Allen Action: ask about medicines
 
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 5
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 1
 
-Client: Suzanne Action: get invoice
+- Hello, please help me with my symptoms: 
+*eye_redness
+*dry_cough
+- Hello! There you go: 
+
+Type: Syrup
+Name: Thiocodin
+Producer: Unia
+Substance: Codeine_phosphoran
+Prescripted: 0
+Position : 1
+Symptoms : dry_cough wet_cough 
+Base price: 12 zl
+Taxed price: 12.96 zl
+
+ Type: Drops
+Name: Lacrimal
+Producer: Polfa_Warszawa
+Substance: hyaluronic_acid
+Prescripted: 0
+Position : 202
+Symptoms : eye_redness dry_eye 
+Base price: 12 zl
+Taxed price: 13.44 zl
+
+ 
+Pharmacist id 7767 supports client
+Client: Eric Action: ask about medicines
+
+Pharmacist id 3232 supports client
+Client: Jennifer Action: ask about substitute
+
+Please replace: 
+Type: Pills
+Name: Scorbolamid
+Producer: Polpharma
+Substance: Salicylamidum
+Prescripted: 0
+Position : 117
+Symptoms : cold flu headache 
+Base price: 23 zl
+Taxed price: 28.29 zl
+
+Medicine replacement found?
+Pharmacist id 5087 supports client
+Client: Ricky Action: buy medicines
+
+Client: Blake Action: get invoice
 
 _____________________________________________________________
 |                                                           |
@@ -65,28 +193,59 @@ _____________________________________________________________
 |                                                           |
 |                                                           |
 |               name:       producer:    tax:  base:  total:|
-|             Aspirin           Bayer     23%  70.00    86.1|
-|         Trittico_CR        Angelini     23% 100.00     123|
+|           Thiocodin            Unia      8%  12.00   12.96|
+|       Ibuprom_sport              US     14%  45.00   51.75|
+|         Trazdodonix           Hasco     23%  50.00    61.5|
 _____________________________________________________________
 |                                                           |
-|                  TOTAL BASE:                        170.00|
-|                   TOTAL TAX:                          39.1|
-|                       TOTAL:                         209.1|
-| Sell to: Suzanne                                              
-| NIP: 1084463210                                           |
+|                  TOTAL BASE:                        107.00|
+|                   TOTAL TAX:                         19.21|
+|                       TOTAL:                        126.21|
+| Sell to: Blake                                              
+| NIP: 1274727035                                           |
 |                                                           |
 _____________________________________________________________
-Pharmacist id 6842 supports client
-Client: Olivia Action: buy medicines
+Pharmacist id 1746 supports client
+Client: Bethany Action: ask about substitute
 
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 5
+Please replace: 
+Type: Pills
+Name: Stopperan
+Producer: UPS
+Substance: Loperamid
+Prescripted: 0
+Position : 120
+Symptoms : diarrhea 
+Base price: 11 zl
+Taxed price: 13.53 zl
 
-Pharmacist id 9459 supports client
-Client: Gina Action: leave Pharmacy
+Medicine replacement found?
+Pharmacist id 8298 supports client
+Client: Allen Action: ask about substitute
 
-Client: Olivia Action: get invoice
+Please replace: 
+Type: Pills
+Name: Aspirin
+Producer: Bayer
+Substance: acetylsalicylic_acid
+Prescripted: 0
+Position : 101
+Symptoms : pain fever inflammation 
+Base price: 70 zl
+Taxed price: 86.1 zl
+
+Medicine replacement found?
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 0
+
+Pharmacist id 7767 supports client
+Client: Eric Action: buy medicines
+
+Pharmacist id 3232 supports client
+Client: Jennifer Action: leave Pharmacy
+
+Client: Ricky Action: get invoice
 
 _____________________________________________________________
 |                                                           |
@@ -103,59 +262,27 @@ _____________________________________________________________
 |                                                           |
 |               name:       producer:    tax:  base:  total:|
 |       Ibuprom_sport              US     14%  45.00   51.75|
-|             Aspirin           Bayer     23%  70.00    86.1|
-|          Octenisept         Schulke     14%  28.00    32.2|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                        143.00|
-|                   TOTAL TAX:                         27.05|
-|                       TOTAL:                        170.05|
-| Sell to: Olivia                                              
-| NIP: 1318376876                                           |
-|                                                           |
-_____________________________________________________________
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 4
-
-Pharmacist id 9459 supports client
-Client: Edgar Action: buy medicines
-
-Pharmacist id 6842 supports client
-Client: Paula Action: buy medicines
-
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 3
-
-Client: Edgar Action: get invoice
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   VAT INVOICE                             |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
 |              Pelavo             USP      8%   8.00    8.64|
-|         Trazdodonix           Hasco     23%  50.00    61.5|
 _____________________________________________________________
 |                                                           |
-|                  TOTAL BASE:                         58.00|
-|                   TOTAL TAX:                         12.14|
-|                       TOTAL:                         70.14|
-| Sell to: Edgar                                              
-| NIP: 1097760652                                           |
+|                  TOTAL BASE:                         53.00|
+|                   TOTAL TAX:                          7.39|
+|                       TOTAL:                         60.39|
+| Sell to: Ricky                                              
+| NIP: 1130457477                                           |
 |                                                           |
 _____________________________________________________________
-Client: Paula Action: get receipt
+Pharmacist id 1746 supports client
+Client: Bethany Action: leave Pharmacy
+
+Pharmacist id 8298 supports client
+Client: Allen Action: leave Pharmacy
+
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 0
+
+Client: Eric Action: get receipt
 
 _____________________________________________________________
 |                                                           |
@@ -171,17 +298,16 @@ _____________________________________________________________
 |                                                           |
 |                                                           |
 |               name:       producer:    tax:  base:  total:|
-|             Sinulan         Walmark      8%  13.00   14.04|
-|         Active_coal       Medipharm     23%  15.00   18.45|
-|             Valused           Hasco     23%  22.00   27.06|
+|           Thiocodin            Unia      8%  12.00   12.96|
+|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
 _____________________________________________________________
 |                                                           |
-|                  TOTAL BASE:                         50.00|
-|                   TOTAL TAX:                          9.55|
-|                       TOTAL:                         59.55|
+|                  TOTAL BASE:                         24.00|
+|                   TOTAL TAX:                           2.4|
+|                       TOTAL:                          26.4|
 |                                                           |
 _____________________________________________________________
-Client: Paula Action: get invoice
+Client: Eric Action: get invoice
 
 _____________________________________________________________
 |                                                           |
@@ -197,83 +323,44 @@ _____________________________________________________________
 |                                                           |
 |                                                           |
 |               name:       producer:    tax:  base:  total:|
-|             Sinulan         Walmark      8%  13.00   14.04|
-|         Active_coal       Medipharm     23%  15.00   18.45|
-|             Valused           Hasco     23%  22.00   27.06|
+|           Thiocodin            Unia      8%  12.00   12.96|
+|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
 _____________________________________________________________
 |                                                           |
-|                  TOTAL BASE:                         50.00|
-|                   TOTAL TAX:                          9.55|
-|                       TOTAL:                         59.55|
-| Sell to: Paula                                              
-| NIP: 1243078456                                           |
+|                  TOTAL BASE:                         24.00|
+|                   TOTAL TAX:                           2.4|
+|                       TOTAL:                          26.4|
+| Sell to: Eric                                              
+| NIP: 1238323950                                           |
 |                                                           |
 _____________________________________________________________
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 3
-
-Pharmacist id 9459 supports client
-Client: Roxanne Action: leave Pharmacy
-
-Pharmacist id 6842 supports client
-Client: Carolyn Action: leave Pharmacy
-
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 1
-
-Pharmacist id 9459 supports client
-Client: Jerry Action: leave Pharmacy
-
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 1
-
-- Hello, please help me with my symptoms: 
-*back_pain
-- Hello! There you go: 
-
-Type: Ointment
-Name: Traumon
-Producer: Mylan
-Substance: etofenamatum
-Prescripted: 0
-Position : 308
-Symptoms : back_pain skin_inflammation 
-Base price: 31 zl
-Taxed price: 35.65 zl
-
- 
-Pharmacist id 9459 supports client
-Client: Tiffany Action: ask about medicines
-
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 1
-
-Pharmacist id 9459 supports client
-Client: Tiffany Action: ask about substitute
-
-Please replace: 
-Type: Ointment
-Name: Traumon
-Producer: Mylan
-Substance: etofenamatum
-Prescripted: 0
-Position : 308
-Symptoms : back_pain skin_inflammation 
-Base price: 31 zl
-Taxed price: 35.65 zl
-
-Medicine replacement found?
-Pharmacist id 6842 supports client
-Client: Francis Action: leave Pharmacy
-
-Windows number: 2
-Pharmacists number: 3
+Windows number: 10
+Pharmacists number: 10
 Clients in queue number: 0
 
-Pharmacist id 9459 supports client
-Client: Tiffany Action: buy medicines
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 0
+
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 1
+
+Pharmacist id 7767 supports client
+Client: Brittany Action: leave Pharmacy
+
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 1
+
+Pharmacist id 7767 supports client
+Client: Trista Action: leave Pharmacy
+
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 0
+
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 0
 

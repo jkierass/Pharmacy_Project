@@ -201,6 +201,7 @@
     <ClInclude Include="drops.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="File_dial_out.h" />
+    <ClInclude Include="pharmacy.h" />
     <ClInclude Include="mdatabase.h" />
     <ClInclude Include="medicine.h" />
     <ClInclude Include="MedicineNotFoundException.h" />
@@ -233,6 +234,7 @@
     <ClCompile Include="NegativePriceTagException.cpp" />
     <ClCompile Include="ointment.cpp" />
     <ClCompile Include="pharmacist.cpp" />
+    <ClCompile Include="pharmacy.cpp" />
     <ClCompile Include="pills.cpp" />
     <ClCompile Include="queue.cpp" />
     <ClCompile Include="random_object_generator.cpp" />
