@@ -27,5 +27,5 @@ public:
 	void set_queue(Queue queue);
 	void set_generator(RandomObjectsGenerator generator);
 
-	void start_simpulation(int iteration_num, std::string output_file_path, std::string path, MDatabase& pharmacist_knowledge);
+	void start_simpulation(int iteration_num, std::string output_file_path, MDatabase& pharmacist_knowledge);
 };

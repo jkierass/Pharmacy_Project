@@ -1,51 +1,7 @@
-Windows number: 10
-Pharmacists number: 10
-Clients in queue number: 1
+Windows number: 3
+Pharmacists number: 4
+Clients in queue number: 3
 
-Client: Branden Action: get invoice
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   VAT INVOICE                             |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
-|            Benadryl           Bayer     23%  60.00    73.8|
-|          Octenisept         Schulke     14%  28.00    32.2|
-|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
-|           123_Ratio           Glaxo     23%  20.00    24.6|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                        120.00|
-|                   TOTAL TAX:                         24.04|
-|                       TOTAL:                        144.04|
-| Sell to: Branden                                              
-| NIP: 1193091608                                           |
-|                                                           |
-_____________________________________________________________
-- Hello, please help me with my symptoms: 
-*disinfection
-- Hello! There you go: 
-
-Type: Ointment
-Name: Octenisept
-Producer: Schulke
-Substance: octenidinum
-Prescripted: 0
-Position : 310
-Symptoms : cuts disinfection 
-Base price: 28 zl
-Taxed price: 32.2 zl
-
- 
-Pharmacist id 8470 supports client
-Client: Monica Action: ask about medicines
+Pharmacist id 3757 supports client
+Client: Marc Action: buy medicines
 
