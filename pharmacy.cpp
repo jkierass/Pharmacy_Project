@@ -28,7 +28,7 @@ void Pharmacy::set_generator(RandomObjectsGenerator generator)
 	this->generator = generator;
 }
 
-void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path, std::string path, MDatabase pharmacist_knowledge)
+void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path, std::string path, MDatabase& pharmacist_knowledge)
 {
 	File_dial_out mo(output_file_path);
 
