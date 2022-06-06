@@ -1,13 +1,3 @@
-#include <iostream>
-#include "pharmacist.h"
-#include "random_objects_generator.h"
-#include <vector>
-#include "client.h"
-#include "mdatabase.h"
-#include "database_meds_reader.h"
-#include "txt_file.h"
-#include "queue.h"
-#include "File_dial_out.h"
 #include <windows.h>
 #include <cstdlib>
 #include "pharmacy.h"
