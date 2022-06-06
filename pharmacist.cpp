@@ -21,7 +21,7 @@ void Pharmacist::set_id(int id)
 	this->id = id;
 }
 
-// dobór najbardziej optymalnych leków (najmniejsza iloœæ leków pokrywaj¹ca wszystkie symptomy pacjenta)
+// choosing best medicines (as small amount of medicines added to cart as possible to cover all the symptoms of a client)
 
 std::vector<Medicine> Pharmacist::choose_medicines(Client& my_client, MDatabase& pharmacist_knowledge) const
 {
@@ -60,8 +60,8 @@ std::vector<Medicine> Pharmacist::choose_medicines(Client& my_client, MDatabase&
 }
 
 
-// Metoda dobieraj¹ca tañszy zamiennik dla pacjenta, zarówno dla leków na receptê jak i bez.
-// Jeœli nie ma bardziej optymalnej opcji, funkcja wyrzuca wyj¹tek.
+// Method replacing medicine with cheaper replacement/s (that combined cover all of symptoms of replaced medicine and their price 
+// is lower than former medicine in the cart). If there is no optimisation possible - exception is thrown with specified message
 std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client& my_client, MDatabase& pharmacist_knowledge, Medicine med_to_replace) const
 {
 	std::string tmp_substance = med_to_replace.get_substance();
@@ -76,7 +76,7 @@ std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client
 	std::string tmp_symptom_to_remove;
 	bool replacement_found;
 	double tmp_combined_price = 0.0;
-	//dla leków bez recepty
+	//for medicine with no prescription required
 	if (is_prescripted = false)
 	{
 		for (const auto& client_symptom : my_client.get_symptoms())
@@ -146,7 +146,7 @@ std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client
 			throw MedicineNotFoundException("There is no cheaper alternative");
 		}
 	}
-	//dla leków na receptê
+	//for prescripted medicines
 	else
 	{
 		for (const auto& medicine_ptrr : pharmacist_knowledge.med_database)
@@ -160,7 +160,7 @@ std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client
 		}
 		std::sort(tmp_chosen_meds.begin(), tmp_chosen_meds.end(), [](const chosen_medicine& a, const chosen_medicine& b)->bool {return a.taxed_price < b.taxed_price; });
 		the_one_chosen_med_name = tmp_chosen_meds[0].chosen_med_name;
-		if (!(the_one_chosen_med_name == med_to_replace.get_name())) //zamiana op³acalna?
+		if (!(the_one_chosen_med_name == med_to_replace.get_name())) //is replacement worth it?
 		{
 			my_client.cart.erase(std::remove_if(my_client.cart.begin(), my_client.cart.end(),
 				[tmp_med_to_replace_name](const Medicine& A)->bool {return A.get_name() == tmp_med_to_replace_name; }));
@@ -168,14 +168,14 @@ std::vector<Medicine> Pharmacist::choose_cheaper_replacements_and_replace(Client
 			added_to_cart_medicines.push_back(pharmacist_knowledge.find_by_name(the_one_chosen_med_name));
 			return added_to_cart_medicines;
 		}
-		else //zamiana nieop³acalna
+		else //not worth to replace
 		{
 			throw MedicineNotFoundException("There is no cheaper alternative");
 		}
 	}
 }
 
-//drukowanie paragonu
+//printing receipt
 
 void Pharmacist::print_receipt(Client my_client, File_dial_out& mo) const
 {
@@ -229,13 +229,13 @@ void Pharmacist::print_receipt(Client my_client, File_dial_out& mo) const
 	}
 }
 
-//drukowanie faktury VAT
+//printing VAT invoice
 
 void Pharmacist::print_invoide(Client my_client, File_dial_out& mo) const
 {
 	if (my_client.cart.size() > 0)
 	{
-		int NIP = RandomObjectsGenerator::generate_NIP(); //Losowo wygenerowany NIP ze statycznej metody
+		int NIP = RandomObjectsGenerator::generate_NIP(); //randomly generated NIP number by static method of other class
 		mo << std::resetiosflags(std::ios::right);
 		double total_price = 0.0;
 		int total_price_base = 0;
@@ -286,7 +286,7 @@ void Pharmacist::print_invoide(Client my_client, File_dial_out& mo) const
 }
 
 
-//przeci¹¿ony operator wypisywania do strumienia dla u³atwienia w implementacji
+//overloaded operator to make printing easier
 
 std::ostream& operator<<(std::ostream& os, const Pharmacist& pharmacist)
 {
@@ -295,8 +295,8 @@ std::ostream& operator<<(std::ostream& os, const Pharmacist& pharmacist)
 }
 
 
-// funkcja pomocnicza - zwraca wektor wszystkich leków dzia³aj¹cych na podane symptomy oraz zlicza
-// na ile symptomów dzia³¹ ka¿dy lek (sposób ewaluacji, wykorzystujê obiekty chosen_medicine)
+// auxiliary function - returns a vector of medicines that cover given symptoms and evaluates
+// every found medicine by a number of symptoms that it covers.
 
 std::vector<chosen_medicine> get_all_meds_for_symptoms(std::vector<std::string> vector_symptoms, MDatabase& database)
 {

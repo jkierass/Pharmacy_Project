@@ -1,18 +1,17 @@
-#include <iostream>
-#include "pharmacist.h"
-#include "random_objects_generator.h"
-#include <vector>
-#include "client.h"
-#include "mdatabase.h"
-#include "database_meds_reader.h"
-#include "txt_file.h"
-#include "queue.h"
-#include "File_dial_out.h"
 #include <windows.h>
 #include <cstdlib>
 #include "pharmacy.h"
 
-//symptoms.txt Med_database_info.txt name.txt Medicines_prescription.txt dialog_output.txt
+// Arguments to run application:
+// 5 mandatory arguments:
+// 1.symptoms_database_path 2.Medicines_database_path 3.names_path 4.Names_of_prescripted_medicines_path 5.dialog_uotput_path 
+// Example:
+// symptoms.txt Med_database_info.txt name.txt Medicines_prescription.txt dialog_output.txt
+//
+// extra 4 optional arguments:
+// 6. 7. 8. 9.
+// Example:
+// 
 
 int main(int argc, char* argv[])
 {
@@ -123,7 +122,7 @@ int main(int argc, char* argv[])
 	}
 
 	Pharmacy pharmacy(windows, pharmacists, queue, generator);
-	pharmacy.start_simpulation(iteration_num, output_file_path, path, pharmacist_knowledge);
+	pharmacy.start_simpulation(iteration_num, output_file_path, pharmacist_knowledge);
 	
 	return 0;
 }
