@@ -7,13 +7,17 @@
 #include "database_meds_reader.h"
 #include "txt_file.h"
 #include "queue.h"
-#include<windows.h>
+#include "File_dial_out.h"
+#include <windows.h>
 #include <cstdlib>
 
 //symptoms.txt Med_database_info.txt name.txt Medicines_prescription.txt
 
 int main(int argc, char* argv[])
 {
+	File_dial_out mo("test.txt");
+	mo << "dzialam" << std::endl;
+	mo << "dzialam sprawnie" << std::endl;
 	if (argc != 5 && argc != 9)
 	{
 		std::cerr << "Incorrect number of command line arguments - expected 4 or 8, got " << argc << std::endl;
@@ -125,9 +129,11 @@ int main(int argc, char* argv[])
 	{
 		iteration_num = iteration_num - 1;
 
-		std::cout << "Windows number: " << windows.size() << std::endl;
-		std::cout << "Pharmacists number: " << pharmacists.size() << std::endl;
-		std::cout << "Clients in queue number: " << queue.get_clients().size() << std::endl << std::endl;
+		
+		
+		mo << "Windows number: " << windows.size() << std::endl;
+		mo << "Pharmacists number: " << pharmacists.size() << std::endl;
+		mo << "Clients in queue number: " << queue.get_clients().size() << std::endl << std::endl;
 
 		//Assigning Clients to window
 		for (int i = 0; i < windows.size(); i++)
@@ -186,10 +192,10 @@ int main(int argc, char* argv[])
 					windows[i].get_client().set_action("ask about medicines");
 					//Ustawienie operacji na 1
 					windows[i].set_client_operation(1);
-					std::cout << "- Hello, please help me with my symptoms: " << std::endl;
+					mo << "- Hello, please help me with my symptoms: " << std::endl;
 					for (int z = 0; z < windows[i].get_client().get_symptoms().size(); z++)
 					{
-						std::cout << "*" << windows[i].get_client().get_symptoms()[z] << std::endl;
+						mo << "*" << windows[i].get_client().get_symptoms()[z] << std::endl;
 					}
 					try
 					{
@@ -200,15 +206,15 @@ int main(int argc, char* argv[])
 						std::cerr << b.what() << std::endl;
 					}
 
-					std::cout << "- Hello! There you go: \n\n";
+					mo << "- Hello! There you go: \n\n";
 					for (int it = 0; it < windows[i].get_client().get_cart().size(); it++)
 					{
 						if (windows[i].get_client().get_cart()[it].get_prescription() == false)
-						std::cout << windows[i].get_client().get_cart()[it] << " ";
+						mo << windows[i].get_client().get_cart()[it] << " ";
 					}
-					std::cout << std::endl;
-					std::cout << windows[i].get_pharmacist();
-					std::cout << windows[i].get_client() << std::endl;
+					mo << std::endl;
+					mo << windows[i].get_pharmacist();
+					mo << windows[i].get_client() << std::endl;
 					//Sleep(2000);
 					break;
 				}
@@ -218,8 +224,8 @@ int main(int argc, char* argv[])
 				{
 					windows[i].get_client().set_action("buy medicines");
 					windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
-					std::cout << windows[i].get_pharmacist();
-					std::cout << windows[i].get_client() << std::endl;
+					mo << windows[i].get_pharmacist();
+					mo << windows[i].get_client() << std::endl;
 					//Zresetowanie akcji okienka
 					windows[i].set_client_operation(3);
 					//zatrzymuje czas na 2s
@@ -232,8 +238,8 @@ int main(int argc, char* argv[])
 				{
 					windows[i].get_client().set_action("leave Pharmacy");
 					windows[i].status_empty();
-					std::cout << windows[i].get_pharmacist();
-					std::cout << windows[i].get_client() << std::endl;
+					mo << windows[i].get_pharmacist();
+					mo << windows[i].get_client() << std::endl;
 					windows[i].set_client_operation(0);
 					//Sleep(2000);
 					break;
@@ -245,18 +251,18 @@ int main(int argc, char* argv[])
 				{
 					windows[i].get_client().set_action("ask about substitute");
 					windows[i].set_client_operation(2);
-					std::cout << windows[i].get_pharmacist();
-					std::cout << windows[i].get_client() << std::endl;
-					std::cout << "Please replace: \n" << windows[i].get_client().get_cart()[0] << "Medicine replacement found?\n";
+					mo << windows[i].get_pharmacist();
+					mo << windows[i].get_client() << std::endl;
+					mo << "Please replace: \n" << windows[i].get_client().get_cart()[0] << "Medicine replacement found?\n";
 					try
 					{
 						std::vector<Medicine> replaced_meds;
 						
 						replaced_meds = windows[i].get_pharmacist().choose_cheaper_replacements_and_replace(windows[i].get_client(), pharmacist_knowledge, windows[i].get_client().get_cart()[0]);
-						std::cout << " Replaced with: ";
+						mo << " Replaced with: ";
 						for (const auto& med_replaced : replaced_meds)
-							std::cout << med_replaced.get_name() << " ";
-						std::cout << std::endl;
+							mo << med_replaced.get_name() << " ";
+						mo << std::endl;
 					}
 					catch (MedicineNotFoundException& a)
 					{
@@ -269,8 +275,8 @@ int main(int argc, char* argv[])
 				case 5:
 				{
 					windows[i].get_client().set_action("get receipt");
-					std::cout << windows[i].get_client() << std::endl;
-					windows[i].get_pharmacist().print_receipt(windows[i].get_client());
+					mo << windows[i].get_client() << std::endl;
+					windows[i].get_pharmacist().print_receipt(windows[i].get_client(), mo);
 					windows[i].status_empty();
 					windows[i].set_client_operation(0);
 					//Sleep(2000);
@@ -279,8 +285,8 @@ int main(int argc, char* argv[])
 				case 6:
 				{
 					windows[i].get_client().set_action("get invoice");
-					std::cout << windows[i].get_client() << std::endl;
-					windows[i].get_pharmacist().print_invoide(windows[i].get_client());
+					mo << windows[i].get_client() << std::endl;
+					windows[i].get_pharmacist().print_invoide(windows[i].get_client(), mo);
 					windows[i].status_empty();
 					windows[i].set_client_operation(0);
 					//Sleep(2000);

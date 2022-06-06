@@ -23,9 +23,9 @@ public:
 	void add_Pills(std::string name, std::string producer, std::string substance, std::vector<std::string>, int amount, int base_price_gr, bool, std::string pills_type);
 	void add_Drops(std::string name, std::string producer, std::string substance, std::vector<std::string>, int amount, int base_price_gr, bool, std::string drops_type);
 	void add_Ointment(std::string name, std::string producer, std::string substance, std::vector<std::string>, int amount, int base_price_gr, bool, std::string ointment_type);
-	void print_total_value() const noexcept;
-	void print_all_data() const noexcept;
-	void print_by_name(std::string) const;
+	void print_total_value(File_dial_out&) const;
+	void print_all_data(File_dial_out&) const;
+	void print_by_name(std::string, File_dial_out&) const;
 	void delete_medicine(int);
 	Medicine find_by_position(int pos) const;
 	Medicine find_by_name(std::string name) const;

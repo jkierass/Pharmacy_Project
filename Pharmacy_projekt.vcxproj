@@ -250,6 +250,7 @@
     <Text Include="name.txt" />
     <Text Include="symptoms.txt" />
     <Text Include="Medicines_prescription.txt" />
+    <Text Include="test.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

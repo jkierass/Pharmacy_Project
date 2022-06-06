@@ -35,7 +35,7 @@ void MDatabase::add_Ointment(std::string name, std::string producer, std::string
 	med_database.sort();
 	ointments_num++;
 }
-void MDatabase::print_total_value() const noexcept
+void MDatabase::print_total_value(File_dial_out& mo) const
 {
 	int base_price_ingr = 0;
 	double taxed_price = 0.0;
@@ -44,27 +44,27 @@ void MDatabase::print_total_value() const noexcept
 		base_price_ingr += Medicine_ptr->get_base_price_gr();
 		taxed_price += Medicine_ptr->get_calculated_price();
 	}
-	std::cout << "The total value of medicine in database with no tax included is: " << (double)base_price_ingr/100 << std::endl 
+	mo << "The total value of medicine in database with no tax included is: " << (double)base_price_ingr/100 << std::endl 
 		<< "-||- with tax included: " << taxed_price << std::endl;
 
-	std::cout << "There is: " << syrups_num << " pieces of Syrup in the database" << std::endl;
-	std::cout << "There is: " << pills_num << " pieces of Pills in the database" << std::endl;
-	std::cout << "There is: " << drops_num << " pieces of Drops in the database" << std::endl;
-	std::cout << "There is: " << ointments_num << " pieces of Ointment in the database" << std::endl;
+	mo << "There is: " << syrups_num << " pieces of Syrup in the database" << std::endl;
+	mo << "There is: " << pills_num << " pieces of Pills in the database" << std::endl;
+	mo << "There is: " << drops_num << " pieces of Drops in the database" << std::endl;
+	mo << "There is: " << ointments_num << " pieces of Ointment in the database" << std::endl;
 
-	std::cout << std::endl;
+	mo << std::endl;
 }
-void MDatabase::print_all_data() const noexcept
+void MDatabase::print_all_data(File_dial_out& mo) const
 {
 	if (med_database.size() != 0)
 	{
 		for (const auto& Medicine_ptr : med_database)
 		{
-			std::cout << *Medicine_ptr;
+			mo << *Medicine_ptr;
 		}
 	}
 	else
-		std::cout << "No objects in database" << std::endl;
+		mo << "No objects in database" << std::endl;
 }
 void MDatabase::delete_medicine(int pos)
 {
@@ -101,13 +101,13 @@ Medicine MDatabase::find_by_name(std::string name) const
 	throw MedicineNotFoundException(name);
 }
 
-void MDatabase::print_by_name(std::string name) const
+void MDatabase::print_by_name(std::string name, File_dial_out& mo) const
 {
 	for (const auto& Medicine_ptr : med_database)
 	{
 		if (Medicine_ptr->get_name() == name)
 		{
-			std::cout << *Medicine_ptr;
+			mo << *Medicine_ptr;
 		}
 	}
 	throw MedicineNotFoundException(name);

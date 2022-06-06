@@ -1,6 +1,7 @@
 #pragma once
 #include "client.h"
 #include "mdatabase.h"
+#include "File_dial_out.h"
 #include <vector>
 #include <algorithm>
 
@@ -14,8 +15,8 @@ public:
 	Pharmacist(int id);
 	std::vector<Medicine> choose_medicines(Client&, MDatabase&) const;
 	std::vector<Medicine> choose_cheaper_replacements_and_replace(Client&, MDatabase&, Medicine) const;
-	void print_receipt(Client) const;
-	void print_invoide(Client) const;
+	void print_receipt(Client, File_dial_out&) const;
+	void print_invoide(Client, File_dial_out&) const;
 	int get_id() const;
 	void set_id(int id);
 	friend std::ostream& operator<<(std::ostream& os, const Pharmacist& pharmacist);
