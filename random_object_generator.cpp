@@ -198,3 +198,13 @@ int RandomObjectsGenerator::generate_number(int min_number, int max_number)
 
 	return number;
 }
+
+int RandomObjectsGenerator::generate_NIP()
+{
+	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+	std::mt19937 generator(seed);
+	std::uniform_int_distribution<int> num(1000000000, 9999999999);
+	int number = num(generator);
+
+	return number;
+}

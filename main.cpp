@@ -213,7 +213,7 @@ int main(int argc, char* argv[])
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
 					//Zresetowanie akcji okienka
-					windows[i].set_client_operation(0);
+					windows[i].set_client_operation(3);
 					//zatrzymuje czas na 2s
 					//Sleep(2000);
 					break;
