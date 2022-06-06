@@ -123,7 +123,7 @@ int main(int argc, char* argv[])
 	}
 
 	Pharmacy pharmacy(windows, pharmacists, queue, generator);
-	pharmacy.start_simpulation(iteration_num, output_file_path, path, pharmacist_knowledge);
+	pharmacy.start_simpulation(iteration_num, output_file_path, pharmacist_knowledge);
 	
 	return 0;
 }
