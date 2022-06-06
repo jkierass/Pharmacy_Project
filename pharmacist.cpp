@@ -220,9 +220,56 @@ void Pharmacist::print_receipt(Client my_client) const
 	}
 }
 
-void Pharmacist::print_invoide(Client) const
+void Pharmacist::print_invoide(Client my_client) const
 {
-
+	if (my_client.cart.size() > 0)
+	{
+		std::cout.fill(' ');
+		std::cout.unsetf(std::ios::right);
+		double total_price = 0.0;
+		int total_price_base = 0;
+		double total_tax_value = 0.0;
+		std::cout.setf(std::ios::left);
+		std::cout.fill('_');
+		std::cout << "_" << std::setw(60) << "_" << std::endl;
+		std::cout.fill(' ');
+		std::cout << std::setw(60) << "|" << "|" << std::endl;
+		std::cout << std::setw(60) << "| Pharmacy 'Pharmax' limited liability company" << "|" << std::endl;
+		std::cout << std::setw(60) << "| Siedmiogrodzka street 13c" << "|" << std::endl;
+		std::cout << std::setw(60) << "| 01-204 Warsaw, Poland" << "|" << std::endl;
+		std::cout << std::setw(60) << "| NIP: 0123456609" << "|" << std::endl;
+		std::cout << std::setw(60) << "| Phone: +48 321 243 967" << "|" << std::endl;
+		std::cout << std::setw(60) << "|" << "|" << std::endl;
+		std::cout << std::setw(60) << "|" << "|" << std::endl;
+		std::cout << std::setw(20) << "|" << "VAT INVOICE" << std::setiosflags(std::ios::right) << std::setw(27) << "|" << std::endl;
+		std::cout.setf(std::ios::left);
+		std::cout << "|" << std::setw(60) << "|" << std::endl;
+		std::cout << "|" << std::setw(60) << "|" << std::endl;
+		std::cout << "|" << std::setw(60) << "|" << std::endl;
+		std::cout << "|" << std::setw(20) << "name:" << std::setw(16)
+			<< "producer:" << std::setw(8) << "tax:" << std::setw(7) << "base:" << std::setw(8) << "total:" << "|" << std::endl;
+		for (const auto& medicine_in_cart : my_client.cart)
+		{
+			medicine_in_cart.print_on_receipt();
+			total_price_base += medicine_in_cart.get_base_price_gr() / 100;
+			total_price += medicine_in_cart.get_calculated_price();
+		}
+		total_tax_value = total_price - total_price_base;
+		std::cout.fill('_');
+		std::cout << "_" << std::setw(60) << "_" << std::endl;
+		std::cout.fill(' ');
+		std::cout << "|" << std::setw(60) << "|" << std::endl;
+		std::cout << "|" << std::setw(30) << "TOTAL BASE: " << std::setw(29) << std::to_string(total_price_base) + ".00" << "|" << std::endl;
+		std::cout << "|" << std::setw(30) << "TOTAL TAX: " << std::setw(29) << total_tax_value << "|" << std::endl;
+		std::cout << "|" << std::setw(30) << "TOTAL: " << std::setw(29) << total_price << "|" << std::endl;
+		std::cout << "|" << std::setw(60) << "|" << std::endl;
+		std::cout.fill('_');
+		std::cout << "_" << std::setw(60) << "_" << std::endl;
+	}
+	else
+	{
+		throw MedicineNotFoundException("Empty cart - cannot print VAT invoice");
+	}
 }
 
 

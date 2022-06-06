@@ -75,6 +75,9 @@
     <ClInclude Include="test_and_main_includes.h">
       <Filter>Pliki zasobów</Filter>
     </ClInclude>
+    <ClInclude Include="File_dial_out.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="client.cpp">
@@ -132,6 +135,9 @@
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="window.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="File_dial_out.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
