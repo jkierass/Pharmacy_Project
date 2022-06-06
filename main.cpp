@@ -82,10 +82,10 @@ int main(int argc, char* argv[])
 	
 	std::vector<int> argv_ints;
 	//Start parameters with user input
-	if (argc == 9)
+	if (argc == 10)
 	{
 		//Converting argv to ints
-		for (int i = 5; i < 9; i++)
+		for (int i = 6; i < 10; i++)
 		{
 			char* p;
 			errno = 0;
