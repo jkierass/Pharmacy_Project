@@ -273,5 +273,8 @@ std::vector<chosen_medicine> get_all_meds_for_symptoms(std::vector<std::string> 
 			}
 		}
 	}
-	return chosen_meds;
+	if (chosen_meds.size() > 0)
+		return chosen_meds;
+	else
+		throw MedicineNotFoundException("Could not find any medicines filling requirements");
 }
