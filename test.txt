@@ -1,183 +1,17 @@
 dzialam
 dzialam sprawnie
-Windows number: 4
-Pharmacists number: 4
-Clients in queue number: 6
+Windows number: 5
+Pharmacists number: 1
+Clients in queue number: 5
 
-- Hello, please help me with my symptoms: 
-*dry_eye
-*diarrhea
-- Hello! There you go: 
+Pharmacist id 4275 supports client
+Client: Beth Action: buy medicines
 
-Type: Pills
-Name: Stopperan
-Producer: UPS
-Substance: Loperamid
-Prescripted: 0
-Position : 120
-Symptoms : diarrhea 
-Base price: 11 zl
-Taxed price: 13.53 zl
+Windows number: 5
+Pharmacists number: 1
+Clients in queue number: 4
 
- Type: Drops
-Name: Lacrimal
-Producer: Polfa_Warszawa
-Substance: hyaluronic_acid
-Prescripted: 0
-Position : 202
-Symptoms : eye_redness dry_eye 
-Base price: 12 zl
-Taxed price: 13.44 zl
-
- 
-Pharmacist id 7281 supports client
-Client: Drew Action: ask about medicines
-
-- Hello, please help me with my symptoms: 
-*allergy
-*back_pain
-*cuts
-- Hello! There you go: 
-
-Type: Ointment
-Name: Octenisept
-Producer: Schulke
-Substance: octenidinum
-Prescripted: 0
-Position : 310
-Symptoms : cuts disinfection 
-Base price: 28 zl
-Taxed price: 32.2 zl
-
- Type: Ointment
-Name: Traumon
-Producer: Mylan
-Substance: etofenamatum
-Prescripted: 0
-Position : 308
-Symptoms : back_pain skin_inflammation 
-Base price: 31 zl
-Taxed price: 35.65 zl
-
- Type: Pills
-Name: Benadryl
-Producer: Bayer
-Substance: diphenhydramine
-Prescripted: 0
-Position : 105
-Symptoms : allergy 
-Base price: 60 zl
-Taxed price: 73.8 zl
-
- 
-Pharmacist id 7653 supports client
-Client: Edwin Action: ask about medicines
-
-Pharmacist id 7124 supports client
-Client: Derrick Action: leave Pharmacy
-
-Pharmacist id 1873 supports client
-Client: Evelyn Action: leave Pharmacy
-
-Windows number: 4
-Pharmacists number: 4
-Clients in queue number: 3
-
-Pharmacist id 7281 supports client
-Client: Drew Action: ask about substitute
-
-Please replace: 
-Type: Pills
-Name: Stopperan
-Producer: UPS
-Substance: Loperamid
-Prescripted: 0
-Position : 120
-Symptoms : diarrhea 
-Base price: 11 zl
-Taxed price: 13.53 zl
-
-Medicine replacement found?
-Pharmacist id 7653 supports client
-Client: Edwin Action: buy medicines
-
-Pharmacist id 7124 supports client
-Client: Ebony Action: buy medicines
-
-Pharmacist id 1873 supports client
-Client: Joseph Action: leave Pharmacy
-
-Windows number: 4
-Pharmacists number: 4
-Clients in queue number: 1
-
-Pharmacist id 7281 supports client
-Client: Drew Action: buy medicines
-
-Client: Edwin Action: get invoice
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   VAT INVOICE                             |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
-|          Octenisept         Schulke     14%  28.00    32.2|
-|             Traumon           Mylan     14%  31.00   35.65|
-|            Benadryl           Bayer     23%  60.00    73.8|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                        119.00|
-|                   TOTAL TAX:                         22.65|
-|                       TOTAL:                        141.65|
-| Sell to: Edwin                                              
-| NIP: 1264624466                                           |
-|                                                           |
-_____________________________________________________________
-Client: Ebony Action: get invoice
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   VAT INVOICE                             |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
-|          Octenisept         Schulke     14%  28.00    32.2|
-|            Benadryl           Bayer     23%  60.00    73.8|
-|         Trazdodonix           Hasco     23%  50.00    61.5|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                        138.00|
-|                   TOTAL TAX:                          29.5|
-|                       TOTAL:                         167.5|
-| Sell to: Ebony                                              
-| NIP: 1209976885                                           |
-|                                                           |
-_____________________________________________________________
-Pharmacist id 1873 supports client
-Client: Ian Action: buy medicines
-
-Windows number: 4
-Pharmacists number: 4
-Clients in queue number: 0
-
-Client: Drew Action: get receipt
+Client: Beth Action: get receipt
 
 _____________________________________________________________
 |                                                           |
@@ -193,16 +27,18 @@ _____________________________________________________________
 |                                                           |
 |                                                           |
 |               name:       producer:    tax:  base:  total:|
+|             Coughix     Synchronile      8%  14.00   15.12|
+|             Aspirin           Bayer     23%  70.00    86.1|
 |           Stopperan             UPS     23%  11.00   13.53|
-|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
+|             Alventa            Krka     23%  27.00   33.21|
 _____________________________________________________________
 |                                                           |
-|                  TOTAL BASE:                         23.00|
-|                   TOTAL TAX:                          3.97|
-|                       TOTAL:                         26.97|
+|                  TOTAL BASE:                        122.00|
+|                   TOTAL TAX:                         25.96|
+|                       TOTAL:                        147.96|
 |                                                           |
 _____________________________________________________________
-Client: Drew Action: get invoice
+Client: Beth Action: get invoice
 
 _____________________________________________________________
 |                                                           |
@@ -218,18 +54,112 @@ _____________________________________________________________
 |                                                           |
 |                                                           |
 |               name:       producer:    tax:  base:  total:|
+|             Coughix     Synchronile      8%  14.00   15.12|
+|             Aspirin           Bayer     23%  70.00    86.1|
 |           Stopperan             UPS     23%  11.00   13.53|
-|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
+|             Alventa            Krka     23%  27.00   33.21|
 _____________________________________________________________
 |                                                           |
-|                  TOTAL BASE:                         23.00|
-|                   TOTAL TAX:                          3.97|
-|                       TOTAL:                         26.97|
-| Sell to: Drew                                              
-| NIP: 1326661812                                           |
+|                  TOTAL BASE:                        122.00|
+|                   TOTAL TAX:                         25.96|
+|                       TOTAL:                        147.96|
+| Sell to: Beth                                              
+| NIP: 1038976330                                           |
 |                                                           |
 _____________________________________________________________
-Client: Ian Action: get invoice
+Windows number: 5
+Pharmacists number: 1
+Clients in queue number: 4
+
+Pharmacist id 4275 supports client
+Client: Brandon Action: leave Pharmacy
+
+Windows number: 5
+Pharmacists number: 1
+Clients in queue number: 3
+
+Pharmacist id 4275 supports client
+Client: Cole Action: leave Pharmacy
+
+Windows number: 5
+Pharmacists number: 1
+Clients in queue number: 2
+
+- Hello, please help me with my symptoms: 
+*cystitis
+*throatache
+- Hello! There you go: 
+
+Type: Syrup
+Name: Coughix
+Producer: Synchronile
+Substance: Codeine_phosphoran
+Prescripted: 0
+Position : 2
+Symptoms : dry_cough wet_cough throatache 
+Base price: 14 zl
+Taxed price: 15.12 zl
+
+ Type: Pills
+Name: Furaginum
+Producer: Hasco
+Substance: Furazidinum
+Prescripted: 0
+Position : 116
+Symptoms : cystitis 
+Base price: 34 zl
+Taxed price: 41.82 zl
+
+ 
+Pharmacist id 4275 supports client
+Client: Austin Action: ask about medicines
+
+Windows number: 5
+Pharmacists number: 1
+Clients in queue number: 1
+
+Pharmacist id 4275 supports client
+Client: Austin Action: ask about substitute
+
+Please replace: 
+Type: Syrup
+Name: Coughix
+Producer: Synchronile
+Substance: Codeine_phosphoran
+Prescripted: 0
+Position : 2
+Symptoms : dry_cough wet_cough throatache 
+Base price: 14 zl
+Taxed price: 15.12 zl
+
+Medicine replacement found?
+ Replaced with: Thiocodin 
+Windows number: 5
+Pharmacists number: 1
+Clients in queue number: 2
+
+Pharmacist id 4275 supports client
+Client: Austin Action: leave Pharmacy
+
+Windows number: 5
+Pharmacists number: 1
+Clients in queue number: 3
+
+Pharmacist id 4275 supports client
+Client: Brooke Action: leave Pharmacy
+
+Windows number: 5
+Pharmacists number: 1
+Clients in queue number: 2
+
+Pharmacist id 4275 supports client
+Client: Kari Action: buy medicines
+
+Windows number: 5
+Pharmacists number: 1
+Clients in queue number: 2
+
+Client: Kari Action: get receipt
 
 _____________________________________________________________
 |                                                           |
@@ -240,151 +170,22 @@ _____________________________________________________________
 | Phone: +48 321 243 967                                    |
 |                                                           |
 |                                                           |
-|                   VAT INVOICE                             |
+|                   FISCAL RECEIPT                          |
 |                                                           |
 |                                                           |
 |                                                           |
 |               name:       producer:    tax:  base:  total:|
-|       Ibuprom_sport              US     14%  45.00   51.75|
-|           Thiocodin            Unia      8%  12.00   12.96|
+|             Aspirin           Bayer     23%  70.00    86.1|
+|             Coughix     Synchronile      8%  14.00   15.12|
 |            Lafactin       Aurovitas     23%  33.00   40.59|
 _____________________________________________________________
 |                                                           |
-|                  TOTAL BASE:                         90.00|
-|                   TOTAL TAX:                          15.3|
-|                       TOTAL:                         105.3|
-| Sell to: Ian                                              
-| NIP: 1380862374                                           |
+|                  TOTAL BASE:                        117.00|
+|                   TOTAL TAX:                         24.81|
+|                       TOTAL:                        141.81|
 |                                                           |
 _____________________________________________________________
-Windows number: 4
-Pharmacists number: 4
-Clients in queue number: 2
-
-Pharmacist id 7281 supports client
-Client: Colin Action: leave Pharmacy
-
-- Hello, please help me with my symptoms: 
-*arthritis
-*food_poisoning
-- Hello! There you go: 
-
-Type: Pills
-Name: Active_coal
-Producer: Medipharm
-Substance: active_coal
-Prescripted: 0
-Position : 108
-Symptoms : food_poisoning stomachache 
-Base price: 15 zl
-Taxed price: 18.45 zl
-
- Type: Ointment
-Name: Ibuprom_sport
-Producer: US
-Substance: ibuprofenum
-Prescripted: 0
-Position : 309
-Symptoms : muscle_pain back_pain arthritis 
-Base price: 45 zl
-Taxed price: 51.75 zl
-
- 
-Pharmacist id 7653 supports client
-Client: Larry Action: ask about medicines
-
-Windows number: 4
-Pharmacists number: 4
-Clients in queue number: 1
-
-- Hello, please help me with my symptoms: 
-*fever
-- Hello! There you go: 
-
-Type: Pills
-Name: Aspirin
-Producer: Bayer
-Substance: acetylsalicylic_acid
-Prescripted: 0
-Position : 101
-Symptoms : pain fever inflammation 
-Base price: 70 zl
-Taxed price: 86.1 zl
-
- 
-Pharmacist id 7281 supports client
-Client: Haley Action: ask about medicines
-
-Pharmacist id 7653 supports client
-Client: Larry Action: ask about substitute
-
-Please replace: 
-Type: Pills
-Name: Active_coal
-Producer: Medipharm
-Substance: active_coal
-Prescripted: 0
-Position : 108
-Symptoms : food_poisoning stomachache 
-Base price: 15 zl
-Taxed price: 18.45 zl
-
-Medicine replacement found?
-Windows number: 4
-Pharmacists number: 4
-Clients in queue number: 0
-
-Pharmacist id 7281 supports client
-Client: Haley Action: ask about substitute
-
-Please replace: 
-Type: Pills
-Name: Aspirin
-Producer: Bayer
-Substance: acetylsalicylic_acid
-Prescripted: 0
-Position : 101
-Symptoms : pain fever inflammation 
-Base price: 70 zl
-Taxed price: 86.1 zl
-
-Medicine replacement found?
-Pharmacist id 7653 supports client
-Client: Larry Action: buy medicines
-
-Windows number: 4
-Pharmacists number: 4
-Clients in queue number: 0
-
-Pharmacist id 7281 supports client
-Client: Haley Action: leave Pharmacy
-
-Client: Larry Action: get receipt
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   FISCAL RECEIPT                          |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
-|         Active_coal       Medipharm     23%  15.00   18.45|
-|       Ibuprom_sport              US     14%  45.00   51.75|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                         60.00|
-|                   TOTAL TAX:                          10.2|
-|                       TOTAL:                          70.2|
-|                                                           |
-_____________________________________________________________
-Client: Larry Action: get invoice
+Client: Kari Action: get invoice
 
 _____________________________________________________________
 |                                                           |
@@ -400,28 +201,15 @@ _____________________________________________________________
 |                                                           |
 |                                                           |
 |               name:       producer:    tax:  base:  total:|
-|         Active_coal       Medipharm     23%  15.00   18.45|
-|       Ibuprom_sport              US     14%  45.00   51.75|
+|             Aspirin           Bayer     23%  70.00    86.1|
+|             Coughix     Synchronile      8%  14.00   15.12|
+|            Lafactin       Aurovitas     23%  33.00   40.59|
 _____________________________________________________________
 |                                                           |
-|                  TOTAL BASE:                         60.00|
-|                   TOTAL TAX:                          10.2|
-|                       TOTAL:                          70.2|
-| Sell to: Larry                                              
-| NIP: 1138040160                                           |
+|                  TOTAL BASE:                        117.00|
+|                   TOTAL TAX:                         24.81|
+|                       TOTAL:                        141.81|
+| Sell to: Kari                                              
+| NIP: 1365419671                                           |
 |                                                           |
 _____________________________________________________________
-Windows number: 4
-Pharmacists number: 4
-Clients in queue number: 0
-
-Windows number: 4
-Pharmacists number: 4
-Clients in queue number: 2
-
-Pharmacist id 7281 supports client
-Client: Kari Action: buy medicines
-
-Pharmacist id 7653 supports client
-Client: Tommy Action: buy medicines
-

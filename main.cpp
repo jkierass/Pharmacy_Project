@@ -16,8 +16,6 @@
 int main(int argc, char* argv[])
 {
 	File_dial_out mo("test.txt");
-	mo << "dzialam" << std::endl;
-	mo << "dzialam sprawnie" << std::endl;
 	if (argc != 5 && argc != 9)
 	{
 		std::cerr << "Incorrect number of command line arguments - expected 4 or 8, got " << argc << std::endl;
