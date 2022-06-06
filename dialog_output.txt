@@ -1,37 +1,41 @@
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 7
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 1
 
-Pharmacist id 9459 supports client
-Client: Suzanne Action: buy medicines
+Client: Branden Action: get invoice
 
+_____________________________________________________________
+|                                                           |
+| Pharmacy 'Pharmax' limited liability company              |
+| Siedmiogrodzka street 13c                                 |
+| 01-204 Warsaw, Poland                                     |
+| NIP: 0123456609                                           |
+| Phone: +48 321 243 967                                    |
+|                                                           |
+|                                                           |
+|                   VAT INVOICE                             |
+|                                                           |
+|                                                           |
+|                                                           |
+|               name:       producer:    tax:  base:  total:|
+|            Benadryl           Bayer     23%  60.00    73.8|
+|          Octenisept         Schulke     14%  28.00    32.2|
+|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
+|           123_Ratio           Glaxo     23%  20.00    24.6|
+_____________________________________________________________
+|                                                           |
+|                  TOTAL BASE:                        120.00|
+|                   TOTAL TAX:                         24.04|
+|                       TOTAL:                        144.04|
+| Sell to: Branden                                              
+| NIP: 1193091608                                           |
+|                                                           |
+_____________________________________________________________
 - Hello, please help me with my symptoms: 
 *disinfection
-*inflammation
-*muscle_pain
 - Hello! There you go: 
 
 Type: Ointment
-Name: Ibuprom_sport
-Producer: US
-Substance: ibuprofenum
-Prescripted: 0
-Position : 309
-Symptoms : muscle_pain back_pain arthritis 
-Base price: 45 zl
-Taxed price: 51.75 zl
-
- Type: Pills
-Name: Aspirin
-Producer: Bayer
-Substance: acetylsalicylic_acid
-Prescripted: 0
-Position : 101
-Symptoms : pain fever inflammation 
-Base price: 70 zl
-Taxed price: 86.1 zl
-
- Type: Ointment
 Name: Octenisept
 Producer: Schulke
 Substance: octenidinum
@@ -42,238 +46,6 @@ Base price: 28 zl
 Taxed price: 32.2 zl
 
  
-Pharmacist id 6842 supports client
-Client: Olivia Action: ask about medicines
-
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 5
-
-Client: Suzanne Action: get invoice
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   VAT INVOICE                             |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
-|             Aspirin           Bayer     23%  70.00    86.1|
-|         Trittico_CR        Angelini     23% 100.00     123|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                        170.00|
-|                   TOTAL TAX:                          39.1|
-|                       TOTAL:                         209.1|
-| Sell to: Suzanne                                              
-| NIP: 1084463210                                           |
-|                                                           |
-_____________________________________________________________
-Pharmacist id 6842 supports client
-Client: Olivia Action: buy medicines
-
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 5
-
-Pharmacist id 9459 supports client
-Client: Gina Action: leave Pharmacy
-
-Client: Olivia Action: get invoice
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   VAT INVOICE                             |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
-|       Ibuprom_sport              US     14%  45.00   51.75|
-|             Aspirin           Bayer     23%  70.00    86.1|
-|          Octenisept         Schulke     14%  28.00    32.2|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                        143.00|
-|                   TOTAL TAX:                         27.05|
-|                       TOTAL:                        170.05|
-| Sell to: Olivia                                              
-| NIP: 1318376876                                           |
-|                                                           |
-_____________________________________________________________
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 4
-
-Pharmacist id 9459 supports client
-Client: Edgar Action: buy medicines
-
-Pharmacist id 6842 supports client
-Client: Paula Action: buy medicines
-
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 3
-
-Client: Edgar Action: get invoice
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   VAT INVOICE                             |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
-|              Pelavo             USP      8%   8.00    8.64|
-|         Trazdodonix           Hasco     23%  50.00    61.5|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                         58.00|
-|                   TOTAL TAX:                         12.14|
-|                       TOTAL:                         70.14|
-| Sell to: Edgar                                              
-| NIP: 1097760652                                           |
-|                                                           |
-_____________________________________________________________
-Client: Paula Action: get receipt
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   FISCAL RECEIPT                          |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
-|             Sinulan         Walmark      8%  13.00   14.04|
-|         Active_coal       Medipharm     23%  15.00   18.45|
-|             Valused           Hasco     23%  22.00   27.06|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                         50.00|
-|                   TOTAL TAX:                          9.55|
-|                       TOTAL:                         59.55|
-|                                                           |
-_____________________________________________________________
-Client: Paula Action: get invoice
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   VAT INVOICE                             |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
-|             Sinulan         Walmark      8%  13.00   14.04|
-|         Active_coal       Medipharm     23%  15.00   18.45|
-|             Valused           Hasco     23%  22.00   27.06|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                         50.00|
-|                   TOTAL TAX:                          9.55|
-|                       TOTAL:                         59.55|
-| Sell to: Paula                                              
-| NIP: 1243078456                                           |
-|                                                           |
-_____________________________________________________________
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 3
-
-Pharmacist id 9459 supports client
-Client: Roxanne Action: leave Pharmacy
-
-Pharmacist id 6842 supports client
-Client: Carolyn Action: leave Pharmacy
-
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 1
-
-Pharmacist id 9459 supports client
-Client: Jerry Action: leave Pharmacy
-
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 1
-
-- Hello, please help me with my symptoms: 
-*back_pain
-- Hello! There you go: 
-
-Type: Ointment
-Name: Traumon
-Producer: Mylan
-Substance: etofenamatum
-Prescripted: 0
-Position : 308
-Symptoms : back_pain skin_inflammation 
-Base price: 31 zl
-Taxed price: 35.65 zl
-
- 
-Pharmacist id 9459 supports client
-Client: Tiffany Action: ask about medicines
-
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 1
-
-Pharmacist id 9459 supports client
-Client: Tiffany Action: ask about substitute
-
-Please replace: 
-Type: Ointment
-Name: Traumon
-Producer: Mylan
-Substance: etofenamatum
-Prescripted: 0
-Position : 308
-Symptoms : back_pain skin_inflammation 
-Base price: 31 zl
-Taxed price: 35.65 zl
-
-Medicine replacement found?
-Pharmacist id 6842 supports client
-Client: Francis Action: leave Pharmacy
-
-Windows number: 2
-Pharmacists number: 3
-Clients in queue number: 0
-
-Pharmacist id 9459 supports client
-Client: Tiffany Action: buy medicines
+Pharmacist id 8470 supports client
+Client: Monica Action: ask about medicines
 

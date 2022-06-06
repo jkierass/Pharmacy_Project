@@ -11,6 +11,7 @@ RandomObjectsGenerator::RandomObjectsGenerator(std::vector<std::string> names, s
 	set_symptoms(symptoms);
 	set_prescripted_medicines(prescripted_medicines);
 }
+RandomObjectsGenerator::RandomObjectsGenerator() {}
 
 void RandomObjectsGenerator::set_names(std::vector<std::string> names)
 {

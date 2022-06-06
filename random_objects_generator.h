@@ -13,6 +13,7 @@ private:
 	std::vector<std::string> symptoms;
 	std::vector<std::string> prescripted_medicines;
 public:
+	RandomObjectsGenerator();
 	RandomObjectsGenerator(std::vector<std::string> names, std::vector<std::string> symptoms, std::vector<std::string> prescripted_medicines);
 
 	void set_names(std::vector<std::string> names);
