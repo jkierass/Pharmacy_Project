@@ -157,7 +157,7 @@
     <Text Include="Med_database_info.txt">
       <Filter>Pliki zasobów</Filter>
     </Text>
-    <Text Include="test.txt">
+    <Text Include="dialog_output.txt">
       <Filter>Pliki zasobów</Filter>
     </Text>
   </ItemGroup>

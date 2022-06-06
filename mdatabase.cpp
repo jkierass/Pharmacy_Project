@@ -3,6 +3,8 @@
 bool operator<(const std::unique_ptr<Medicine>& Med, const std::unique_ptr<Medicine>& Med2);
 
 
+// dodaj leki do bazy danych
+
 void MDatabase::add_Syrup(std::string name, std::string producer, std::string substance, std::vector<std::string> syndroms, int amount, int base_price_gr, bool prescription, std::string cough_type)
 {
 	std::unique_ptr<Syrup> ASyrup = std::make_unique<Syrup>(name, producer, substance, syndroms, amount, base_price_gr, prescription, cough_type);
@@ -35,6 +37,9 @@ void MDatabase::add_Ointment(std::string name, std::string producer, std::string
 	med_database.sort();
 	ointments_num++;
 }
+
+//drukowanie informacji o lekach w bazie danych
+
 void MDatabase::print_total_value(File_dial_out& mo) const
 {
 	int base_price_ingr = 0;
@@ -54,6 +59,9 @@ void MDatabase::print_total_value(File_dial_out& mo) const
 
 	mo << std::endl;
 }
+
+//drukowanie informacji o ka¿dym leku po kolei (szczegó³owo)
+
 void MDatabase::print_all_data(File_dial_out& mo) const
 {
 	if (med_database.size() != 0)
@@ -66,6 +74,7 @@ void MDatabase::print_all_data(File_dial_out& mo) const
 	else
 		mo << "No objects in database" << std::endl;
 }
+//usuñ lek z bazy danych
 void MDatabase::delete_medicine(int pos)
 {
 	for (std::list<std::unique_ptr<Medicine>>::iterator it = med_database.begin(); it != med_database.end(); it++)
@@ -78,6 +87,7 @@ void MDatabase::delete_medicine(int pos)
 	}
 	throw MedicineNotFoundException(pos);
 }
+//szukanie leku w bazie danych po pozycji na pó³ce
 Medicine MDatabase::find_by_position(int pos) const
 {
 	for (const auto& Medicine_ptr : med_database)
@@ -89,6 +99,8 @@ Medicine MDatabase::find_by_position(int pos) const
 	}
 	throw MedicineNotFoundException(pos);
 }
+
+//szukanie leku w bazie danych po imieniu
 Medicine MDatabase::find_by_name(std::string name) const
 {
 	for (const auto& Medicine_ptr : med_database)
