@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 	std::string path_name = argv[3];
 	std::string path_medicine_prescription = argv[4];
 	std::string output_file_path = argv[5];
-	File_dial_out mo(output_file_path);
+
 	Database_meds_reader database_reader_file(path);
 	MDatabase pharmacist_knowledge;
 	TxtFile file(path_name, path_symptoms, path_medicine_prescription);
@@ -124,7 +124,7 @@ int main(int argc, char* argv[])
 	}
 
 	Pharmacy pharmacy(windows, pharmacists, queue, generator);
-	pharmacy.start_simpulation(iteration_num, mo, pharmacist_knowledge);
+	pharmacy.start_simpulation(iteration_num, output_file_path, path, pharmacist_knowledge);
 	
 	return 0;
 }

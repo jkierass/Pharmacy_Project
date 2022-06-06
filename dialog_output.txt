@@ -1,366 +1,51 @@
 Windows number: 10
 Pharmacists number: 10
-Clients in queue number: 10
+Clients in queue number: 1
 
-Pharmacist id 7767 supports client
-Client: Luis Action: leave Pharmacy
+Client: Branden Action: get invoice
 
-Pharmacist id 6088 supports client
-Client: Grant Action: leave Pharmacy
-
+_____________________________________________________________
+|                                                           |
+| Pharmacy 'Pharmax' limited liability company              |
+| Siedmiogrodzka street 13c                                 |
+| 01-204 Warsaw, Poland                                     |
+| NIP: 0123456609                                           |
+| Phone: +48 321 243 967                                    |
+|                                                           |
+|                                                           |
+|                   VAT INVOICE                             |
+|                                                           |
+|                                                           |
+|                                                           |
+|               name:       producer:    tax:  base:  total:|
+|            Benadryl           Bayer     23%  60.00    73.8|
+|          Octenisept         Schulke     14%  28.00    32.2|
+|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
+|           123_Ratio           Glaxo     23%  20.00    24.6|
+_____________________________________________________________
+|                                                           |
+|                  TOTAL BASE:                        120.00|
+|                   TOTAL TAX:                         24.04|
+|                       TOTAL:                        144.04|
+| Sell to: Branden                                              
+| NIP: 1193091608                                           |
+|                                                           |
+_____________________________________________________________
 - Hello, please help me with my symptoms: 
-*inflammation
-*headache
-- Hello! There you go: 
-
-Type: Pills
-Name: Scorbolamid
-Producer: Polpharma
-Substance: Salicylamidum
-Prescripted: 0
-Position : 117
-Symptoms : cold flu headache 
-Base price: 23 zl
-Taxed price: 28.29 zl
-
- Type: Pills
-Name: Aspirin
-Producer: Bayer
-Substance: acetylsalicylic_acid
-Prescripted: 0
-Position : 101
-Symptoms : pain fever inflammation 
-Base price: 70 zl
-Taxed price: 86.1 zl
-
- 
-Pharmacist id 3232 supports client
-Client: Jennifer Action: ask about medicines
-
-- Hello, please help me with my symptoms: 
-*back_pain
-*runny_nose
-*arthritis
+*disinfection
 - Hello! There you go: 
 
 Type: Ointment
-Name: Ibuprom_sport
-Producer: US
-Substance: ibuprofenum
+Name: Octenisept
+Producer: Schulke
+Substance: octenidinum
 Prescripted: 0
-Position : 309
-Symptoms : muscle_pain back_pain arthritis 
-Base price: 45 zl
-Taxed price: 51.75 zl
-
- Type: Syrup
-Name: Pelavo
-Producer: USP
-Substance: Pelargonia
-Prescripted: 0
-Position : 3
-Symptoms : runny_nose 
-Base price: 8 zl
-Taxed price: 8.64 zl
+Position : 310
+Symptoms : cuts disinfection 
+Base price: 28 zl
+Taxed price: 32.2 zl
 
  
-Pharmacist id 5087 supports client
-Client: Ricky Action: ask about medicines
-
-Pharmacist id 5313 supports client
-Client: Blake Action: buy medicines
-
-Pharmacist id 3354 supports client
-Client: Richard Action: leave Pharmacy
-
-- Hello, please help me with my symptoms: 
-*diarrhea
-- Hello! There you go: 
-
-Type: Pills
-Name: Stopperan
-Producer: UPS
-Substance: Loperamid
-Prescripted: 0
-Position : 120
-Symptoms : diarrhea 
-Base price: 11 zl
-Taxed price: 13.53 zl
-
- 
-Pharmacist id 1746 supports client
-Client: Bethany Action: ask about medicines
-
-Pharmacist id 2127 supports client
-Client: Cristina Action: leave Pharmacy
-
-Pharmacist id 1980 supports client
-Client: Calvin Action: leave Pharmacy
-
-- Hello, please help me with my symptoms: 
-*throat_irritation
-*pain
-- Hello! There you go: 
-
-Type: Pills
-Name: Aspirin
-Producer: Bayer
-Substance: acetylsalicylic_acid
-Prescripted: 0
-Position : 101
-Symptoms : pain fever inflammation 
-Base price: 70 zl
-Taxed price: 86.1 zl
-
- Type: Syrup
-Name: Antussimin
-Producer: Doz
-Substance: Malva_aborea
-Prescripted: 0
-Position : 6
-Symptoms : throat_irritation dry_cough 
-Base price: 17 zl
-Taxed price: 18.36 zl
-
- 
-Pharmacist id 8298 supports client
-Client: Allen Action: ask about medicines
-
-Windows number: 10
-Pharmacists number: 10
-Clients in queue number: 1
-
-- Hello, please help me with my symptoms: 
-*eye_redness
-*dry_cough
-- Hello! There you go: 
-
-Type: Syrup
-Name: Thiocodin
-Producer: Unia
-Substance: Codeine_phosphoran
-Prescripted: 0
-Position : 1
-Symptoms : dry_cough wet_cough 
-Base price: 12 zl
-Taxed price: 12.96 zl
-
- Type: Drops
-Name: Lacrimal
-Producer: Polfa_Warszawa
-Substance: hyaluronic_acid
-Prescripted: 0
-Position : 202
-Symptoms : eye_redness dry_eye 
-Base price: 12 zl
-Taxed price: 13.44 zl
-
- 
-Pharmacist id 7767 supports client
-Client: Eric Action: ask about medicines
-
-Pharmacist id 3232 supports client
-Client: Jennifer Action: ask about substitute
-
-Please replace: 
-Type: Pills
-Name: Scorbolamid
-Producer: Polpharma
-Substance: Salicylamidum
-Prescripted: 0
-Position : 117
-Symptoms : cold flu headache 
-Base price: 23 zl
-Taxed price: 28.29 zl
-
-Medicine replacement found?
-Pharmacist id 5087 supports client
-Client: Ricky Action: buy medicines
-
-Client: Blake Action: get invoice
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   VAT INVOICE                             |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
-|           Thiocodin            Unia      8%  12.00   12.96|
-|       Ibuprom_sport              US     14%  45.00   51.75|
-|         Trazdodonix           Hasco     23%  50.00    61.5|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                        107.00|
-|                   TOTAL TAX:                         19.21|
-|                       TOTAL:                        126.21|
-| Sell to: Blake                                              
-| NIP: 1274727035                                           |
-|                                                           |
-_____________________________________________________________
-Pharmacist id 1746 supports client
-Client: Bethany Action: ask about substitute
-
-Please replace: 
-Type: Pills
-Name: Stopperan
-Producer: UPS
-Substance: Loperamid
-Prescripted: 0
-Position : 120
-Symptoms : diarrhea 
-Base price: 11 zl
-Taxed price: 13.53 zl
-
-Medicine replacement found?
-Pharmacist id 8298 supports client
-Client: Allen Action: ask about substitute
-
-Please replace: 
-Type: Pills
-Name: Aspirin
-Producer: Bayer
-Substance: acetylsalicylic_acid
-Prescripted: 0
-Position : 101
-Symptoms : pain fever inflammation 
-Base price: 70 zl
-Taxed price: 86.1 zl
-
-Medicine replacement found?
-Windows number: 10
-Pharmacists number: 10
-Clients in queue number: 0
-
-Pharmacist id 7767 supports client
-Client: Eric Action: buy medicines
-
-Pharmacist id 3232 supports client
-Client: Jennifer Action: leave Pharmacy
-
-Client: Ricky Action: get invoice
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   VAT INVOICE                             |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
-|       Ibuprom_sport              US     14%  45.00   51.75|
-|              Pelavo             USP      8%   8.00    8.64|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                         53.00|
-|                   TOTAL TAX:                          7.39|
-|                       TOTAL:                         60.39|
-| Sell to: Ricky                                              
-| NIP: 1130457477                                           |
-|                                                           |
-_____________________________________________________________
-Pharmacist id 1746 supports client
-Client: Bethany Action: leave Pharmacy
-
-Pharmacist id 8298 supports client
-Client: Allen Action: leave Pharmacy
-
-Windows number: 10
-Pharmacists number: 10
-Clients in queue number: 0
-
-Client: Eric Action: get receipt
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   FISCAL RECEIPT                          |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
-|           Thiocodin            Unia      8%  12.00   12.96|
-|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                         24.00|
-|                   TOTAL TAX:                           2.4|
-|                       TOTAL:                          26.4|
-|                                                           |
-_____________________________________________________________
-Client: Eric Action: get invoice
-
-_____________________________________________________________
-|                                                           |
-| Pharmacy 'Pharmax' limited liability company              |
-| Siedmiogrodzka street 13c                                 |
-| 01-204 Warsaw, Poland                                     |
-| NIP: 0123456609                                           |
-| Phone: +48 321 243 967                                    |
-|                                                           |
-|                                                           |
-|                   VAT INVOICE                             |
-|                                                           |
-|                                                           |
-|                                                           |
-|               name:       producer:    tax:  base:  total:|
-|           Thiocodin            Unia      8%  12.00   12.96|
-|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
-_____________________________________________________________
-|                                                           |
-|                  TOTAL BASE:                         24.00|
-|                   TOTAL TAX:                           2.4|
-|                       TOTAL:                          26.4|
-| Sell to: Eric                                              
-| NIP: 1238323950                                           |
-|                                                           |
-_____________________________________________________________
-Windows number: 10
-Pharmacists number: 10
-Clients in queue number: 0
-
-Windows number: 10
-Pharmacists number: 10
-Clients in queue number: 0
-
-Windows number: 10
-Pharmacists number: 10
-Clients in queue number: 1
-
-Pharmacist id 7767 supports client
-Client: Brittany Action: leave Pharmacy
-
-Windows number: 10
-Pharmacists number: 10
-Clients in queue number: 1
-
-Pharmacist id 7767 supports client
-Client: Trista Action: leave Pharmacy
-
-Windows number: 10
-Pharmacists number: 10
-Clients in queue number: 0
-
-Windows number: 10
-Pharmacists number: 10
-Clients in queue number: 0
+Pharmacist id 8470 supports client
+Client: Monica Action: ask about medicines
 

@@ -28,13 +28,13 @@ void Pharmacy::set_generator(RandomObjectsGenerator generator)
 	this->generator = generator;
 }
 
-void Pharmacy::start_simpulation(int iteration_num, File_dial_out mo, MDatabase pharmacist_knowledge)
+void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path, std::string path, MDatabase pharmacist_knowledge)
 {
+	File_dial_out mo(output_file_path);
+
 	while (iteration_num > 0)
 	{
 		iteration_num = iteration_num - 1;
-
-
 
 		mo << "Windows number: " << windows.size() << std::endl;
 		mo << "Pharmacists number: " << pharmacists.size() << std::endl;
