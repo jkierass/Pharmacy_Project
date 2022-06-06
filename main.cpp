@@ -172,6 +172,12 @@ int main(int argc, char* argv[])
 					action_number = generator.generate_number(2,3);
 				}
 
+				if (windows[i].get_client_operation() == 3)
+				{
+					//Program wybiera opcjê od 2 do 3
+					action_number = generator.generate_number(5, 6);
+				}
+
 				switch(action_number)
 				{
 					//Klient pyta o leki, czyli wyœwietlaj¹ siê proponowane leki i zapisuj¹ siê u niego w koszyku
@@ -204,11 +210,8 @@ int main(int argc, char* argv[])
 				{
 					windows[i].get_client().set_action("buy medicines");
 					windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
-					windows[i].status_empty();
-					std::cout << windows[i].get_client().get_cart().size() << std::endl;
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
-					windows[i].get_pharmacist().print_receipt(windows[i].get_client());
 					//Zresetowanie akcji okienka
 					windows[i].set_client_operation(0);
 					//zatrzymuje czas na 2s
@@ -221,7 +224,6 @@ int main(int argc, char* argv[])
 				{
 					windows[i].get_client().set_action("leave Pharmacy");
 					windows[i].status_empty();
-					std::cout << windows[i].get_client().get_cart().size() << std::endl;
 					std::cout << windows[i].get_pharmacist();
 					std::cout << windows[i].get_client() << std::endl;
 					windows[i].set_client_operation(0);
@@ -254,6 +256,26 @@ int main(int argc, char* argv[])
 					}
 					//Sleep(2000);
 					break;
+				}
+
+				case 5:
+				{
+					windows[i].get_client().set_action("get receipt");
+					std::cout << windows[i].get_client() << std::endl;
+					windows[i].get_pharmacist().print_receipt(windows[i].get_client());
+					windows[i].status_empty();
+					windows[i].set_client_operation(0);
+					//Sleep(2000);
+				}
+
+				case 6:
+				{
+					windows[i].get_client().set_action("get invoice");
+					std::cout << windows[i].get_client() << std::endl;
+					windows[i].get_pharmacist().print_invoide(windows[i].get_client());
+					windows[i].status_empty();
+					windows[i].set_client_operation(0);
+					//Sleep(2000);
 				}
 				}
 			}
