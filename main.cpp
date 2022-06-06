@@ -11,14 +11,13 @@
 #include <windows.h>
 #include <cstdlib>
 
-//symptoms.txt Med_database_info.txt name.txt Medicines_prescription.txt
+//symptoms.txt Med_database_info.txt name.txt Medicines_prescription.txt dialog_output.txt
 
 int main(int argc, char* argv[])
 {
-	File_dial_out mo("test.txt");
-	if (argc != 5 && argc != 9)
+	if (argc != 6 && argc != 10)
 	{
-		std::cerr << "Incorrect number of command line arguments - expected 4 or 8, got " << argc << std::endl;
+		std::cerr << "Incorrect number of command line arguments - expected 5 or 9, got " << argc << std::endl;
 		return 1;
 	}
 
@@ -26,7 +25,8 @@ int main(int argc, char* argv[])
 	std::string path = argv[2];
 	std::string path_name = argv[3];
 	std::string path_medicine_prescription = argv[4];
-
+	std::string output_file_path = argv[5];
+	File_dial_out mo(output_file_path);
 	Database_meds_reader database_reader_file(path);
 	MDatabase pharmacist_knowledge;
 	TxtFile file(path_name, path_symptoms, path_medicine_prescription);
@@ -56,7 +56,7 @@ int main(int argc, char* argv[])
 	Queue queue;
 
 	//Start parameters without user input
-	if (argc == 5)
+	if (argc == 6)
 	{
 		iteration_num = 10;
 
