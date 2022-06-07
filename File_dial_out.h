@@ -16,6 +16,5 @@ public:
     template <typename T>
     friend File_dial_out& operator<<(File_dial_out& mo, T const& t) { mo.out1 << t; mo.out2 << t; return mo;}
     friend File_dial_out& operator<<(File_dial_out& mo, std::ostream& (*f)(std::ostream&)) {  mo.out1 << f; mo.out2 << f; return mo;}
-
 };
 
