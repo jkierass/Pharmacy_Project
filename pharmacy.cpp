@@ -28,7 +28,7 @@ void Pharmacy::set_generator(RandomObjectsGenerator generator)
 	this->generator = generator;
 }
 
-void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path, std::string path, MDatabase& pharmacist_knowledge)
+void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path, MDatabase& pharmacist_knowledge)
 {
 	File_dial_out mo(output_file_path);
 
@@ -61,40 +61,40 @@ void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path
 			{
 				int action_number = 3;
 
-				//Wchodzi jak klient jeszcze nie podj¹³ ¿adnej akcji
+				//Goes in when cielnt has not made decision yet
 				if (windows[i].get_client_operation() == 0)
 				{
 					//Program wybiera opcjê od 1 do 3
 					action_number = generator.generate_number(1, 3);
 				}
 
-				//Wchodzi jak klient zapyta³ o leki
+				//when client asks about medicines
 				if (windows[i].get_client_operation() == 1)
 				{
-					//Program wybiera opcjê od 2 do 4
+					//Program chooses option number from 2 to 4
 					action_number = generator.generate_number(2, 4);
 				}
 
-				//Wchodzi jak klient zapyta³ o substytut
+				//Client asks about cheaper replacement
 				if (windows[i].get_client_operation() == 2)
 				{
-					//Program wybiera opcjê od 2 do 3
+					//Program chooses option number from 2 to 3
 					action_number = generator.generate_number(2, 3);
 				}
 
 				if (windows[i].get_client_operation() == 3)
 				{
-					//Program wybiera opcjê od 2 do 3
+					//Program chooses option number from 2 to 3
 					action_number = generator.generate_number(5, 6);
 				}
 
 				switch (action_number)
 				{
-					//Klient pyta o leki, czyli wyœwietlaj¹ siê proponowane leki i zapisuj¹ siê u niego w koszyku
+					//Client asks for medicine, so proposed medicines are displayed and added to his cart
 				case 1:
 				{
 					windows[i].get_client().set_action("ask about medicines");
-					//Ustawienie operacji na 1
+					//Client operation info set to 1
 					windows[i].set_client_operation(1);
 					mo << "- Hello, please help me with my symptoms: " << std::endl;
 					for (int z = 0; z < windows[i].get_client().get_symptoms().size(); z++)
@@ -119,25 +119,25 @@ void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path
 					mo << std::endl;
 					mo << windows[i].get_pharmacist();
 					mo << windows[i].get_client() << std::endl;
-					//Sleep(2000);
+					Sleep(3000);
 					break;
 				}
 
-				//Klient kupuje odrazu leki, czyli program mu je wybiera i on je odrazu kupuje - dostaje paragon
+				//Client wants do buy medicines immediately, so he gets receipt or VAT invoice as he pleases
 				case 2:
 				{
 					windows[i].get_client().set_action("buy medicines");
 					windows[i].get_pharmacist().choose_medicines(windows[i].get_client(), pharmacist_knowledge);
 					mo << windows[i].get_pharmacist();
 					mo << windows[i].get_client() << std::endl;
-					//Zresetowanie akcji okienka
+					//Restart window operation info
 					windows[i].set_client_operation(3);
-					//zatrzymuje czas na 2s
-					//Sleep(2000);
+					//holds time for 3 seconds
+					Sleep(3000);
 					break;
 				}
 
-				//Klient odchodzi - opró¿nia siê okno
+				//Client goes away - window status is set to free
 				case 3:
 				{
 					windows[i].get_client().set_action("leave Pharmacy");
@@ -145,12 +145,12 @@ void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path
 					mo << windows[i].get_pharmacist();
 					mo << windows[i].get_client() << std::endl;
 					windows[i].set_client_operation(0);
-					//Sleep(2000);
+					Sleep(3000);
 					break;
 				}
 
 
-				//Klient pyta o zamiennik
+				//Client asks for cheaper substitute
 				case 4:
 				{
 					windows[i].get_client().set_action("ask about substitute");
@@ -170,9 +170,9 @@ void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path
 					}
 					catch (MedicineNotFoundException& a)
 					{
-						std::cerr << a.what() << std::endl;
+						std::cerr << a.what() << std::endl; //cheaper medicine not found or there is no other medicine with desired substance
 					}
-					//Sleep(2000);
+					Sleep(3000);
 					break;
 				}
 
@@ -183,7 +183,7 @@ void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path
 					windows[i].get_pharmacist().print_receipt(windows[i].get_client(), mo);
 					windows[i].status_empty();
 					windows[i].set_client_operation(0);
-					//Sleep(2000);
+					Sleep(3000);
 				}
 
 				case 6:
@@ -193,7 +193,7 @@ void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path
 					windows[i].get_pharmacist().print_invoide(windows[i].get_client(), mo);
 					windows[i].status_empty();
 					windows[i].set_client_operation(0);
-					//Sleep(2000);
+					Sleep(3000);
 				}
 				}
 			}
@@ -202,7 +202,7 @@ void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path
 		int client_num = generator.generate_number(0, 2);
 		std::vector<Client> new_clients = generator.generate_clients_vector(0, client_num);
 
-		//appendinng queue
+		//new clients can join queue
 		for (int i = 0; i < new_clients.size(); i++)
 		{
 			queue.add_client(new_clients[i]);
