@@ -1,7 +1,388 @@
-Windows number: 3
-Pharmacists number: 4
-Clients in queue number: 3
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 10
 
-Pharmacist id 3757 supports client
-Client: Marc Action: buy medicines
+Pharmacist id 5755 supports client
+Client: Dominic Action: leave Pharmacy
+
+Pharmacist id 5060 supports client
+Client: Shelby Action: leave Pharmacy
+
+Pharmacist id 5121 supports client
+Client: Carolyn Action: buy medicines
+
+- Hello, please help me with my symptoms: 
+*throatache
+*wet_cough
+- Hello! There you go: 
+
+Type: Syrup
+Name: Coughix
+Producer: Synchronile
+Substance: Codeine_phosphoran
+Prescripted: 0
+Position : 2
+Symptoms : dry_cough wet_cough throatache 
+Base price: 14 zl
+Taxed price: 15.12 zl
+
+ 
+Pharmacist id 6879 supports client
+Client: Steven Action: ask about medicines
+
+Pharmacist id 4922 supports client
+Client: Karl Action: buy medicines
+
+- Hello, please help me with my symptoms: 
+*cuts
+- Hello! There you go: 
+
+Type: Ointment
+Name: Octenisept
+Producer: Schulke
+Substance: octenidinum
+Prescripted: 0
+Position : 310
+Symptoms : cuts disinfection 
+Base price: 28 zl
+Taxed price: 32.2 zl
+
+ 
+Pharmacist id 7589 supports client
+Client: Taylor Action: ask about medicines
+
+Pharmacist id 4921 supports client
+Client: Eva Action: buy medicines
+
+Pharmacist id 2366 supports client
+Client: Rosa Action: leave Pharmacy
+
+Pharmacist id 8356 supports client
+Client: Noah Action: buy medicines
+
+- Hello, please help me with my symptoms: 
+*dry_cough
+*cold
+*throat_irritation
+- Hello! There you go: 
+
+Type: Syrup
+Name: Antussimin
+Producer: Doz
+Substance: Malva_aborea
+Prescripted: 0
+Position : 6
+Symptoms : throat_irritation dry_cough 
+Base price: 17 zl
+Taxed price: 18.36 zl
+
+ Type: Pills
+Name: Scorbolamid
+Producer: Polpharma
+Substance: Salicylamidum
+Prescripted: 0
+Position : 117
+Symptoms : cold flu headache 
+Base price: 23 zl
+Taxed price: 28.29 zl
+
+ 
+Pharmacist id 9281 supports client
+Client: Lawrence Action: ask about medicines
+
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 0
+
+Client: Carolyn Action: get receipt
+
+_____________________________________________________________
+|                                                           |
+| Pharmacy 'Pharmax' limited liability company              |
+| Siedmiogrodzka street 13c                                 |
+| 01-204 Warsaw, Poland                                     |
+| NIP: 0123456609                                           |
+| Phone: +48 321 243 967                                    |
+|                                                           |
+|                                                           |
+|                   FISCAL RECEIPT                          |
+|                                                           |
+|                                                           |
+|                                                           |
+|               name:       producer:    tax:  base:  total:|
+|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
+|         Scorbolamid       Polpharma     23%  23.00   28.29|
+|           Stopperan             UPS     23%  11.00   13.53|
+|            Lafactin       Aurovitas     23%  33.00   40.59|
+_____________________________________________________________
+|                                                           |
+|                  TOTAL BASE:                         79.00|
+|                   TOTAL TAX:                         16.85|
+|                       TOTAL:                         95.85|
+|                                                           |
+_____________________________________________________________
+Client: Carolyn Action: get invoice
+
+_____________________________________________________________
+|                                                           |
+| Pharmacy 'Pharmax' limited liability company              |
+| Siedmiogrodzka street 13c                                 |
+| 01-204 Warsaw, Poland                                     |
+| NIP: 0123456609                                           |
+| Phone: +48 321 243 967                                    |
+|                                                           |
+|                                                           |
+|                   VAT INVOICE                             |
+|                                                           |
+|                                                           |
+|                                                           |
+|               name:       producer:    tax:  base:  total:|
+|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
+|         Scorbolamid       Polpharma     23%  23.00   28.29|
+|           Stopperan             UPS     23%  11.00   13.53|
+|            Lafactin       Aurovitas     23%  33.00   40.59|
+_____________________________________________________________
+|                                                           |
+|                  TOTAL BASE:                         79.00|
+|                   TOTAL TAX:                         16.85|
+|                       TOTAL:                         95.85|
+| Sell to: Carolyn                                              
+| NIP: 1326988719                                           |
+|                                                           |
+_____________________________________________________________
+Pharmacist id 6879 supports client
+Client: Steven Action: leave Pharmacy
+
+Client: Karl Action: get receipt
+
+_____________________________________________________________
+|                                                           |
+| Pharmacy 'Pharmax' limited liability company              |
+| Siedmiogrodzka street 13c                                 |
+| 01-204 Warsaw, Poland                                     |
+| NIP: 0123456609                                           |
+| Phone: +48 321 243 967                                    |
+|                                                           |
+|                                                           |
+|                   FISCAL RECEIPT                          |
+|                                                           |
+|                                                           |
+|                                                           |
+|               name:       producer:    tax:  base:  total:|
+|             Aspirin           Bayer     23%  70.00    86.1|
+|             Acnidol             Doz     14%  35.00   40.25|
+_____________________________________________________________
+|                                                           |
+|                  TOTAL BASE:                        105.00|
+|                   TOTAL TAX:                         21.35|
+|                       TOTAL:                        126.35|
+|                                                           |
+_____________________________________________________________
+Client: Karl Action: get invoice
+
+_____________________________________________________________
+|                                                           |
+| Pharmacy 'Pharmax' limited liability company              |
+| Siedmiogrodzka street 13c                                 |
+| 01-204 Warsaw, Poland                                     |
+| NIP: 0123456609                                           |
+| Phone: +48 321 243 967                                    |
+|                                                           |
+|                                                           |
+|                   VAT INVOICE                             |
+|                                                           |
+|                                                           |
+|                                                           |
+|               name:       producer:    tax:  base:  total:|
+|             Aspirin           Bayer     23%  70.00    86.1|
+|             Acnidol             Doz     14%  35.00   40.25|
+_____________________________________________________________
+|                                                           |
+|                  TOTAL BASE:                        105.00|
+|                   TOTAL TAX:                         21.35|
+|                       TOTAL:                        126.35|
+| Sell to: Karl                                              
+| NIP: 1069787166                                           |
+|                                                           |
+_____________________________________________________________
+Pharmacist id 7589 supports client
+Client: Taylor Action: leave Pharmacy
+
+Client: Eva Action: get invoice
+
+_____________________________________________________________
+|                                                           |
+| Pharmacy 'Pharmax' limited liability company              |
+| Siedmiogrodzka street 13c                                 |
+| 01-204 Warsaw, Poland                                     |
+| NIP: 0123456609                                           |
+| Phone: +48 321 243 967                                    |
+|                                                           |
+|                                                           |
+|                   VAT INVOICE                             |
+|                                                           |
+|                                                           |
+|                                                           |
+|               name:       producer:    tax:  base:  total:|
+|             Coughix     Synchronile      8%  14.00   15.12|
+|              Pelavo             USP      8%   8.00    8.64|
+|            Lafactin       Aurovitas     23%  33.00   40.59|
+_____________________________________________________________
+|                                                           |
+|                  TOTAL BASE:                         55.00|
+|                   TOTAL TAX:                          9.35|
+|                       TOTAL:                         64.35|
+| Sell to: Eva                                              
+| NIP: 1067517720                                           |
+|                                                           |
+_____________________________________________________________
+Client: Noah Action: get invoice
+
+_____________________________________________________________
+|                                                           |
+| Pharmacy 'Pharmax' limited liability company              |
+| Siedmiogrodzka street 13c                                 |
+| 01-204 Warsaw, Poland                                     |
+| NIP: 0123456609                                           |
+| Phone: +48 321 243 967                                    |
+|                                                           |
+|                                                           |
+|                   VAT INVOICE                             |
+|                                                           |
+|                                                           |
+|                                                           |
+|               name:       producer:    tax:  base:  total:|
+|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
+|             Aspirin           Bayer     23%  70.00    86.1|
+|             Alventa            Krka     23%  27.00   33.21|
+_____________________________________________________________
+|                                                           |
+|                  TOTAL BASE:                        109.00|
+|                   TOTAL TAX:                         23.75|
+|                       TOTAL:                        132.75|
+| Sell to: Noah                                              
+| NIP: 1267931966                                           |
+|                                                           |
+_____________________________________________________________
+Pharmacist id 9281 supports client
+Client: Lawrence Action: leave Pharmacy
+
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 2
+
+Pharmacist id 5755 supports client
+Client: Tara Action: leave Pharmacy
+
+- Hello, please help me with my symptoms: 
+*dry_eye
+*cystitis
+- Hello! There you go: 
+
+Type: Pills
+Name: Furaginum
+Producer: Hasco
+Substance: Furazidinum
+Prescripted: 0
+Position : 116
+Symptoms : cystitis 
+Base price: 34 zl
+Taxed price: 41.82 zl
+
+ Type: Drops
+Name: Lacrimal
+Producer: Polfa_Warszawa
+Substance: hyaluronic_acid
+Prescripted: 0
+Position : 202
+Symptoms : eye_redness dry_eye 
+Base price: 12 zl
+Taxed price: 13.44 zl
+
+ 
+Pharmacist id 5060 supports client
+Client: Grant Action: ask about medicines
+
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 0
+
+Pharmacist id 5060 supports client
+Client: Grant Action: buy medicines
+
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 0
+
+Client: Grant Action: get receipt
+
+_____________________________________________________________
+|                                                           |
+| Pharmacy 'Pharmax' limited liability company              |
+| Siedmiogrodzka street 13c                                 |
+| 01-204 Warsaw, Poland                                     |
+| NIP: 0123456609                                           |
+| Phone: +48 321 243 967                                    |
+|                                                           |
+|                                                           |
+|                   FISCAL RECEIPT                          |
+|                                                           |
+|                                                           |
+|                                                           |
+|               name:       producer:    tax:  base:  total:|
+|           Furaginum           Hasco     23%  34.00   41.82|
+|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
+_____________________________________________________________
+|                                                           |
+|                  TOTAL BASE:                         46.00|
+|                   TOTAL TAX:                          9.26|
+|                       TOTAL:                         55.26|
+|                                                           |
+_____________________________________________________________
+Client: Grant Action: get invoice
+
+_____________________________________________________________
+|                                                           |
+| Pharmacy 'Pharmax' limited liability company              |
+| Siedmiogrodzka street 13c                                 |
+| 01-204 Warsaw, Poland                                     |
+| NIP: 0123456609                                           |
+| Phone: +48 321 243 967                                    |
+|                                                           |
+|                                                           |
+|                   VAT INVOICE                             |
+|                                                           |
+|                                                           |
+|                                                           |
+|               name:       producer:    tax:  base:  total:|
+|           Furaginum           Hasco     23%  34.00   41.82|
+|            Lacrimal  Polfa_Warszawa     12%  12.00   13.44|
+_____________________________________________________________
+|                                                           |
+|                  TOTAL BASE:                         46.00|
+|                   TOTAL TAX:                          9.26|
+|                       TOTAL:                         55.26|
+| Sell to: Grant                                              
+| NIP: 1149889653                                           |
+|                                                           |
+_____________________________________________________________
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 0
+
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 0
+
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 0
+
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 0
+
+Windows number: 10
+Pharmacists number: 10
+Clients in queue number: 0
 
