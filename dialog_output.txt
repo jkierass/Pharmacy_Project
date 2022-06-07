@@ -9,14 +9,14 @@ Clients in queue number: 4
 - Hello! There you go: 
 
 Type: Pills
-Name: Furaginum
-Producer: Hasco
-Substance: Furazidinum
+Name: Active_coal
+Producer: Medipharm
+Substance: active_coal
 Prescripted: 0
-Position : 116
-Symptoms : cystitis 
-Base price: 34 zl
-Taxed price: 41.82 zl
+Position : 108
+Symptoms : food_poisoning stomachache 
+Base price: 15 zl
+Taxed price: 18.45 zl
 
  Type: Drops
 Name: Lacrimal
