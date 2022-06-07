@@ -9,7 +9,6 @@
 #include "queue.h"
 #include "File_dial_out.h"
 #include <windows.h>
-#include <cstdlib>
 
 class Pharmacy
 {

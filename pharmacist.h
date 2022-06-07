@@ -2,8 +2,6 @@
 #include "client.h"
 #include "mdatabase.h"
 #include "File_dial_out.h"
-#include <vector>
-#include <algorithm>
 
 struct chosen_medicine;
 

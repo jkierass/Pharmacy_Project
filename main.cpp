@@ -1,5 +1,3 @@
-#include <windows.h>
-#include <cstdlib>
 #include "pharmacy.h"
 
 //symptoms.txt Med_database_info.txt name.txt Medicines_prescription.txt dialog_output.txt

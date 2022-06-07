@@ -213,7 +213,7 @@
     <ClInclude Include="queue.h" />
     <ClInclude Include="random_objects_generator.h" />
     <ClInclude Include="syrup.h" />
-    <ClInclude Include="test_and_main_includes.h" />
+    <ClInclude Include="tests_includes.h" />
     <ClInclude Include="txt_file.h" />
     <ClInclude Include="window.h" />
   </ItemGroup>

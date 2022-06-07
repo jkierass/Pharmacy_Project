@@ -184,6 +184,7 @@ void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path
 					windows[i].status_empty();
 					windows[i].set_client_operation(0);
 					Sleep(3000);
+					break;
 				}
 
 				case 6:
@@ -194,6 +195,7 @@ void Pharmacy::start_simpulation(int iteration_num, std::string output_file_path
 					windows[i].status_empty();
 					windows[i].set_client_operation(0);
 					Sleep(3000);
+					break;
 				}
 				}
 			}

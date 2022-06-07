@@ -69,7 +69,7 @@
     <ClInclude Include="database_meds_reader.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="test_and_main_includes.h">
+    <ClInclude Include="tests_includes.h">
       <Filter>Pliki zasobów</Filter>
     </ClInclude>
     <ClInclude Include="File_dial_out.h">

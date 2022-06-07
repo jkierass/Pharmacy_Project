@@ -1,5 +1,5 @@
 #define CATCH_CONFIG_MAIN
-#include "test_and_main_includes.h"
+#include "tests_includes.h"
 
 TEST_CASE("Test Queue")
 {
