@@ -199,7 +199,6 @@
     <ClInclude Include="client.h" />
     <ClInclude Include="database_meds_reader.h" />
     <ClInclude Include="drops.h" />
-    <ClInclude Include="Exception.h" />
     <ClInclude Include="File_dial_out.h" />
     <ClInclude Include="pharmacy.h" />
     <ClInclude Include="mdatabase.h" />
@@ -225,6 +224,7 @@
     <ClCompile Include="File_dial_out.cpp" />
     <ClCompile Include="main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="mdatabase.cpp" />
     <ClCompile Include="medicine.cpp" />
@@ -247,7 +247,6 @@
     <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="meds.txt" />
     <Text Include="Med_database_info.txt" />
     <Text Include="name.txt" />
     <Text Include="symptoms.txt" />

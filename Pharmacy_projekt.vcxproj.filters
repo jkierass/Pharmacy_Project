@@ -21,9 +21,6 @@
     <ClInclude Include="drops.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="Exception.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="mdatabase.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
@@ -149,9 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="name.txt">
-      <Filter>Pliki zasobów</Filter>
-    </Text>
-    <Text Include="meds.txt">
       <Filter>Pliki zasobów</Filter>
     </Text>
     <Text Include="symptoms.txt">
